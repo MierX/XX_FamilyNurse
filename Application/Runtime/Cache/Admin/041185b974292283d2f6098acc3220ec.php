@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -21,19 +21,8 @@
 </head>
 <body>
   <div class="loginWraper">
-    <div id="loginform" class="loginBox">
-      <form class="form form-horizontal" action="{:U('login')}" method="post" onsubmit="return loginNow()">
-        <div class="row cl">
-          <label class="form-label col-xs-3">
-            <i class="Hui-iconfont">&#xe62a;</i>
-          </label>
-          <div class="formControls col-xs-8" style="margin-top: 5px;">
-            <label style="font-size: 20px">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户：<input type="radio" name="role" class="radio-box size-L" value="User" checked="checked" onclick="roleStatus(this.value)" />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;护士：<input type="radio" name="role" class="radio-box size-L" value="Nurse" onclick="roleStatus(this.value)" />
-            </label>
-          </div>
-        </div>
+    <div id="loginform" class="loginBox" style="height: 250px; padding-top: 60px">
+      <form class="form form-horizontal" action="<?php echo U('login');?>" method="post" onsubmit="return loginNow()">
         <div class="row cl">
           <label class="form-label col-xs-3">
             <i class="Hui-iconfont">&#xe60d;</i>
@@ -56,21 +45,9 @@
             </label>
           </div>
         </div>
-        <div id="job-num" class="row cl">
-          <label class="form-label col-xs-3">
-            <i class="Hui-iconfont">&#xe602;</i>
-          </label>
-          <div class="formControls col-xs-8">
-            <label>
-              <input type="number" name="job-num" class="input-text size-L" value="" placeholder="请输入您的工号" onfocusout="checkValue(this.name,this.value)" />
-              <i id="i_job-num" class="Hui-iconfont"></i>
-            </label>
-          </div>
-        </div>
         <div class="row cl">
           <div class="formControls col-xs-8 col-xs-offset-3">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="btn size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" class="btn size-L" value="&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;册&nbsp;"  onclick="goRegister()">
+            <input type="submit" class="btn size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;" >
           </div>
         </div>
       </form>
@@ -80,30 +57,7 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/static/h-ui/js/H-ui.min.js"></script>
 <script type="text/javascript">
-  window.onload = init();
-
-  var role = 'User';
-
   var value = {};
-
-  function init() {
-    roleStatus();
-  }
-
-  function roleStatus(value) {
-    if(value === 'User' || !value) {
-      document.getElementById("job-num").style.display = 'none';
-      document.getElementById("job-num").value = '';
-      document.getElementById("loginform").style.height = '300px';
-      document.getElementById("loginform").style.borderBottom = '1px #78b5b8 solid';
-      role = 'User';
-    } else if(value === 'Nurse') {
-      document.getElementById("job-num").style.display = '';
-      document.getElementById("loginform").style.height = '350px';
-      document.getElementById("loginform").style.borderBottom = 'none';
-      role = 'Nurse';
-    }
-  }
 
   function checkValue(name, value) {
     if(value) {
@@ -129,37 +83,18 @@
   }
 
   function loginNow() {
-    if(role === 'User') {
-      delete value['job-num'];
-      if(Object.keys(value).length !== 2) {
-        alert('请确认所有信息填写正确！');
-        return false;
-      } else {
-        for(var i in value) {
-          if(!i) {
-            alert('请确认所有信息填写正确！');
-            return false;
-          }
-        }
-      }
-    } else if(role === 'Nurse') {
-      if(Object.keys(value).length !== 3) {
-        alert('请确认所有信息填写正确！');
-        return false;
-      } else {
-        for(var j in value) {
-          if(!j) {
-            alert('请确认所有信息填写正确！');
-            return false;
-          }
+    if(Object.keys(value).length !== 2) {
+      alert('请确认所有信息填写正确！');
+      return false;
+    } else {
+      for(var i in value) {
+        if(!i) {
+          alert('请确认所有信息填写正确！');
+          return false;
         }
       }
     }
     return true;
-  }
-
-  function goRegister() {
-    window.location.href = "{:U('register')}";
   }
 </script>
 </html>

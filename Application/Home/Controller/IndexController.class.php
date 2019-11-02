@@ -1,6 +1,5 @@
 <?php
 namespace Home\Controller;
-use Cassandra\Session;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
