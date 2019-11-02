@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -22,7 +22,7 @@
 <body>
   <div class="loginWraper">
     <div id="loginform" class="loginBox">
-      <form class="form form-horizontal" action="{:U('login')}" method="post" onsubmit="return loginNow()">
+      <form class="form form-horizontal" action="<?php echo U('login');?>" method="post" onsubmit="return loginNow()">
         <div class="row cl">
           <label class="form-label col-xs-3">
             <i class="Hui-iconfont">&#xe62a;</i>
@@ -159,7 +159,7 @@
   }
 
   function goRegister() {
-    window.location.href = "{:U('register')}";
+    window.location.href = "<?php echo U('register');?>";
   }
 </script>
 </html>

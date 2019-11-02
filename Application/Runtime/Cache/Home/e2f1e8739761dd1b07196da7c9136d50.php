@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -22,7 +22,7 @@
 <body>
   <div class="loginWraper">
     <div id="loginform" class="loginBox" style="top: 270px; padding-top: 5px">
-      <form class="form form-horizontal" action="{:U('register')}" method="post" onsubmit="return registerNow()">
+      <form class="form form-horizontal" action="<?php echo U('register');?>" method="post" onsubmit="return registerNow()">
         <div class="row cl">
           <label class="form-label col-xs-3">
             <i class="Hui-iconfont">&#xe62a;</i>
@@ -197,7 +197,7 @@
         if(name === 'card' && value.length !== 18) rs =  valueError(name);
         if(rs) {
           $.ajax({
-            url:"{:U('checkValue')}",
+            url:"<?php echo U('checkValue');?>",
             type:"get",
             data:{
               "role":role,
@@ -300,7 +300,7 @@
   }
 
   function goLogin() {
-    window.location.href = "{:U('login')}";
+    window.location.href = "<?php echo U('login');?>";
   }
 </script>
 </html>
