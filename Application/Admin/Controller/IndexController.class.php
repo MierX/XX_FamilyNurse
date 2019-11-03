@@ -3,6 +3,6 @@ namespace Admin\Controller;
 use Think\Controller;
 class IndexController extends BaseController {
     public function index(){
-        dump('后台');
+        $this -> display();
     }
 }

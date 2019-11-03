@@ -17,7 +17,7 @@
   <script type="text/javascript" src="../../../../Public/h-ui/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
   <script>DD_belatedPNG.fix('*');</script>
   <![endif]-->
-  <title>注册</title>
+  <title>登录</title>
 </head>
 <body>
   <div class="loginWraper">
