@@ -475,3 +475,2464 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000942s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001835s ]
 
+[ 2019-11-04T15:49:53+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000152s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001421s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000324s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000985s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001488s ]
+
+[ 2019-11-04T15:58:52+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000187s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001982s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000383s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001158s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+NOTIC: [8] Undefined variable: data E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001729s ]
+
+[ 2019-11-04T15:58:54+08:00 ] 127.0.0.1 /index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000160s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001363s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000358s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000975s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003727s ]
+
+[ 2019-11-04T15:59:10+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000151s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001409s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000403s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001119s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+NOTIC: [8] Undefined variable: data E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001491s ]
+
+[ 2019-11-04T15:59:10+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000186s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002270s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000310s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+NOTIC: [8] Undefined variable: data E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001581s ]
+
+[ 2019-11-04T15:59:12+08:00 ] 127.0.0.1 /index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000189s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001623s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000300s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014659s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015549s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001388s ]
+
+[ 2019-11-04T15:59:33+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000332s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002952s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000378s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001149s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+NOTIC: [8] Undefined variable: data E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041554s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001491s ]
+
+[ 2019-11-04T15:59:35+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000159s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001367s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000325s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000981s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+NOTIC: [8] Undefined variable: data E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001390s ]
+
+[ 2019-11-04T15:59:37+08:00 ] 127.0.0.1 /index.php/Home/Index/login.html;
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000156s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001330s ]
+ERR: 非法操作:login.html;
+
+[ 2019-11-04T16:12:31+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001408s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000348s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001064s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037178s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037835s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000870s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001495s ]
+
+[ 2019-11-04T16:12:34+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=&role=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000150s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001356s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000966s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001285s ]
+
+[ 2019-11-04T16:12:37+08:00 ] 127.0.0.1 /index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000156s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001593s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000375s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012982s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001438s ]
+
+[ 2019-11-04T16:12:57+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000159s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001420s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000333s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000995s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037397s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000851s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001463s ]
+
+[ 2019-11-04T16:13:03+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000172s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001503s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000310s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001021s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000784s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001414s ]
+
+[ 2019-11-04T16:13:09+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000165s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001385s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000521s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001314s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001630s ]
+
+[ 2019-11-04T16:13:13+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000266s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001475s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000322s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000959s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035229s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001216s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001450s ]
+
+[ 2019-11-04T16:13:21+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001344s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000316s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000948s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001258s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001449s ]
+
+[ 2019-11-04T16:13:24+08:00 ] 127.0.0.1 /index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000209s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001921s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000462s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001321s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013681s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000723s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001349s ]
+
+[ 2019-11-04T16:13:29+08:00 ] 127.0.0.1 /index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000155s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001647s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `password` = '123456' LIMIT 1   [ RunTime:0.0009s ]
+
+[ 2019-11-04T16:13:29+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000192s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000346s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000988s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035859s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001273s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001835s ]
+
+[ 2019-11-04T16:13:33+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000148s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001583s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000311s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000940s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010290s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001617s ]
+
+[ 2019-11-04T16:13:48+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000369s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003516s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000326s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000962s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011237s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000715s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001334s ]
+
+[ 2019-11-04T16:13:51+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000275s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001458s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000308s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000979s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011051s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000771s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001450s ]
+
+[ 2019-11-04T16:13:54+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000372s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003225s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000394s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001246s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001391s ]
+
+[ 2019-11-04T16:13:55+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001353s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000330s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001490s ]
+
+[ 2019-11-04T16:15:14+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000268s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002545s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000307s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001047s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037389s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001592s ]
+
+[ 2019-11-04T16:15:15+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000191s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001901s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000353s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000972s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011174s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001355s ]
+
+[ 2019-11-04T16:33:07+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000164s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001423s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000333s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001461s ]
+
+[ 2019-11-04T16:33:08+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000187s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003276s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000332s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001056s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013701s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001258s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001350s ]
+
+[ 2019-11-04T16:38:42+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001343s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000317s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000955s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035222s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000952s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001671s ]
+
+[ 2019-11-04T16:38:44+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000247s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001507s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001578s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000325s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000980s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012399s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004464s ]
+
+[ 2019-11-04T16:38:47+08:00 ] 127.0.0.1 /index.php/Home/Index/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000156s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001424s ]
+
+[ 2019-11-04T16:38:47+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000240s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001391s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000338s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000967s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 190 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038854s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000973s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001776s ]
+
+[ 2019-11-04T16:38:49+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000441s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002546s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000418s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001387s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 190 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050546s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000854s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002296s ]
+
+[ 2019-11-04T16:38:55+08:00 ] 127.0.0.1 /index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000190s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000343s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001820s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001261s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002137s ]
+
+[ 2019-11-04T16:39:10+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000146s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001457s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000970s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 190 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038495s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001255s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001247s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002231s ]
+
+[ 2019-11-04T16:39:12+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=&role=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000378s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001529s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT * FROM `` WHERE `id` = '' LIMIT 1  
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT * FROM `` WHERE `id` = '' LIMIT 1  
+
+[ 2019-11-04T16:39:35+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000368s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001549s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000309s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000933s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 190 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001505s ]
+
+[ 2019-11-04T16:39:39+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=&role=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003347s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT * FROM `` WHERE `id` = '' LIMIT 1  
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT * FROM `` WHERE `id` = '' LIMIT 1  
+
+[ 2019-11-04T16:39:58+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=&role=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001571s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+
+[ 2019-11-04T16:40:19+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000168s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001597s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000336s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001059s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 190 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038269s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001747s ]
+
+[ 2019-11-04T16:40:21+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=&role=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000153s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001451s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT * FROM `` WHERE `id` = '' LIMIT 1  
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT * FROM `` WHERE `id` = '' LIMIT 1  
+
+[ 2019-11-04T16:40:40+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000193s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001724s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000387s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001174s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 190 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001438s ]
+
+[ 2019-11-04T16:40:41+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=&role=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000154s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001857s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000601s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001841s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012390s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013288s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001381s ]
+
+[ 2019-11-04T16:40:44+08:00 ] 127.0.0.1 /index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000212s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001781s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000299s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000921s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012889s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000717s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001325s ]
+
+[ 2019-11-04T16:41:35+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000308s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002265s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000374s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000992s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 190 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038468s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001460s ]
+
+[ 2019-11-04T16:41:36+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=&role=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000159s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001403s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT * FROM `` WHERE `id` = '' LIMIT 1  
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT * FROM `` WHERE `id` = '' LIMIT 1  
+
+[ 2019-11-04T16:42:08+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000200s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001748s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000411s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001248s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 190 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001712s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001969s ]
+
+[ 2019-11-04T16:42:23+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000239s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002065s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000326s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000944s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 190 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040827s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001282s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001596s ]
+
+[ 2019-11-04T16:42:24+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=&role=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000148s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001542s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\BaseController.class.php 第 7 行.
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT * FROM `` WHERE `id` = '' LIMIT 1  
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT * FROM `` WHERE `id` = '' LIMIT 1  
+
+[ 2019-11-04T16:46:34+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001808s ]
+NOTIC: [8] Undefined index: role E:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000361s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000997s ]
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 124 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 141 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 161 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 184 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 185 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 189 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 190 行.
+NOTIC: [8] Undefined variable: user E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\5f5878b563bbd0551b6c84d71156b7e9.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002158s ]
+
+[ 2019-11-04T16:46:37+08:00 ] 127.0.0.1 /index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000255s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001935s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001723s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000378s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016371s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017149s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002730s ]
+
+[ 2019-11-04T16:46:44+08:00 ] 127.0.0.1 /index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000206s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001412s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `password` = '123456' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-11-04T16:46:45+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000147s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001640s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000307s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000931s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001530s ]
+
+[ 2019-11-04T18:20:41+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000626s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002910s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001574s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0807s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000390s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058344s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001598s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001734s ]
+
+[ 2019-11-04T18:20:43+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000162s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003511s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000639s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013597s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001449s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001235s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002135s ]
+
+[ 2019-11-04T18:22:23+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000167s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001385s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000317s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000980s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035892s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001793s ]
+
+[ 2019-11-04T18:22:24+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000233s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001935s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001591s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000304s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000957s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000902s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001579s ]
+
+[ 2019-11-04T18:22:31+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000213s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001476s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000299s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000945s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001334s ]
+
+[ 2019-11-04T18:22:57+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000146s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001533s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000336s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001032s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036823s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001534s ]
+
+[ 2019-11-04T18:22:58+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000145s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001646s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000299s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000978s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001378s ]
+
+[ 2019-11-04T18:23:13+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000160s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001632s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000326s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000984s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036507s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005175s ]
+
+[ 2019-11-04T18:23:15+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000245s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001286s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000300s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000928s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015387s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001426s ]
+
+[ 2019-11-04T18:24:32+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000269s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001864s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002380s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000331s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001034s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036639s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001414s ]
+
+[ 2019-11-04T18:24:33+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000223s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001553s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0044s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000318s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000984s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014147s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000786s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001437s ]
+
+[ 2019-11-04T18:25:40+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000145s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001672s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000317s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000996s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036553s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001651s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003621s ]
+
+[ 2019-11-04T18:25:42+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000155s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002247s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001948s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003588s ]
+
+[ 2019-11-04T18:28:01+08:00 ] 127.0.0.1 /index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000327s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001639s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000334s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001528s ]
+
+[ 2019-11-04T18:28:02+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000148s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001826s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000332s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000742s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001418s ]
+
+[ 2019-11-04T19:12:35+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000204s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003794s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000331s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000996s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001448s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001559s ]
+
+[ 2019-11-04T19:12:38+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000165s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001651s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000372s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001458s ]
+
+[ 2019-11-04T19:12:51+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000144s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001282s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000304s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000972s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010525s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000768s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001402s ]
+
+[ 2019-11-04T19:13:34+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000268s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002361s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000334s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001041s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001494s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001244s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002364s ]
+
+[ 2019-11-04T19:13:57+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000145s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001382s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000326s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000974s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001475s ]
+
+[ 2019-11-04T19:14:14+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000186s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001607s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000359s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000968s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010477s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000731s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001341s ]
+
+[ 2019-11-04T19:14:29+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000261s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001880s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002183s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000304s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000963s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010570s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001356s ]
+
+[ 2019-11-04T19:15:21+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000234s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002217s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000337s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010315s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001453s ]
+
+[ 2019-11-04T19:15:31+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000242s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002073s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000369s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001038s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010556s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001411s ]
+
+[ 2019-11-04T19:16:04+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000326s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001538s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000316s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000937s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000757s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001399s ]
+
+[ 2019-11-04T19:16:35+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000173s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001667s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000324s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000986s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010792s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001384s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001478s ]
+
+[ 2019-11-04T19:16:43+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000228s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001841s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002104s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000343s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001036s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001446s ]
+
+[ 2019-11-04T19:16:51+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000225s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002007s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000357s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000974s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010030s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010792s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001356s ]
+
+[ 2019-11-04T19:16:57+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000158s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001437s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000374s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010356s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001442s ]
+
+[ 2019-11-04T19:17:48+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000266s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001998s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003795s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000345s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010698s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001421s ]
+
+[ 2019-11-04T19:18:06+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000164s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001497s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000309s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000986s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010720s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001222s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001817s ]
+
+[ 2019-11-04T19:18:19+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000269s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002446s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000553s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001704s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016571s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002082s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001279s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002411s ]
+
+[ 2019-11-04T19:18:25+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000147s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001693s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000311s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010540s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001425s ]
+
+[ 2019-11-04T19:18:51+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000374s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002867s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003433s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000493s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001507s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014869s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001880s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001169s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001971s ]
+
+[ 2019-11-04T19:19:17+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000264s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001865s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002413s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000332s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001403s ]
+
+[ 2019-11-04T19:19:26+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000155s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001464s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000351s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000974s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001668s ]
+
+[ 2019-11-04T19:19:47+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000206s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001339s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000367s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011207s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001410s ]
+
+[ 2019-11-04T19:20:02+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000180s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001391s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000314s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000992s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001353s ]
+
+[ 2019-11-04T19:20:08+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000262s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002859s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002346s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000350s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000972s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010643s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001417s ]
+
+[ 2019-11-04T19:22:19+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000155s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001479s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000318s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000990s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010440s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000870s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001505s ]
+
+[ 2019-11-04T19:22:37+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000151s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001429s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000311s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000979s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000796s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001437s ]
+
+[ 2019-11-04T19:29:11+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000330s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002792s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000319s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000964s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000825s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001434s ]
+
+[ 2019-11-04T19:29:13+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000169s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001397s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000346s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000998s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011138s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001765s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001528s ]
+
+[ 2019-11-04T19:30:32+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000145s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002044s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000302s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000953s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015554s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001984s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003370s ]
+
+[ 2019-11-04T19:43:21+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000241s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001468s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000334s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000996s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034457s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001572s ]
+
+[ 2019-11-04T19:43:22+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000282s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001875s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001439s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000309s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000958s ]
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 43 行.
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 44 行.
+NOTIC: [8] Undefined index: remark E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000798s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001491s ]
+
+[ 2019-11-04T19:44:38+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000367s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001284s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000302s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001023s ]
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 43 行.
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 44 行.
+NOTIC: [8] Undefined index: remark E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016589s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000739s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001347s ]
+
+[ 2019-11-04T19:45:17+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000376s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001274s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000296s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000955s ]
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 43 行.
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 44 行.
+NOTIC: [8] Undefined index: remark E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016248s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001376s ]
+
+[ 2019-11-04T19:52:53+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000330s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002873s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000359s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000970s ]
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 43 行.
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 44 行.
+NOTIC: [8] Undefined index: remark E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016104s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001439s ]
+
+[ 2019-11-04T19:53:45+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000249s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002265s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000349s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000974s ]
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 43 行.
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 44 行.
+NOTIC: [8] Undefined index: remark E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001378s ]
+
+[ 2019-11-04T19:54:43+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000188s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001956s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000340s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001077s ]
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 43 行.
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 44 行.
+NOTIC: [8] Undefined index: remark E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001693s ]
+
+[ 2019-11-04T19:55:28+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000255s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002333s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000961s ]
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 43 行.
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 44 行.
+NOTIC: [8] Undefined index: remark E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018482s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001522s ]
+
+[ 2019-11-04T19:55:40+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000161s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001549s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `user` WHERE `account` = 'test002' AND `name` = 'test2' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000334s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001012s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035146s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001385s ]
+
+[ 2019-11-04T19:55:42+08:00 ] 127.0.0.1 /index.php/Home/User/index.html?id=2&role=User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000167s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002341s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000369s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001132s ]
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 43 行.
+NOTIC: [8] Undefined index: work-year E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 44 行.
+NOTIC: [8] Undefined index: remark E:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024320s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025101s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001409s ]
+

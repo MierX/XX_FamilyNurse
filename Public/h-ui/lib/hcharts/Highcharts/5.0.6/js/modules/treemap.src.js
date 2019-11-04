@@ -104,11 +104,11 @@
             translateColors: seriesTypes.heatmap && seriesTypes.heatmap.prototype.translateColors,
             trackerGroups: ['group', 'dataLabelsGroup'],
             /**
-             * Creates an object map from parent id to childrens index.
+             * Creates an object map from parent id to childrens Index.
              * @param {Array} data List of points set in options.
              * @param {string} data[].parent Parent id of point.
              * @param {Array} ids List of all point ids.
-             * @return {Object} Map from parent id to children index in data.
+             * @return {Object} Map from parent id to children Index in data.
              */
             getListOfParents: function(data, ids) {
                 var listOfParents = reduce(data, function(prev, curr, i) {
@@ -649,7 +649,7 @@
             },
 
             /**
-             * Over the alignment method by setting z index
+             * Over the alignment method by setting z Index
              */
             alignDataLabel: function(point) {
                 seriesTypes.column.prototype.alignDataLabel.apply(this, arguments);

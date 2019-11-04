@@ -23,7 +23,7 @@ class IndexController extends Controller {
                 $_SESSION['account'] = $_POST['account'];
                 $_SESSION['role'] = $_POST['role'];
                 $_SESSION['name'] = $_POST['name'];
-                $this -> redirect('index');
+                $this -> redirect('Index');
             }
         }
         $this -> display();
@@ -56,7 +56,7 @@ class IndexController extends Controller {
                 $_SESSION['account'] = $info['account'];
                 $_SESSION['role'] = $info['role'];
                 $_SESSION['name'] = $info['name'];
-                $this -> redirect('index');
+                $this -> redirect('Index');
             } else {
                 $this -> error('信息输入错误！请重试！');
             }
@@ -68,6 +68,6 @@ class IndexController extends Controller {
         unset($_SESSION['account']);
         unset($_SESSION['role']);
         unset($_SESSION['name']);
-        $this -> redirect('index');
+        $this -> redirect('Index');
     }
 }

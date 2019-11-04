@@ -139,7 +139,7 @@
                     for (i = 0; i < numberOfValueColumnsNeeded; i++) {
                         if (!builder.hasReader(pointArrayMap[i])) {
                             //builder.addNextColumnReader(pointArrayMap[i]);
-                            // Create and add a column reader for the next free column index
+                            // Create and add a column reader for the next free column Index
                             builder.addColumnReader(undefined, pointArrayMap[i]);
                         }
                     }
@@ -703,14 +703,14 @@
                         builder = new SeriesBuilder();
                         builder.addColumnReader(0, 'x');
 
-                        // Mark index as used (not free)
+                        // Mark Index as used (not free)
                         index = inArray(0, freeIndexes);
                         if (index !== -1) {
                             freeIndexes.splice(index, 1);
                         }
 
                         for (i = 0; i < this.valueCount.global; i++) {
-                            // Create and add a column reader for the next free column index
+                            // Create and add a column reader for the next free column Index
                             builder.addColumnReader(undefined, this.valueCount.globalPointArrayMap[i]);
                         }
 
@@ -842,7 +842,7 @@
          * The output would then be points/rows of the form {x: 11, y1: 22, y2: 33}
          * 
          * The name of the builder is taken from the second column. In the above
-         * example it would be the column with index 7.
+         * example it would be the column with Index 7.
          * @constructor
          */
         SeriesBuilder = function() {
@@ -852,7 +852,7 @@
 
         /**
          * Populates readers with column indexes. A reader can be added without
-         * a specific index and for those readers the index is taken sequentially
+         * a specific Index and for those readers the Index is taken sequentially
          * from the free columns (this is handled by the ColumnCursor instance).
          * @returns {boolean}
          */
@@ -860,7 +860,7 @@
             var builder = this,
                 enoughColumns = true;
 
-            // Loop each reader and give it an index if its missing.
+            // Loop each reader and give it an Index if its missing.
             // The freeIndexes.shift() will return undefined if there
             // are no more columns.
             each(builder.readers, function(reader) {
@@ -915,7 +915,7 @@
                     // Sort the remaining
                     columnIndexes.sort();
 
-                    // Now use the lowest index as name column
+                    // Now use the lowest Index as name column
                     this.name = columns[columnIndexes.shift()].name;
                 }
             }
@@ -926,7 +926,7 @@
         /**
          * Creates and adds ColumnReader from the given columnIndex and configName.
          * ColumnIndex can be undefined and in that case the reader will be given
-         * an index when columns are populated.
+         * an Index when columns are populated.
          * @param columnIndex {Number | undefined}
          * @param configName
          */

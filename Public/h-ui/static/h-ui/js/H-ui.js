@@ -2655,7 +2655,7 @@ function stopDefault(e) {
 						_class += ' active';
 					}
 				}
-				ul.push('<li class="' + _class + '" data-index="' + i + '">' + value.replace(/@.*/, '') + '@' + domain + '</li>');
+				ul.push('<li class="' + _class + '" data-Index="' + i + '">' + value.replace(/@.*/, '') + '@' + domain + '</li>');
 			});
 
 			ul.push('</ul>');

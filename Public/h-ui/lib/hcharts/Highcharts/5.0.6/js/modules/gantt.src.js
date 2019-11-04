@@ -50,7 +50,7 @@
         /**
          * Checks if an axis is the outer axis in its dimension. Since
          * axes are placed outwards in order, the axis with the highest
-         * index is the outermost axis.
+         * Index is the outermost axis.
          *
          * Example: If there are multiple x-axes at the top of the chart,
          * this function returns true if the axis supplied is the last
@@ -67,14 +67,14 @@
             each(this.chart.axes, function(otherAxis, index) {
                 if (otherAxis.side === axis.side) {
                     if (otherAxis === axis) {
-                        // Get the index of the axis in question
+                        // Get the Index of the axis in question
                         thisIndex = index;
 
                         // Check thisIndex >= 0 in case thisIndex has
                         // not been found yet
                     } else if (thisIndex >= 0 && index > thisIndex) {
                         // There was an axis on the same side with a
-                        // higher index. Exit the loop.
+                        // higher Index. Exit the loop.
                         isOuter = false;
                         return;
                     }

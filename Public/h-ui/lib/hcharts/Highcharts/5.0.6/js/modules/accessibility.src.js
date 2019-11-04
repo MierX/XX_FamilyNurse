@@ -354,7 +354,7 @@
                 return series[0].points[0].highlight();
             }
 
-            // Find index of current point in series.points array. Necessary for dataGrouping (and maybe zoom?)
+            // Find Index of current point in series.points array. Necessary for dataGrouping (and maybe zoom?)
             if (curPoint.series.points[curPointIndex] !== curPoint) {
                 for (var i = 0; i < curPoint.series.points.length; ++i) {
                     if (curPoint.series.points[i] === curPoint) {
@@ -392,7 +392,7 @@
             }
         };
 
-        // Highlight export menu item by index
+        // Highlight export menu item by Index
         H.Chart.prototype.highlightExportItem = function(ix) {
             var listItem = this.exportDivElements && this.exportDivElements[ix],
                 curHighlighted = this.exportDivElements && this.exportDivElements[this.highlightedExportItem];
@@ -412,7 +412,7 @@
             }
         };
 
-        // Highlight range selector button by index
+        // Highlight range selector button by Index
         H.Chart.prototype.highlightRangeSelectorButton = function(ix) {
             var buttons = this.rangeSelector.buttons;
             // Deselect old
@@ -432,7 +432,7 @@
             return false;
         };
 
-        // Highlight legend item by index
+        // Highlight legend item by Index
         H.Chart.prototype.highlightLegendItem = function(ix) {
             var items = this.legend.allItems;
             if (items[this.highlightedLegendItemIx]) {
@@ -539,7 +539,7 @@
                 // If key was not tab, don't slip the next tab
                 chart.slipNextTab = false;
 
-                // If there is a navigation module for the current index, run it. Otherwise, we are outside of the chart in some direction.
+                // If there is a navigation module for the current Index, run it. Otherwise, we are outside of the chart in some direction.
                 if (curNavModule) {
                     if (curNavModule.run(e)) {
                         e.preventDefault(); // If successfully handled, stop the event here.
@@ -850,7 +850,7 @@
                 })
             ];
 
-            // Init nav module index. We start at the first module, and as the user navigates through the chart the index will increase to use different handler modules.
+            // Init nav module Index. We start at the first module, and as the user navigates through the chart the Index will increase to use different handler modules.
             chart.keyboardNavigationModuleIndex = 0;
 
             // Make chart reachable by tab

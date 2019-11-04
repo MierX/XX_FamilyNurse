@@ -121,11 +121,7 @@
 		</div>
 		<div id="info" style="float: left;font-size: 28px;margin-top: 14px;margin-left: 140px;">
 			<i class="Hui-iconfont">
-				<notempty name="Think.SESSION.name">
-					<a href="#" title="{$user.name}">&#xe625;</a>
-				<else />
-					<a href="{:U('login')}" title="{$user.name}">&#xe625;</a>
-				</notempty>
+				<a href="javascript:void(0);" onClick="member_show('个人信息','id={$user.id}&role={$user.role}','0','0')" title="{$user.name}">&#xe625;</a>
 			</i>
 			&nbsp;&nbsp;
 			<empty name="user.name">
@@ -226,8 +222,23 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/static/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="../../../../Public/h-ui/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="../../../../Public/h-ui/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/My97DatePicker/4.8/WdatePicker.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+	function member_show(title,url,w,h) {
+		var account = "{$Think.SESSION.account}";
+		if(account) {
+			title = "个人中心";
+			url = "{:U('User/index')}?"+url;
+			w = document.body.clientWidth*0.95;
+			h = document.body.clientHeight*0.85;
+			layer_show(title,url,w,h);
+		} else {
+			alert('请先登录');
+			window.location.href = "{:U('login')}";
+		}
+	}
+</script>
 </html>
