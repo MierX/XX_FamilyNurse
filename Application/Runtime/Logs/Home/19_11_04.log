@@ -419,3 +419,59 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000992s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001923s ]
 
+[ 2019-11-04T15:46:41+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000444s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003939s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003164s ]
+NOTIC: [8] Undefined index: role D:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001704s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.109306s ]
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 126 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 163 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 186 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 187 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 191 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 192 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.811761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.831567s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001933s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003549s ]
+
+[ 2019-11-04T15:48:28+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000186s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001744s ]
+NOTIC: [8] Undefined index: role D:\MyProject\XX_FamilyNurse\Application\Home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000413s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001233s ]
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 126 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 163 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 186 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 187 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 191 行.
+NOTIC: [8] Undefined variable: user D:\MyProject\XX_FamilyNurse\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 192 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001594s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000942s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001835s ]
+
