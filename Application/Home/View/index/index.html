@@ -121,7 +121,11 @@
 		</div>
 		<div id="info" style="float: left;font-size: 28px;margin-top: 14px;margin-left: 140px;">
 			<i class="Hui-iconfont">
-				<a href="{:U('User/index')}" title="{$user.name}">&#xe625;</a>
+				<notempty name="Think.SESSION.name">
+					<a href="#" title="{$user.name}">&#xe625;</a>
+				<else />
+					<a href="{:U('login')}" title="{$user.name}">&#xe625;</a>
+				</notempty>
 			</i>
 			&nbsp;&nbsp;
 			<empty name="user.name">

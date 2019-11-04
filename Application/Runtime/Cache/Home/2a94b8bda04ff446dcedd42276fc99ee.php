@@ -121,7 +121,9 @@
 		</div>
 		<div id="info" style="float: left;font-size: 28px;margin-top: 14px;margin-left: 140px;">
 			<i class="Hui-iconfont">
-				<a href="<?php echo U('User/index');?>" title="<?php echo ($user["name"]); ?>">&#xe625;</a>
+				<?php if(!empty($_SESSION['name'])): ?><a href="#" title="<?php echo ($user["name"]); ?>">&#xe625;</a>
+				<?php else: ?>
+					<a href="<?php echo U('login');?>" title="<?php echo ($user["name"]); ?>">&#xe625;</a><?php endif; ?>
 			</i>
 			&nbsp;&nbsp;
 			<?php if(empty($user["name"])): ?><i class="Hui-iconfont">
