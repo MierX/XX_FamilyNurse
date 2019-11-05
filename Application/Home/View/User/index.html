@@ -23,32 +23,67 @@
 			border: 0;
 			padding: 0;
 			margin: 0;
+			background-color: #e6e6e6;
+		}
+		input{
+			width: 450px!important;
+			display: block;
+			border: none!important;
+			border-bottom: 1px #ffffff dashed!important;
+			outline: none;
+			background-color: #E6E6E6;
+		}
+		ul > li {
+			font-size: 16px;
+			font-weight: bold;
+			text-align: right;
 		}
 	</style>
 </head>
 <body>
-	<div style="margin: auto;position: fixed;width: 50%;margin-left: 25%;">
-		<form>
-			<input class="input-text size-L radius size-L radius" type="hidden" value="{$user.id}" />
-			<input class="input-text size-L radius" type="text" value="{$user.name}" />
+	<div style="margin-left: 35%;margin-top: 5%;float: left;">
+		<ul>
+			<li style="margin-top: 9px">用户名：</li>
+			<li style="margin-top: 15px">身份：</li>
+			<li style="margin-top: 16px">性别：</li>
+			<li style="margin-top: 17px">年龄：</li>
+			<li style="margin-top: 15px">联系电话：</li>
+			<li style="margin-top: 15px">身份证号：</li>
+			<if condition="$user.role eq 'Nurse'">
+				<li style="margin-top: 18px">工号：</li>
+				<li style="margin-top: 15px">绩效点：</li>
+				<li style="margin-top: 17px">工龄：</li>
+				<li style="margin-top: 15px">现在就职医院：</li>
+				<li style="margin-top: 8px">自我介绍：</li>
+			</if>
+		</ul>
+	</div>
+	<div style="width: 460px;float: left;margin-top: 5%;text-align: left;">
+		<form style="border: none;outline: none;background-color: #E6E6E6">
+			<input class="input-text size-L radius" type="hidden" name="id" value="{$user.id}" />
+			<input style="border: none;outline: none;" class="input-text radius size-L" type="text" name="name" value="{$user.name}" />
 			<if condition="$user.role eq 'User'">
-					<input class="input-text size-L radius" type="text" value="用户" readonly="readonly" />
-				<elseif condition="$user.role eq 'Nurse'" />
-					<input class="input-text size-L radius" type="text" value="护士" readonly="readonly" />
+				<input class="input-text size-L radius" type="text" name="role" value="用户" readonly="readonly" />
+			<elseif condition="$user.role eq 'Nurse'" />
+				<input class="input-text size-L radius" type="text" name="role" value="护士" readonly="readonly" />
 			</if>
 			<if condition="$user.sex eq 1">
-				<input class="input-text size-L radius" type="text" value="男性" />
+				<input class="input-text size-L radius" type="text" name="sex" value="男性" />
 				<elseif condition="$user.sex eq 0" />
-				<input class="input-text size-L radius" type="text" value="女性" />
+				<input class="input-text size-L radius" type="text" name="sex" value="女性" />
 			</if>
-			<input class="input-text size-L radius" type="text" value="{$user.age}周岁" />
-			<input class="input-text size-L radius" type="text" value="{$user.phone}" />
-			<input class="input-text size-L radius" type="text" value="{$user.card}" readonly="readonly" />
-			<if condition="$user.role = 'Nurse'">
-				<input class="input-text size-L radius" type="text" value="{$user.work-year}年" />
-				<input class="input-text size-L radius" type="text" value="{$user.work-year}" />
-				<input class="input-text size-L radius" type="text" value="{$user.remark}" />
+			<input class="input-text size-L radius" type="text" name="age" value="{$user.age}周岁" />
+			<input class="input-text size-L radius" type="text" name="phone" value="{$user.phone}" />
+			<input class="input-text size-L radius" type="text" name="card" value="{$user.card}" readonly="readonly" />
+			<if condition="$user.role eq 'Nurse'">
+				<input class="input-text size-L radius" type="text" name="id" value="{$user.id}" />
+				<input class="input-text size-L radius" type="text" name="merits" value="{$user.merits}" readonly="readonly" />
+				<input class="input-text size-L radius" type="text" name="work-year" value="{$user.work-year}年" />
+				<input class="input-text size-L radius" type="text" name="work-add" value="{$user.work-add}" />
+				<textarea name="remark" style="width: 450px;height: 180px;background-color: #E6E6E6;border: none;" class="textarea">{$user.remark}</textarea>
+
 			</if>
+
 		</form>
 	</div>
 </body>
