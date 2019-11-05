@@ -8,7 +8,7 @@ class LoginController extends Controller {
 
     public function login() {
         if($_POST) {
-            $info = D('Admin') -> field('*') -> where(['account' => $_POST['account'], 'password' => $_POST['password']]) -> find();
+            $info = D('admin') -> field('*') -> where(['account' => $_POST['account'], 'password' => $_POST['password']]) -> find();
             if($info) {
                 $_SESSION['admin_role'] = $info['role'];
                 $_SESSION['admin_account'] = $info['account'];
