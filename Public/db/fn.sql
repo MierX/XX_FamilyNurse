@@ -11,7 +11,7 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 04/11/2019 15:01:20
+ Date: 05/11/2019 21:04:03
 */
 
 SET NAMES utf8mb4;
@@ -53,14 +53,15 @@ CREATE TABLE `nurse`  (
   `work-add` varchar(23) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `remark` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `addtime` int(10) NOT NULL,
+  `merits` bigint(128) NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of nurse
 -- ----------------------------
-INSERT INTO `nurse` VALUES (1, 'Nurse', 'test001', '123456', 'test1', 1, 18, 12312312300, 12345678900987654, '2', 'qwadasd', 'asdasdasdaf', 1572687086);
-INSERT INTO `nurse` VALUES (2, 'Nurse', 'test002', '123456', 'test2', 0, 27, 12312312301, 123123123123123123, '5', '123213', '12321312312312312312312321321321231231231233213213213', 1572687086);
+INSERT INTO `nurse` VALUES (1, 'Nurse', 'test001', '123456', 'test1', 1, 18, 12312312300, 12345678900987654, '2', 'qwadasd', 'asdasdasdaf', 1572687086, 0);
+INSERT INTO `nurse` VALUES (2, 'Nurse', 'test002', '123456', 'test2', 0, 46, 12312312301, 123123123123123123, '15', '123213', '12321312312312312312312321321321231231231233213213213', 1572687086, 0);
 
 -- ----------------------------
 -- Table structure for user
