@@ -9,5 +9,24 @@ class BaseController extends Controller {
 
     public function index(){
     }
+
+    public function search() {
+        foreach ($_GET as $key => $value) {
+            if($key == 'table') {
+                $table = $value;
+            } else {
+                if(stristr($value,'like')) {
+                    $value = json_decode(str_replace('|','',$value),true);
+                }
+                $where[$key] = $value;
+            }
+        }
+        $info = D($table) -> where($where) -> select();
+        $count = D($table) -> where($where) -> count();
+        $this -> count = $count;
+        $this -> role = $table;
+        $this -> data = $info;
+        unset($_GET);
+    }
 }
 ?>

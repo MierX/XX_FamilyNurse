@@ -18,6 +18,7 @@ class IndexController extends Controller {
                 unset($_POST['remark']);
             }
             $_POST['addtime'] = time();
+            $_POST['status'] = 1;
             $result = D($_POST['role']) -> add($_POST);
             if($result) {
                 $_SESSION['account'] = $_POST['account'];
@@ -48,9 +49,9 @@ class IndexController extends Controller {
     public function login() {
         if($_POST) {
             if($_POST['role'] == 'User') {
-                $info = D($_POST['role']) -> field('*') -> where(['account' => $_POST['account'], 'password' => $_POST['password']]) -> find();
+                $info = D($_POST['role']) -> field('*') -> where(['status' => 1, 'account' => $_POST['account'], 'password' => $_POST['password']]) -> find();
             } else if($_POST['role'] == 'Nurse') {
-                $info = D($_POST['role']) -> field('*') -> where(['account' => $_POST['account'], 'password' => $_POST['password'], 'id' => $_POST['job-num']]) -> find();
+                $info = D($_POST['role']) -> field('*') -> where(['status' => 1, 'account' => $_POST['account'], 'password' => $_POST['password'], 'id' => $_POST['job-num']]) -> find();
             }
             if($info) {
                 $_SESSION['account'] = $info['account'];
