@@ -7,6 +7,8 @@ class IndexController extends Controller {
             $user_info = D($_SESSION['role']) -> field('*') -> where(['account' => $_SESSION['account'], 'name' => $_SESSION['name']]) -> find();
             $this -> user = $user_info;
         }
+        $notice_info = D('Notice') -> where(['status' => 1]) -> order('addtime desc,hot desc') -> select();
+        $this -> notice = $notice_info;
         $this -> display();
     }
 
