@@ -18,24 +18,28 @@
     <script type="text/javascript" src="../../../../Public/h-ui/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <title>用户列表</title>
+    <title>公告管理</title>
 </head>
 <body>
 	<nav class="breadcrumb">
 		<i class="Hui-iconfont">&#xe67f;</i> 首页
-		<span class="c-gray en">&gt;</span> 用户管理
-		<if condition="$table == 'User'">
-			<span class="c-gray en">&gt;</span> 用户列表
-		<elseif condition="$table eq 'Nurse'" />
-			<span class="c-gray en">&gt;</span> 护士列表
-		</if>
+		<span class="c-gray en">&gt;</span> 公告管理
+        <span class="c-gray en">&gt;</span> 公告列表
 	</nav>
 	<div class="page-container">
 		<div class="text-c">
-			<input id="keyword" type="text" class="input-text" onmouseover="this.style.border = '1px #DDDDDD solid'" style="width:250px;" placeholder="输入用户电话" />
+            <input type="date" value="" id="min" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />
+            -
+            <input type="date" value="" id="max" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />
+			<input id="title" type="text" class="input-text" onmouseover="this.style.border = '1px #DDDDDD solid'" style="width:250px;" placeholder="输入公告标题" />
 			<button type="button" class="btn radius" onclick="search()">
-                <i class="Hui-iconfont">&#xe665;</i> 搜用户
+                <i class="Hui-iconfont">&#xe665;</i> 搜公告
             </button>
+            <span class="l">
+                <a href="javascript:;" onclick="show('发布公告','{:U(\'info\')}','1600','1200')" class="btn radius">
+                    <i class="Hui-iconfont">&#xe600;</i> 发布公告
+                </a>
+            </span>
             <span class="r">
                 统计：<strong>{$count}</strong> 条数据
             </span>
@@ -45,10 +49,10 @@
 				<thead>
                     <tr class="text-c">
                         <th>序号</th>
-                        <th>姓名</th>
-                        <th>性别</th>
-                        <th>手机</th>
-                        <th>注册时间</th>
+                        <th>标题</th>
+                        <th>作者</th>
+                        <th>热度</th>
+                        <th>发布时间</th>
                         <th>状态</th>
                     </tr>
 				</thead>
@@ -57,22 +61,16 @@
                         <tr class="text-c">
                             <td>{$vo.id}</td>
                             <td>
-                                <u style="cursor:pointer" class="text-primary" onclick="show('用户信息','{:U(\'info\')}?table={$table}&where[id]={$vo.id}','1600','1200')">{$vo.name}</u>
+                                <u style="cursor:pointer" class="text-primary" onclick="show('公告内容','{:U(\'info\')}?table=Notice&where[id]={$vo.id}','1600','1200')">{$vo.title}</u>
                             </td>
-                            <td>
-                                <if condition="$vo.sex eq 1">
-                                    男
-                                <else />
-                                    女
-                                </if>
-                            </td>
-                            <td>{$vo.phone}</td>
+                            <td>{$vo.author}</td>
+                            <td>{$vo.hot}</td>
                             <td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
                             <td class="td-status">
                                 <if condition="$vo.status eq 1">
-                                    <u style="cursor:pointer" class="text-primary" href="javascript:;" onclick="edit('?table={$table}&where[id]={$vo.id}&data[status]=2')">正常</u>
+                                    <u style="cursor:pointer" class="text-primary" href="javascript:;" onclick="edit('?table={$table}&where[id]={$vo.id}&data[status]=2')">开启</u>
                                 <else />
-                                    <u style="cursor:pointer" class="text-primary" href="javascript:;" onclick="edit('?table={$table}&&where[id]={$vo.id}&data[status]=1')">封号</u>
+                                    <u style="cursor:pointer" class="text-primary" href="javascript:;" onclick="edit('?table={$table}&where[id]={$vo.id}&data[status]=1')">关闭</u>
                                 </if>
                             </td>
                         </tr>
@@ -101,6 +99,7 @@
 		});
 
 	});
+
 	function show(title,url,id,w,h){
 		layer_show(title,url,w,h);
 	}
@@ -110,14 +109,53 @@
             window.location.href = "{:U(edit)}"+get;
         }
     }
-    function search() {
-	    var value = document.getElementById("keyword").value;
-        if(value || value === '0') {
-            value = ['%',value,'%'].join('|');
-            var phone = JSON.stringify(['like', value]);
-            window.location.href = "{:U('search')}?table={$table}&where[phone]="+phone;
+    function checkTime(id,value) {
+	    var time = new Date(value.replace(/-/g,'/')).getTime();
+	    var nowTime = new Date().getTime();
+	    if(time <= nowTime) {
+            if(id === 'max') {
+                var min = document.getElementById("min").value;
+                min = new Date(min.replace(/-/g,'/')).getTime();
+                if(min) {
+                    if(time <= min) {
+                        alert('请大于最小时间！');
+                        document.getElementById(id).value = '';
+                    }
+                } else {
+                    alert('请先选择最小时间！');
+                    document.getElementById(id).value = '';
+                }
+            }
         } else {
-            window.location.href = "{:U('User/index')}?table={$table}";
+	        alert('请选择正确时间！');
+	        document.getElementById(id).value = '';
+        }
+    }
+    function search() {
+	    var value = {
+	        'title' : document.getElementById("title").value,
+	        'min' : new Date((document.getElementById("min").value).replace(/-/g,'/')).getTime(),
+	        'max' : new Date((document.getElementById("max").value).replace(/-/g,'/')).getTime(),
+        };
+	    if(value['min'] && !value['max']) {
+            alert('请选择最大时间！');
+            window.location.href = "{:U('Notice/index')}?table={$table}";
+        }
+	    for(var key in value) {
+	        if(!value[key]) delete value[key];
+        }
+        if(Object.keys(value).length) {
+            var title = null;
+            var addtime = null;
+            if(value['title']) {
+                title = JSON.stringify(['like', ['%',value['title'],'%'].join('|')]);
+            }
+            if(value['min'] && value['max']) {
+                addtime = JSON.stringify(['between',[Number(value['min'].toString().slice(0,-3)),Number(value['max'].toString().slice(0,-3))+86400]]);
+            }
+            window.location.href = "{:U('search')}?table={$table}&where[title]="+title+"&where[addtime]="+addtime;
+        } else {
+            window.location.href = "{:U('Notice/index')}?table={$table}";
         }
     }
 </script>
