@@ -7,15 +7,13 @@ class IndexController extends Controller {
             $user_info = D($_SESSION['role']) -> field('*') -> where(['account' => $_SESSION['account'], 'name' => $_SESSION['name']]) -> find();
             $this -> user = $user_info;
         }
-        $notice_info = D('Notice') -> where(['status' => 1]) -> order('addtime desc,hot desc') -> select();
-        $nurse_info = D('Nurse') -> where(['status' => 1]) -> order('addtime desc,merits desc') -> select();
-        $this -> Notice = $notice_info;
-        $this -> Nurse = $nurse_info;
-        if($_GET['search_info']) {
-            $this -> $_GET['table'] = $_GET['search_info'];
-            unset($_GET);
-        }
         $this -> display('index');
+    }
+
+    public function noticeList() {
+        $notice_info = D('Notice') -> where(['status' => 1]) -> order('addtime desc,hot desc') -> select();
+        $this -> Notice = $notice_info;
+        $this -> display();
     }
 
     public function search() {
