@@ -11,7 +11,7 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 07/11/2019 18:58:20
+ Date: 08/11/2019 18:42:07
 */
 
 SET NAMES utf8mb4;
@@ -48,14 +48,22 @@ CREATE TABLE `notice`  (
   `status` int(1) NOT NULL DEFAULT 1,
   `addtime` int(10) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of notice
 -- ----------------------------
-INSERT INTO `notice` VALUES (1, 'test1', 1, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 2, 1522101156);
-INSERT INTO `notice` VALUES (2, 'test2', 1, '管理员', '<p>test22222222</p>', 1, 1573056000);
-INSERT INTO `notice` VALUES (3, 'test3', 1, '管理员', '<p>请新编辑内容</p>', 1, 1573117385);
+INSERT INTO `notice` VALUES (1, 'test1', 5, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
+INSERT INTO `notice` VALUES (2, 'test2', 3, '管理员', '<p>test22222222</p>', 1, 1573056000);
+INSERT INTO `notice` VALUES (3, 'test3', 29, '管理员', '<p>请新编辑内容</p>', 1, 1573117385);
+INSERT INTO `notice` VALUES (4, 'test1', 7, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
+INSERT INTO `notice` VALUES (5, 'test1', 6, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
+INSERT INTO `notice` VALUES (6, 'test1', 1, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
+INSERT INTO `notice` VALUES (7, 'test1', 1, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
+INSERT INTO `notice` VALUES (8, 'test1', 1, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
+INSERT INTO `notice` VALUES (9, 'test1', 1, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
+INSERT INTO `notice` VALUES (10, 'test1', 1, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
+INSERT INTO `notice` VALUES (11, 'test11', 1, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
 
 -- ----------------------------
 -- Table structure for nurse
@@ -73,7 +81,8 @@ CREATE TABLE `nurse`  (
   `card` bigint(18) NOT NULL,
   `work-year` varchar(23) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `work-add` varchar(23) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `merits` bigint(128) NULL DEFAULT 0,
+  `work-expertise` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `merits` bigint(128) NOT NULL DEFAULT 0,
   `remark` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1,
   `addtime` int(10) NOT NULL,
@@ -83,8 +92,8 @@ CREATE TABLE `nurse`  (
 -- ----------------------------
 -- Records of nurse
 -- ----------------------------
-INSERT INTO `nurse` VALUES (1, 'Nurse', 'test001', '123456', 'test1', 1, 18, 12312312300, 12345678900987654, '2', 'qwadasd', 0, 'asdasdasdaf', 2, 1572687086);
-INSERT INTO `nurse` VALUES (2, 'Nurse', 'test002', '123456', 'test2', 0, 46, 12312312301, 123123123123123123, '15', '123213', 0, '12321312312312312312312321321321231231231233213213213', 1, 1572687086);
+INSERT INTO `nurse` VALUES (1, 'Nurse', 'test001', '123456', 'test1', 1, 18, 12312312300, 12345678900987654, '2', 'qwadasd', NULL, 0, 'asdasdasdaf', 2, 1572687086);
+INSERT INTO `nurse` VALUES (2, 'Nurse', 'test002', '123456', 'test2', 0, 41, 12312312301, 123123123123123123, '15', '123213', NULL, 0, 'testtest', 1, 1572687086);
 
 -- ----------------------------
 -- Table structure for user
