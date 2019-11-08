@@ -126,14 +126,14 @@
             "bPaginate":false,
             "bInfo":false,
         })
-    })
+    });
 
     function show(title,url,w,h) {
     	var account = "{$Think.SESSION.account}";
     	if(account) {
-    		w = document.body.clientWidth*0.95;
-    		h = document.body.clientHeight*0.85;
-    		layer_show(title,url,w,h);
+    		w = parent.document.body.clientWidth*0.95;
+    		h = parent.document.body.clientHeight*0.85;
+    		parent.layer_show(title,url,w,h);
     	} else {
     		alert('请先登录');
     		parent.location.href = "{:U('login')}";

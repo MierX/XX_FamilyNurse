@@ -113,13 +113,13 @@
 		</div>
 		<ul id="top-ul">
 			<li>
-				<a data-href="{:U('noticeList')}" data-title="公告" href="javascript:void(0)">公告</a>
+				<a href="{:U('noticeList')}" target="targetText">公告</a>
 			</li>
 			<li>
-				<a href="javascript:;" onclick="tagValue('User')">患者需求</a>
+				<a href="{:U('userList')}" target="targetText">患者需求</a>
 			</li>
 			<li>
-				<a href="javascript:;" onclick="tagValue('Nurse')">驻站护士</a>
+				<a href="{:U('nurseList')}" target="targetText">驻站护士</a>
 			</li>
 		</ul>
 		<div id="search" style="float: left;margin-left: 50px;margin-top: 18px;background-color: #E6E6E6;padding-left: 10px;">
@@ -144,7 +144,7 @@
 	</div>
 	<div id="left" class="show_iframe">
 		<div style="display:none" class="loading"></div>
-		<iframe id="list" scrolling="auto" frameborder="0" src="{:U('noticeList')}"></iframe>
+		<iframe id="list" scrolling="auto" frameborder="0" name="targetText" src="{:U('noticeList')}"></iframe>
 	</div>
 	<div id="downBow"></div>
 	<div id="right">
@@ -239,29 +239,16 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
-	// window.onload = init();
-	//
-	// function init() {
-	// 	tagValue();
-	// }
-	//
-	// var status;
-	//
-	// function tagValue(value = 'Notice') {
-	// 	status = value;
-	// 	if(status === 'Notice') {
-	// 		document.getElementById('notice').style.display = '';
-	// 		document.getElementById('user').style.display = 'none';
-	// 		document.getElementById('nurse').style.display = 'none';
-	// 	} else if(status === 'User') {
-	// 		document.getElementById('notice').style.display = 'none';
-	// 		document.getElementById('user').style.display = '';
-	// 		document.getElementById('nurse').style.display = 'none';
-	// 	} else if(status === 'Nurse') {
-	// 		document.getElementById('notice').style.display = 'none';
-	// 		document.getElementById('user').style.display = 'none';
-	// 		document.getElementById('nurse').style.display = '';
-	// 	}
-	// }
+	function show(title,url,w,h) {
+		var account = "{$Think.SESSION.account}";
+		if(account) {
+			w = parent.document.body.clientWidth*0.95;
+			h = parent.document.body.clientHeight*0.85;
+			parent.layer_show(title,url,w,h);
+		} else {
+			alert('请先登录');
+			parent.location.href = "{:U('login')}";
+		}
+	}
 </script>
 </html>
