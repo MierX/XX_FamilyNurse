@@ -2,14 +2,33 @@
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
-    public function index(){
+    public function index() {
         if($_SESSION['role']) {
             $user_info = D($_SESSION['role']) -> field('*') -> where(['account' => $_SESSION['account'], 'name' => $_SESSION['name']]) -> find();
             $this -> user = $user_info;
         }
         $notice_info = D('Notice') -> where(['status' => 1]) -> order('addtime desc,hot desc') -> select();
-        $this -> notice = $notice_info;
-        $this -> display();
+        $nurse_info = D('Nurse') -> where(['status' => 1]) -> order('addtime desc,merits desc') -> select();
+        $this -> Notice = $notice_info;
+        $this -> Nurse = $nurse_info;
+        if($_GET['search_info']) {
+            $this -> $_GET['table'] = $_GET['search_info'];
+            unset($_GET);
+        }
+        $this -> display('index');
+    }
+
+    public function search() {
+        if($_GET) {
+            foreach ($_GET['where'] as $key => &$value) {
+                if(stristr($value,'null')) unset($_GET['where'][$key]);
+                if(stristr($value,'like')) $value = json_decode(str_replace('|','',$value),true);
+                if(stristr($value,'between')) $value = json_decode($value,true);
+            }
+            $info = D($_GET['table']) -> where($_GET['where']) -> select();
+            $_GET['search_info'] = $info;
+            $this -> index();
+        }
     }
 
     public function register() {

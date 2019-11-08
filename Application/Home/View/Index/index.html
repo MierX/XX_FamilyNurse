@@ -30,20 +30,20 @@
 			text-decoration: none;
 		}
 		body {
-			background-color: #f6f6f6;
+			background-color: #E6E6E6;
 		}
 		#top {
 			width: 100%;
 			height: 55px;
-			border-bottom: 1px #f6f6f6 solid;
+			border-bottom: 1px #E6E6E6 solid;
 			background-color: #ffffff;
 			position: fixed;
 		}
-		#notice,#user,#nurse {
+		#left,#downBow {
 			float: left;
 			margin-left: 450px;
 			width: 695px;
-			border: 1px #f6f6f6 solid;
+			border: 1px #E6E6E6 solid;
 			background-color: #ffffff;
 			margin-top: 65px;
 		}
@@ -58,7 +58,7 @@
 			width: 100%;
 			height: 195px;
 			background-color: #ffffff;
-			border: 1px #f6f6f6 solid;
+			border: 1px #E6E6E6 solid;
 		}
 		#right2 {
 			float: left;
@@ -66,7 +66,7 @@
 			height: 240px;
 			margin-top: 10px;
 			background-color: #ffffff;
-			border: 1px #f6f6f6 solid;
+			border: 1px #E6E6E6 solid;
 		}
 		#right3 {
 			float: left;
@@ -74,7 +74,7 @@
 			height: 355px;
 			margin-top: 10px;
 			background-color: #ffffff;
-			border: 1px #f6f6f6 solid;
+			border: 1px #E6E6E6 solid;
 		}
 		#top-ul > li {
 			float: left;
@@ -97,6 +97,13 @@
 			margin-top: 10px;
 			font-size: 16px;
 		}
+		#down1 ul > li {
+			float: left;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-size: 14px;
+			font-weight: 600;
+		}
 	</style>
 </head>
 <body>
@@ -106,22 +113,22 @@
 		</div>
 		<ul id="top-ul">
 			<li>
-				<a href="javascript:;" onclick="tagValue(1)">公告</a>
+				<a data-href="{:U('Notice/index')}" data-title="公告" href="javascript:void(0)">公告</a>
 			</li>
 			<li>
-				<a href="javascript:;" onclick="tagValue(2)">患者需求</a>
+				<a href="javascript:;" onclick="tagValue('User')">患者需求</a>
 			</li>
 			<li>
-				<a href="javascript:;" onclick="tagValue(3)">驻站护士</a>
+				<a href="javascript:;" onclick="tagValue('Nurse')">驻站护士</a>
 			</li>
 		</ul>
-		<div id="search" style="float: left;margin-left: 50px;margin-top: 18px;background-color: #f6f6f6;padding-left: 10px;">
-			<input type="text" class="input-text" style="background-color: #f6f6f6;width: 180px;border: none;" name="keyword" value="" placeholder="请输入您想要搜索的内容" />
-			<input type="button" class="btn radius" value="搜索" style="border: none; background-color: #f6f6f6" onclick="search()" />
+		<div id="search" style="float: left;margin-left: 50px;margin-top: 18px;background-color: #E6E6E6;padding-left: 10px;">
+			<input type="text" class="input-text" style="background-color: #E6E6E6;width: 180px;border: none;" name="keyword" value="" placeholder="请输入您想要搜索的内容" />
+			<input type="button" class="btn radius" value="搜索" style="border: none; background-color: #E6E6E6" onclick="search()" />
 		</div>
 		<div id="info" style="float: left;font-size: 28px;margin-top: 14px;margin-left: 140px;">
 			<i class="Hui-iconfont">
-				<a href="javascript:void(0);" onClick="member_show('个人信息','id={$user.id}&role={$user.role}','0','0')" title="{$user.name}">&#xe625;</a>
+				<a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')" title="{$user.name}">&#xe625;</a>
 			</i>
 			&nbsp;&nbsp;
 			<empty name="user.name">
@@ -135,32 +142,11 @@
 			</empty>
 		</div>
 	</div>
-	<div id="notice">
-		<div id="bow" style="width: 90%;margin-left: 5%;">
-			<table class="table table-border table-bordered table-hover table-bg table-sort" style="border: none!important;">
-				<thead>
-				<tr class="text-c">
-					<th style="text-align: left;height: 1px;background-color: #ffffff;border: none!important;"></th>
-				</tr>
-				</thead>
-				<tbody>
-				<volist name="notice" id="vo">
-					<tr class="text-c">
-						<td style="border: none!important;">
-							<u style="cursor:pointer;" class="text-primary" onclick="show('公告内容','{:U(\'info\')}?table=Notice&where[id]={$vo.id}','1600','1200')">{$vo.title}</u>
-						</td>
-					</tr>
-				</volist>
-				</tbody>
-			</table>
-		</div>
+	<div id="left" class="show_iframe">
+		<div style="display:none" class="loading"></div>
+		<iframe id="list" scrolling="auto" frameborder="0" src="{:U('Notice/index')}"></iframe>
 	</div>
-	<div id="user">
-		2
-	</div>
-	<div id="nurse">
-		3
-	</div>
+	<div id="downBow"></div>
 	<div id="right">
 		<div id="right1">
 			<ul id="right1-ul">
@@ -201,11 +187,11 @@
 					<a href="{:U('Nurse/index')}">查看医生</a>
 				</li>
 				<li>
-					<Hr style="width: 90%; margin-left: 5%; background-color: #f6f6f6;margin-top: 10px;margin-bottom: 10px;" size="4">
+					<Hr style="width: 90%; margin-left: 5%; background-color: #E6E6E6;margin-top: 10px;margin-bottom: 10px;" size="4">
 				</li>
 				<li style="margin-left: 5%;font-size: 14px">
 					<i class="Hui-iconfont">&#xe62c;</i>
-					<a href="javascript:void(0);" onClick="member_show('个人信息','id={$user.id}&role={$user.role}','0','0')">个人中心</a>
+					<a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')">个人中心</a>
 				</li>
 			</ul>
 		</div>
@@ -238,9 +224,9 @@
 		<div id="right3">
 			<p style="margin-top: 10px;margin-left: 15px">
 				<i class="Hui-iconfont" style="font-size: 18px">&#xe69d;&nbsp;&nbsp;我的收藏</i>
-				<input type="text" class="input-text" style="float: right;width: 25px;height: 25px;margin-right: 20px;margin-top: 2px;background-color: #f6f6f6;border: none;text-align: center;" value="0" />
-				<hr style="width: 90%;background-color: #f6f6f6;margin-left: 5%;" size="5" />
+				<input type="text" class="input-text" style="float: right;width: 25px;height: 25px;margin-right: 20px;margin-top: 2px;background-color: #E6E6E6;border: none;text-align: center;" value="0" />
 			</p>
+			<hr style="width: 90%;background-color: #E6E6E6;margin-left: 5%;" size="5" />
 		</div>
 	</div>
 </body>
@@ -251,50 +237,31 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/My97DatePicker/4.8/WdatePicker.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
-	window.onload = init();
-	
-	function init() {
-		tagValue();
-	}
-
-	function tagValue(value = 1) {
-		if(value === 1) {
-			document.getElementById('notice').style.display = '';
-			document.getElementById('user').style.display = 'none';
-			document.getElementById('nurse').style.display = 'none';
-		} else if(value === 2) {
-			document.getElementById('notice').style.display = 'none';
-			document.getElementById('user').style.display = '';
-			document.getElementById('nurse').style.display = 'none';
-		} else if(value === 3) {
-			document.getElementById('notice').style.display = 'none';
-			document.getElementById('user').style.display = 'none';
-			document.getElementById('nurse').style.display = '';
-		}
-	}
-	
-	function member_show(title,url,w,h) {
-		var account = "{$Think.SESSION.account}";
-		if(account) {
-			title = "个人中心";
-			url = "{:U('User/index')}?"+url;
-			w = document.body.clientWidth*0.95;
-			h = document.body.clientHeight*0.85;
-			layer_show(title,url,w,h);
-		} else {
-			alert('请先登录');
-			window.location.href = "{:U('login')}";
-		}
-	}
-
-	$(function(){
-		$('.table-sort').dataTable({
-			"searching":false,
-			"bLengthChange":false,
-			'bSort':false,
-		});
-
-	});
+	// window.onload = init();
+	//
+	// function init() {
+	// 	tagValue();
+	// }
+	//
+	// var status;
+	//
+	// function tagValue(value = 'Notice') {
+	// 	status = value;
+	// 	if(status === 'Notice') {
+	// 		document.getElementById('notice').style.display = '';
+	// 		document.getElementById('user').style.display = 'none';
+	// 		document.getElementById('nurse').style.display = 'none';
+	// 	} else if(status === 'User') {
+	// 		document.getElementById('notice').style.display = 'none';
+	// 		document.getElementById('user').style.display = '';
+	// 		document.getElementById('nurse').style.display = 'none';
+	// 	} else if(status === 'Nurse') {
+	// 		document.getElementById('notice').style.display = 'none';
+	// 		document.getElementById('user').style.display = 'none';
+	// 		document.getElementById('nurse').style.display = '';
+	// 	}
+	// }
 </script>
 </html>

@@ -24,7 +24,6 @@ class BaseController extends Controller {
             if(stristr($value,'like')) $value = json_decode(str_replace('|','',$value),true);
             if(stristr($value,'between')) $value = json_decode($value,true);
         }
-        dump($_GET['where']);
         $info = D($_GET['table']) -> where($_GET['where']) -> select();
         $count = D($_GET['table']) -> where($_GET['where']) -> count();
         $this -> count = $count;

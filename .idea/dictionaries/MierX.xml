@@ -5,10 +5,16 @@
       <w>closeall</w>
       <w>closethis</w>
       <w>datatables</w>
+      <w>fontfamily</w>
+      <w>forecolor</w>
       <w>huiadminmenu</w>
+      <w>insertimage</w>
+      <w>inserttable</w>
       <w>laypage</w>
       <w>myselfinfo</w>
       <w>navbar</w>
+      <w>simpleupload</w>
+      <w>spechars</w>
       <w>userbar</w>
       <w>wdate</w>
     </words>
