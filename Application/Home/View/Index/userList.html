@@ -38,22 +38,37 @@
         body::-webkit-scrollbar {
             display: none;
         }
-        #down ul > li {
+        #top-ul > li {
             float: left;
-            padding-left: 10px;
-            padding-right: 10px;
-            font-size: 14px;
-            font-weight: 600;
+            margin-left: 30px;
+            font-size: 18px;
+            margin-top: 18px;
         }
+        #right1-ul > li {
+            float: left;
+            margin-top: 20px;
+            margin-left: 58px;
+            font-size: 20px;
+        }
+        #right1-ul1 > li {
+            float: left;
+            font-size: 18px;
+        }
+        #right2-ul > li {
+            margin-left: 20px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
     </style>
 </head>
 <body>
     <div id="notice">
-        <div id="bow" style="width: 100%;">
+        <div id="bow1" style="width: 100%;">
             <table class="table table-border table-bordered table-hover table-bg table-sort" style="border: none!important;">
                 <thead>
                     <tr class="text-c">
-                        <th style="background-color: #ffffff;border: none!important;padding: 0">
+                        <th style="background-color: #ffffff;border: none!important;">
 <!--                            <div class="text-c" style="float: left">-->
 <!--                                <input type="date" value="" id="min" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />-->
 <!--                                - -->
@@ -66,14 +81,14 @@
                     <volist name="Notice" id="vo">
                         <tr class="text-c" style="background-color: #ffffff">
                             <td style="height: 185px;margin-top: 50px;border: none;">
-                                <div id="content" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','{:U(\'Notice/index\')}?id={$vo.id}','0','0')">
+                                <div id="content1" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','{:U(\'Notice/index\')}?id={$vo.id}','0','0')">
                                     <div id="up1" style="text-align: left">
                                         <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #1A1A1A" onmousemove="this.style.color='blue'" onmouseout="this.style.color = '#1A1A1A'">{$vo.title}</u>
                                     </div>
-                                    <div id="mid" style="margin-top: 10px;padding-left: 5px;height: 90px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
+                                    <div id="mid1" style="margin-top: 10px;padding-left: 5px;height: 90px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
                                         <u style="font-size: 16px;line-height: 1.67;">{$vo.content}</u>
                                     </div>
-                                    <div id="down">
+                                    <div id="down1">
                                         <ul>
                                             <li>热度：{$vo.hot}</li>
                                             <li>发布者：{$vo.author}</li>

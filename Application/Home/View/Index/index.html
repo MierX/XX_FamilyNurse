@@ -32,201 +32,213 @@
 		body {
 			background-color: #E6E6E6;
 		}
-		#top {
+		#content {
 			width: 100%;
-			height: 55px;
+			position: static;
+
+		}
+		#top {
+            float: left;
+			width: 100%;
+			height: 5%;
+			padding-left: 21.5%;
 			border-bottom: 1px #E6E6E6 solid;
 			background-color: #ffffff;
 			position: fixed;
+			z-index: 99;
 		}
-		#left,#downBow {
+		#top ul > li {
 			float: left;
-			margin-left: 450px;
-			width: 695px;
+			margin-left: 2%;
+			margin-top: 1%;
+			font-size: 18px;
+		}
+		#top ul > li > input {
+			background-color: #E6E6E6;
+			border: none;
+		}
+		#body {
+			width: 53%;
+            height: 100%;
+			margin-left: 23.5%;
+            position: fixed;
+		}
+        #left {
+            float: left;
+			width: 68%;
 			border: 1px #E6E6E6 solid;
 			background-color: #ffffff;
-			margin-top: 65px;
+			margin-top: 6%;
 		}
-		#right {
-			float: left;
-			width: 295px;
-			margin-top: 65px;
-			margin-left: 8px;
+        #right {
+			float: right;
+			width: 29%;
+            margin-top: 6%;
 		}
-		#right1 {
-			float: left;
+		#right_1 {
 			width: 100%;
 			height: 195px;
+			padding-top: 7%;
 			background-color: #ffffff;
 			border: 1px #E6E6E6 solid;
+		}
+        #ul_1 > li {
+            float: left;
+            margin-left: 19%;
+            font-size: 24px;
+        }
+		#ul_2 > li {
+			float: left;
+			font-size: 20px;
+			margin-left: 9.5%;
 		}
 		#right2 {
-			float: left;
 			width: 100%;
 			height: 240px;
-			margin-top: 10px;
+			margin-top: 4.5%;
 			background-color: #ffffff;
 			border: 1px #E6E6E6 solid;
 		}
-		#right3 {
-			float: left;
-			width: 100%;
-			height: 355px;
-			margin-top: 10px;
-			background-color: #ffffff;
-			border: 1px #E6E6E6 solid;
-		}
-		#top-ul > li {
-			float: left;
-			margin-left: 30px;
-			font-size: 18px;
-			margin-top: 18px;
-		}
-		#right1-ul > li {
-			float: left;
-			margin-top: 20px;
-			margin-left: 58px;
-			font-size: 20px;
-		}
-		#right1-ul1 > li {
-			float: left;
-			font-size: 18px;
-		}
-		#right2-ul > li {
-			margin-left: 20px;
-			margin-top: 10px;
+		#ul_3 > li {
+			margin-left: 5%;
+			margin-top: 3.5%;
 			font-size: 16px;
 		}
-		#down1 ul > li {
-			float: left;
-			padding-left: 10px;
-			padding-right: 10px;
-			font-size: 14px;
-			font-weight: 600;
+		#right3 {
+			width: 100%;
+			height: 355px;
+			margin-top: 4.5%;
+			background-color: #ffffff;
+			border: 1px #E6E6E6 solid;
 		}
 	</style>
 </head>
 <body>
-	<div id="top">
-		<div id="title" style="margin-left: 450px;float: left">
-			<a href="{:U('index')}" style="font-size: 32px;">XX家庭护士网</a>
-		</div>
-		<ul id="top-ul">
-			<li>
-				<a href="{:U('noticeList')}" target="targetText">公告</a>
-			</li>
-			<li>
-				<a href="{:U('userList')}" target="targetText">患者需求</a>
-			</li>
-			<li>
-				<a href="{:U('nurseList')}" target="targetText">驻站护士</a>
-			</li>
-		</ul>
-		<div id="search" style="float: left;margin-left: 50px;margin-top: 18px;background-color: #E6E6E6;padding-left: 10px;">
-			<input type="text" class="input-text" style="background-color: #E6E6E6;width: 180px;border: none;" name="keyword" value="" placeholder="请输入您想要搜索的内容" />
-			<input type="button" class="btn radius" value="搜索" style="border: none; background-color: #E6E6E6" onclick="search()" />
-		</div>
-		<div id="info" style="float: left;font-size: 28px;margin-top: 14px;margin-left: 140px;">
-			<i class="Hui-iconfont">
-				<a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')" title="{$user.name}">&#xe625;</a>
-			</i>
-			&nbsp;&nbsp;
-			<empty name="user.name">
-				<i class="Hui-iconfont">
-					<a href="{:U('login')}" title="登陆">&#xe645;</a>
-				</i>
-			<else />
-				<i class="Hui-iconfont">
-					<a href="{:U('logout')}" title="注销">&#xe634;</a>
-				</i>
-			</empty>
-		</div>
-	</div>
-	<div id="left" class="show_iframe">
-		<div style="display:none" class="loading"></div>
-		<iframe id="list" scrolling="auto" frameborder="0" name="targetText" src="{:U('noticeList')}"></iframe>
-	</div>
-	<div id="downBow"></div>
-	<div id="right">
-		<div id="right1">
-			<ul id="right1-ul">
+	<div id="content">
+		<div id="top">
+			<ul>
+				<li style="margin-top: 0">
+					<a href="{:U('index')}" style="font-size: 32px;">XX家庭护士网</a>
+				</li>
 				<li>
-					<if condition="$user.role eq 'Nurse'">
+					<a href="{:U('noticeList')}" target="targetText">公告</a>
+				</li>
+				<li>
+					<a href="{:U('userList')}" target="targetText">患者需求</a>
+				</li>
+				<li>
+					<a href="{:U('nurseList')}" target="targetText">驻站护士</a>
+				</li>
+				<li style="background-color: #E6E6E6;margin-top: 0.8%;margin-left: 3.5%;">
+					<input type="text" class="input-text" style="width: 180px;" name="keyword" value="" placeholder="请输入您想要搜索的内容" />
+					<input type="button" class="btn radius" value="搜索" onclick="search()" />
+				</li>
+				<li style="margin-left: 7%">
+					<i class="Hui-iconfont">
+						<a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')" title="{$user.name}">&#xe625;</a>
+					</i>
+				</li>
+				<li>
+					<empty name="user.name">
 						<i class="Hui-iconfont">
-							<a href="{:U('Nurse/index')}">&#xe627;</a>
+							<a href="{:U('login')}" title="登陆">&#xe645;</a>
 						</i>
+					<else />
+						<i class="Hui-iconfont">
+							<a href="{:U('logout')}" title="注销">&#xe634;</a>
+						</i>
+					</empty>
+				</li>
+			</ul>
+		</div>
+		<div id="body">
+            <div id="left" class="show_iframe">
+                <iframe id="list" scrolling="auto" frameborder="0" name="targetText" src="{:U('noticeList')}"></iframe>
+            </div>
+            <div id="right">
+                <div id="right_1">
+                    <ul id="ul_1">
+                        <li>
+                            <if condition="$user.role eq 'Nurse'">
+                                <i class="Hui-iconfont">
+                                    <a href="{:U('Nurse/index')}">&#xe627;</a>
+                                </i>
+                            <else />
+                                <i class="Hui-iconfont">
+                                    <a href="{:U('Need/add')}">&#xe60c;</a>
+                                </i>
+                            </if>
+                        </li>
+                        <li>
+                            <i class="Hui-iconfont">
+                                <a href="{:U('Talk/index')}">&#xe68a;</a>
+                            </i>
+                        </li>
+                        <li>
+                            <i class="Hui-iconfont">
+                                <a href="{:U('User/index')}">&#xe686;</a>
+                            </i>
+                        </li>
+                    </ul>
+                    <ul id="ul_2">
+						<li>
+							<if condition="$user.role eq 'Nurse'">
+								看需求
+							<else />
+								发需求
+							</if>
+						</li>
+                        <li>看信箱</li>
+                        <li>查记录</li>
+                    </ul>
+                    <ul style="margin-top: 40%">
+                        <li style="margin-left: 5%;font-size: 14px">
+                            <i class="Hui-iconfont" style="color: red">&#xe600;</i>
+                            <a href="{:U('Nurse/index')}">查看医生</a>
+                        </li>
+                        <li>
+                            <Hr style="width: 90%; margin-left: 5%; background-color: #E6E6E6;margin-top: 10px;margin-bottom: 10px;" size="4">
+                        </li>
+                        <li style="margin-left: 5%;font-size: 14px">
+                            <i class="Hui-iconfont">&#xe62c;</i>
+                            <a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')">个人中心</a>
+                        </li>
+                    </ul>
+                </div>
+				<div id="right2">
+					<ul id="ul_3">
+						<li style="margin-top: 8%;">姓名：{$user.name|default='未登录'}</li>
+						<if condition="$user.role eq 'User'">
+							<li>身份：用户</li>
+						<elseif condition="$user.role eq 'Nurse'" />
+							<li>身份：护士</li>
 						<else />
-						<i class="Hui-iconfont">
-							<a href="{:U('Need/add')}">&#xe60c;</a>
-						</i>
-					</if>
-				</li>
-				<li>
-					<i class="Hui-iconfont">
-						<a href="{:U('Talk/index')}">&#xe68a;</a>
-					</i>
-				</li>
-				<li>
-					<i class="Hui-iconfont">
-						<a href="{:U('User/index')}">&#xe686;</a>
-					</i>
-				</li>
-			</ul>
-			<ul id="right1-ul1">
-				<if condition="$user.role eq 'Nurse'">
-					<li style="margin-left: 40px">看需求</li>
-					<else />
-					<li style="margin-left: 40px">发需求</li>
-				</if>
-				<li style="margin-left: 24px">看信箱</li>
-				<li style="margin-left: 24px">查记录</li>
-			</ul>
-			<ul style="margin-top: 120px">
-				<li style="margin-left: 5%;font-size: 14px">
-					<i class="Hui-iconfont" style="color: red">&#xe600;</i>
-					<a href="{:U('Nurse/index')}">查看医生</a>
-				</li>
-				<li>
-					<Hr style="width: 90%; margin-left: 5%; background-color: #E6E6E6;margin-top: 10px;margin-bottom: 10px;" size="4">
-				</li>
-				<li style="margin-left: 5%;font-size: 14px">
-					<i class="Hui-iconfont">&#xe62c;</i>
-					<a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')">个人中心</a>
-				</li>
-			</ul>
-		</div>
-		<div id="right2">
-			<ul id="right2-ul">
-				<li style="margin-top: 30px;">姓名：{$user.name|default='未登录'}</li>
-				<if condition="$user.role eq 'User'">
-					<li>身份：用户</li>
-				<elseif condition="$user.role eq 'Nurse'" />
-					<li>身份：护士</li>
-				<else />
-					<li>身份：未登录</li>
-				</if>
-				<if condition="$user.sex eq 1">
-					<li>性别：男</li>
-					<elseif condition="$user.sex eq 2" />
-					<li>性别：女</li>
-					<else />
-					<li>性别：未登录</li>
-				</if>
-				<li>年龄：{$user.age|default='未登录'}</li>
-				<li>手机：{$user.phone|default='未登录'}</li>
-				<notempty name="user.addtime">
-					<li>注册时间：{$user.addtime|date='Y-m-d H:i:s', ###}</li>
-				<else />
-					<li>注册时间：未登录</li>
-				</notempty>
-			</ul>
-		</div>
-		<div id="right3">
-			<p style="margin-top: 10px;margin-left: 15px">
-				<i class="Hui-iconfont" style="font-size: 18px">&#xe69d;&nbsp;&nbsp;我的收藏</i>
-				<input type="text" class="input-text" style="float: right;width: 25px;height: 25px;margin-right: 20px;margin-top: 2px;background-color: #E6E6E6;border: none;text-align: center;" value="0" />
-			</p>
-			<hr style="width: 90%;background-color: #E6E6E6;margin-left: 5%;" size="5" />
+							<li>身份：未登录</li>
+						</if>
+						<if condition="$user.sex eq 1">
+							<li>性别：男</li>
+						<elseif condition="$user.sex eq 0" />
+							<li>性别：女</li>
+						<else />
+							<li>性别：未登录</li>
+						</if>
+						<li>年龄：{$user.age|default='未登录'}</li>
+						<li>手机：{$user.phone|default='未登录'}</li>
+						<notempty name="user.addtime">
+							<li>注册时间：{$user.addtime|date='Y-m-d H:i:s', ###}</li>
+						<else />
+							<li>注册时间：未登录</li>
+						</notempty>
+					</ul>
+				</div>
+				<div id="right3">
+					<p style="margin-top: 10px;margin-left: 15px;cursor: default">
+						<i class="Hui-iconfont" style="font-size: 18px">&#xe69d;&nbsp;&nbsp;我的收藏</i>
+						<input type="text" class="input-text" style="float: right;width: 25px;height: 25px;margin-right: 20px;margin-top: 2px;background-color: #E6E6E6;border: none;text-align: center;cursor: default" value="17" readonly="readonly" />
+					</p>
+					<hr style="width: 90%;background-color: #E6E6E6;margin-left: 5%;" size="5" />
+				</div>
+            </div>
 		</div>
 	</div>
 </body>

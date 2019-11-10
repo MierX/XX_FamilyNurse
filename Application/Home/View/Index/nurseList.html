@@ -38,6 +38,13 @@
         body::-webkit-scrollbar {
             display: none;
         }
+        ul > li {
+            float: left;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
         #down ul > li {
             float: left;
             padding-left: 10px;
@@ -48,36 +55,43 @@
     </style>
 </head>
 <body>
-    <div id="notice">
+    <div id="nurse">
         <div id="bow" style="width: 100%;">
             <table class="table table-border table-bordered table-hover table-bg table-sort" style="border: none!important;">
                 <thead>
                     <tr class="text-c">
-                        <th style="background-color: #ffffff;border: none!important;padding: 0">
-<!--                            <div class="text-c" style="float: left">-->
-<!--                                <input type="date" value="" id="min" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />-->
-<!--                                - -->
-<!--                                <input type="date" value="" id="max" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />-->
-<!--                            </div>-->
-                        </th>
+                        <th style="background-color: #ffffff;border: none!important;padding: 0;"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <volist name="Notice" id="vo">
+                    <volist name="Nurse" id="vo">
                         <tr class="text-c" style="background-color: #ffffff">
-                            <td style="height: 185px;margin-top: 50px;border: none;">
-                                <div id="content" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','{:U(\'Notice/index\')}?id={$vo.id}','0','0')">
+                            <td>
+                                <div id="content" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','{:U(\'Nurse/index\')}?id={$vo.id}','0','0')">
                                     <div id="up1" style="text-align: left">
-                                        <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #1A1A1A" onmousemove="this.style.color='blue'" onmouseout="this.style.color = '#1A1A1A'">{$vo.title}</u>
+                                        <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #1A1A1A">
+                                            <ul>
+                                                <li>工号：{$vo.id}</li>
+                                                <li>姓名：{$vo.name}</li>
+                                                <li>性别：
+                                                    <if condition="vo.sex eq 1">
+                                                        男
+                                                        <else />
+                                                        女
+                                                    </if>
+                                                </li>
+                                                <li>年龄：{$vo.age}</li>
+                                                <li>绩效：{$vo.merits}</li>
+                                            </ul>
+                                        </u>
                                     </div>
-                                    <div id="mid" style="margin-top: 10px;padding-left: 5px;height: 90px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
-                                        <u style="font-size: 16px;line-height: 1.67;">{$vo.content}</u>
-                                    </div>
+                                    <div id="mid" style="padding-left: 5px;height: 30px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;"></div>
                                     <div id="down">
                                         <ul>
-                                            <li>热度：{$vo.hot}</li>
-                                            <li>发布者：{$vo.author}</li>
-                                            <li>发布时间：{$vo.addtime|date='Y-m-d H:i:s',###}</li>
+                                            <li>工龄：{$vo.work-year}</li>
+                                            <li>就职医院：{$vo.work-add}</li>
+                                            <li>专长领域：{$vo.work-expertise|default='无'}</li>
+                                            <li>注册时间：{$vo.addtime|date='Y-m-d',###}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -118,39 +132,5 @@
     		parent.location.href = "{:U('login')}";
     	}
     }
-
-    // function checkTime(id,value) {
-    // 	var time = new Date(value.replace(/-/g,'/')).getTime();
-    // 	var nowTime = new Date().getTime();
-    // 	if(time <= nowTime) {
-    // 		if(id === 'max') {
-    // 			var min = document.getElementById("min").value;
-    // 			min = new Date(min.replace(/-/g,'/')).getTime();
-    // 			if(min) {
-    // 				if(time <= min) {
-    // 					alert('请大于最小时间！');
-    // 					document.getElementById(id).value = '';
-    // 				} else {
-    // 					search('Notice');
-    // 				}
-    // 			} else {
-    // 				alert('请先选择最小时间！');
-    // 				document.getElementById(id).value = '';
-    // 			}
-    // 		}
-    // 	} else {
-    // 		alert('请选择正确时间！');
-    // 		document.getElementById(id).value = '';
-    // 	}
-    // }
-
-    // function search(table = '') {
-    // 	var value = {
-    // 		'min' : new Date((document.getElementById("min").value).replace(/-/g,'/')).getTime(),
-    // 		'max' : new Date((document.getElementById("max").value).replace(/-/g,'/')).getTime(),
-    // 	};
-    // 	var addtime = JSON.stringify(['between',[Number(value['min'].toString().slice(0,-3)),Number(value['max'].toString().slice(0,-3))+86400]]);
-    // 	window.location.href = "{:U('search')}?table="+table+"&where[addtime]="+addtime;
-    // }
 </script>
 </html>

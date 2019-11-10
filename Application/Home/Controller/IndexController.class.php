@@ -16,6 +16,18 @@ class IndexController extends Controller {
         $this -> display();
     }
 
+    public function userList() {
+        $notice_info = D('Notice') -> where(['status' => 1]) -> order('addtime desc,hot desc') -> select();
+        $this -> Notice = $notice_info;
+        $this -> display();
+    }
+
+    public function nurseList() {
+        $nurse_info = D('Nurse') -> where(['status' => 1]) -> order('addtime desc,merits desc') -> select();
+        $this -> Nurse = $nurse_info;
+        $this -> display();
+    }
+
     public function search() {
         if($_GET) {
             foreach ($_GET['where'] as $key => &$value) {
