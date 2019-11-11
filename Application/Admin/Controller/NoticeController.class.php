@@ -5,7 +5,13 @@ use Think\Controller;
 
 class NoticeController extends BaseController {
     public function index() {
-        parent::index();
+        $value = parent::index();
+        $table = $value[0];
+        $count = $value[1];
+        $info_list = $value[2];
+        $this -> table = $table;
+        $this -> count = $count;
+        $this -> data = $info_list;
         $this -> display('index');
     }
 
@@ -15,12 +21,16 @@ class NoticeController extends BaseController {
     }
 
     public function info() {
-        parent::info();
+        $info = parent::info();
+        $this -> data = $info;
         $this -> display();
     }
 
     public function search() {
-        parent::search();
+        $value = parent::search();
+        $this -> table = $value[0];
+        $this -> count = $value[1];
+        $this -> data = $value[2];
         $this -> display('index');
     }
 }

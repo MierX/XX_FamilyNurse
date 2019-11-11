@@ -5,6 +5,7 @@
       <w>closeall</w>
       <w>closethis</w>
       <w>datatables</w>
+      <w>endtime</w>
       <w>fontfamily</w>
       <w>forecolor</w>
       <w>huiadminmenu</w>
@@ -15,8 +16,10 @@
       <w>navbar</w>
       <w>simpleupload</w>
       <w>spechars</w>
+      <w>strtotime</w>
       <w>userbar</w>
       <w>wdate</w>
+      <w>worktime</w>
     </words>
   </dictionary>
 </component>

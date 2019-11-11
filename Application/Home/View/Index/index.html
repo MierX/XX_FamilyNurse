@@ -124,7 +124,7 @@
 					<a href="{:U('noticeList')}" target="targetText">公告</a>
 				</li>
 				<li>
-					<a href="{:U('userList')}" target="targetText">患者需求</a>
+					<a href="{:U('needsList')}" target="targetText">患者需求</a>
 				</li>
 				<li>
 					<a href="{:U('nurseList')}" target="targetText">驻站护士</a>
@@ -161,11 +161,11 @@
                         <li>
                             <if condition="$user.role eq 'Nurse'">
                                 <i class="Hui-iconfont">
-                                    <a href="{:U('Nurse/index')}">&#xe627;</a>
+                                    <a href="javascript:void(0);" onClick="show('个人中心','{:U(\'Needs/watch\')}?id={$user.id}','0','0')">&#xe627;</a>
                                 </i>
                             <else />
                                 <i class="Hui-iconfont">
-                                    <a href="{:U('Need/add')}">&#xe60c;</a>
+                                    <a href="javascript:void(0);" onClick="show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0')">&#xe60c;</a>
                                 </i>
                             </if>
                         </li>

@@ -9,13 +9,12 @@ class BaseController extends Controller {
 
     public function index() {
         if($_GET) {
-            $info_list = D($_GET['table']) -> select();
+            $table =  $_GET['table'];
             $count = D($_GET['table']) -> count();
-            $this -> table = $_GET['table'];
-            $this -> count = $count;
-            $this -> data = $info_list;
+            $info_list = D($_GET['table']) -> select();
             unset($_GET);
         }
+        return [$table,$count,$info_list];
     }
 
     public function search() {
@@ -24,20 +23,19 @@ class BaseController extends Controller {
             if(stristr($value,'like')) $value = json_decode(str_replace('|','',$value),true);
             if(stristr($value,'between')) $value = json_decode($value,true);
         }
-        $info = D($_GET['table']) -> where($_GET['where']) -> select();
+        $table = $_GET['table'];
         $count = D($_GET['table']) -> where($_GET['where']) -> count();
-        $this -> count = $count;
-        $this -> table = $_GET['table'];
-        $this -> data = $info;
+        $info = D($_GET['table']) -> where($_GET['where']) -> select();
         unset($_GET);
+        return [$table,$count,$info];
     }
 
     public function info() {
         if($_GET) {
             $info = D($_GET['table']) -> where($_GET['where']) -> find();
-            $this -> data = $info;
             unset($_GET);
         }
+        return $info;
     }
 
     public function edit() {
