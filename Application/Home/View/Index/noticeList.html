@@ -54,11 +54,12 @@
                 <thead>
                     <tr class="text-c">
                         <th style="background-color: #ffffff;border: none!important;padding: 0">
-<!--                            <div class="text-c" style="float: left">-->
-<!--                                <input type="date" value="" id="min" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />-->
-<!--                                - -->
-<!--                                <input type="date" value="" id="max" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />-->
-<!--                            </div>-->
+                            <div class="text-c" style="float: right">
+                                <button type="button" class="radius btn size-MINI" style="border: none;font-size: 14px;" onclick="hotSort()">
+                                    根据热度排序
+                                    <i class="Hui-iconfont">&#xe675;</i>
+                                </button>
+                            </div>
                         </th>
                     </tr>
                 </thead>
@@ -118,39 +119,8 @@
     		parent.location.href = "{:U('login')}";
     	}
     }
+    function hotSort() {
 
-    // function checkTime(id,value) {
-    // 	var time = new Date(value.replace(/-/g,'/')).getTime();
-    // 	var nowTime = new Date().getTime();
-    // 	if(time <= nowTime) {
-    // 		if(id === 'max') {
-    // 			var min = document.getElementById("min").value;
-    // 			min = new Date(min.replace(/-/g,'/')).getTime();
-    // 			if(min) {
-    // 				if(time <= min) {
-    // 					alert('请大于最小时间！');
-    // 					document.getElementById(id).value = '';
-    // 				} else {
-    // 					search('Notice');
-    // 				}
-    // 			} else {
-    // 				alert('请先选择最小时间！');
-    // 				document.getElementById(id).value = '';
-    // 			}
-    // 		}
-    // 	} else {
-    // 		alert('请选择正确时间！');
-    // 		document.getElementById(id).value = '';
-    // 	}
-    // }
-
-    // function search(table = '') {
-    // 	var value = {
-    // 		'min' : new Date((document.getElementById("min").value).replace(/-/g,'/')).getTime(),
-    // 		'max' : new Date((document.getElementById("max").value).replace(/-/g,'/')).getTime(),
-    // 	};
-    // 	var addtime = JSON.stringify(['between',[Number(value['min'].toString().slice(0,-3)),Number(value['max'].toString().slice(0,-3))+86400]]);
-    // 	window.location.href = "{:U('search')}?table="+table+"&where[addtime]="+addtime;
-    // }
+    }
 </script>
 </html>
