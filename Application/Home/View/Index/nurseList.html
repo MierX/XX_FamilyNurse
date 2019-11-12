@@ -67,7 +67,7 @@
                     <volist name="Nurse" id="vo">
                         <tr class="text-c" style="background-color: #ffffff">
                             <td>
-                                <div id="content" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','{:U(\'Nurse/index\')}?id={$vo.id}','0','0')">
+                                <div id="content" style="height: 90%;width: 100%;cursor: pointer" onclick="show('护士自述','{:U(\'Nurse/index\')}?id={$vo.id}','0','0')">
                                     <div id="up1" style="text-align: left;padding-top: 5px">
                                         <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #1A1A1A">
                                             <ul>
@@ -76,7 +76,7 @@
                                                 <li>性别：
                                                     <if condition="vo.sex eq 1">
                                                         男
-                                                        <else />
+                                                    <else />
                                                         女
                                                     </if>
                                                 </li>

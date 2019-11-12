@@ -5,13 +5,28 @@ class IndexController extends Controller {
     public function index() {
         if($_SESSION['role']) {
             $user_info = D($_SESSION['role']) -> field('*') -> where(['account' => $_SESSION['account'], 'name' => $_SESSION['name']]) -> find();
+            $collection = json_decode(D($_SESSION['role'].'Collection') -> field('ids') -> where(['uid' => $_SESSION['id']]) -> find()['ids'],true);
+            if($collection) {
+                if($_SESSION['role'] == 'User') {
+                    $collection_count = D('Nurse') -> where(['id' => ['in', $collection],'status' => 1]) -> count();
+                    $collection_info = D('Nurse') -> where(['id' => ['in', $collection],'status' => 1]) -> limit('10') -> select();
+                    $this -> collection_count = $collection_count;
+                    $this -> collection = $collection_info;
+                }
+            }
             $this -> user = $user_info;
         }
         $this -> display('index');
     }
 
     public function noticeList() {
-        $notice_info = D('Notice') -> where(['status' => 1]) -> order('addtime desc,hot desc') -> select();
+        if($_GET['order']) {
+            $order = $_GET['order'];
+            unset($_GET);
+        } else {
+            $order = 'addtime desc,hot desc';
+        }
+        $notice_info = D('Notice') -> where(['status' => 1]) -> order($order) -> select();
         $length = 10 - count($notice_info);
         if($length > 0) {
             for ($i = 0; $i < $length; $i++) {
@@ -103,6 +118,7 @@ class IndexController extends Controller {
                 $info = D($_POST['role']) -> field('*') -> where(['status' => 1, 'account' => $_POST['account'], 'password' => $_POST['password'], 'id' => $_POST['job-num']]) -> find();
             }
             if($info) {
+                $_SESSION['id'] = $info['id'];
                 $_SESSION['account'] = $info['account'];
                 $_SESSION['role'] = $info['role'];
                 $_SESSION['name'] = $info['name'];

@@ -22,12 +22,21 @@
     <title>护士详情</title>
     <style type="text/css">
         #content {
-            margin: 5px 100px 0 100px;
+            margin: 15px 100px 0 200px;
         }
     </style>
 </head>
 <body>
-<div id="content">{$data.remark}</div>
+    <if condition="$Think.SESSION.role eq 'User'">
+        <p onclick="collection()" style="margin-left: 15px;font-size: 20px;cursor: default;">
+            <if condition="$collection eq true">
+                <i class="Hui-iconfont" style="cursor: pointer" title="收藏">&#xe630;</i>
+                <elseif condition="$collection eq false" />
+                <i class="Hui-iconfont" style="cursor: pointer" title="收藏">&#xe61b;</i>
+            </if>
+        </p>
+    </if>
+    <div id="content">{$data.remark}</div>
 </body>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/layer/2.4/layer.js"></script>
@@ -42,6 +51,26 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript">
-
+    function collection() {
+        $.ajax({
+            url:"{:U('Collection/userCollection')}",
+            type:"get",
+            data:{
+                "user":"{$Think.SESSION.id}",
+                "nurse":"{$nurse}",
+                "status":"{$collection}",
+            },
+            success:function (data) {
+                if(data) {
+                    window.location.reload();
+                } else {
+                    alert('出错了~');
+                }
+            },
+            error:function () {
+                alert('未知错误！请调试！');
+            }
+        })
+    }
 </script>
 </html>
