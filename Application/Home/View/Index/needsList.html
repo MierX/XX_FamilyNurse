@@ -38,28 +38,14 @@
         body::-webkit-scrollbar {
             display: none;
         }
-        #top-ul > li {
+        #down ul > li {
             float: left;
-            margin-left: 30px;
-            font-size: 18px;
-            margin-top: 18px;
-        }
-        #right1-ul > li {
-            float: left;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 14px;
+            font-weight: 600;
             margin-top: 20px;
-            margin-left: 58px;
-            font-size: 20px;
         }
-        #right1-ul1 > li {
-            float: left;
-            font-size: 18px;
-        }
-        #right2-ul > li {
-            margin-left: 20px;
-            margin-top: 10px;
-            font-size: 16px;
-        }
-
     </style>
 </head>
 <body>
@@ -68,31 +54,31 @@
             <table class="table table-border table-bordered table-hover table-bg table-sort" style="border: none!important;">
                 <thead>
                     <tr class="text-c">
-                        <th style="background-color: #ffffff;border: none!important;">
-<!--                            <div class="text-c" style="float: left">-->
-<!--                                <input type="date" value="" id="min" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />-->
-<!--                                - -->
-<!--                                <input type="date" value="" id="max" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />-->
-<!--                            </div>-->
-                        </th>
+                        <th style="background-color: #ffffff;border: none!important;"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <volist name="Notice" id="vo">
+                    <volist name="Needs" id="vo">
                         <tr class="text-c" style="background-color: #ffffff">
-                            <td style="height: 185px;margin-top: 50px;border: none;">
-                                <div id="content1" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','{:U(\'Notice/index\')}?id={$vo.id}','0','0')">
+                            <td style="height: 185px;margin-top: 60px;border: none;">
+                                <div id="content1" style="height: 90%;width: 100%;cursor: pointer" onclick="show('需求详情','{:U(\'Needs/index\')}?id={$vo.id}','0','0')">
                                     <div id="up1" style="text-align: left">
                                         <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #1A1A1A" onmousemove="this.style.color='blue'" onmouseout="this.style.color = '#1A1A1A'">{$vo.title}</u>
                                     </div>
-                                    <div id="mid1" style="margin-top: 10px;padding-left: 5px;height: 90px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
-                                        <u style="font-size: 16px;line-height: 1.67;">{$vo.content}</u>
+                                    <div id="mid1" style="margin-top: 10px;padding-left: 5px;height: 150px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
+                                        <u style="font-size: 16px;line-height: 1.67;">{$vo.needs}</u>
                                     </div>
-                                    <div id="down1">
+                                    <div id="down">
                                         <ul>
-                                            <li>热度：{$vo.hot}</li>
-                                            <li>发布者：{$vo.author}</li>
+                                            <li>发布者：{$vo.name}</li>
+                                            <li>性别：{$vo.sex}</li>
+                                            <li>报酬：{$vo.reward}</li>
+                                            <li>预计工时：{$vo.worktime}</li>
+                                        </ul>
+                                        <ul>
+                                            <li>病症：{$vo.disease|default=未填写}</li>
                                             <li>发布时间：{$vo.addtime|date='Y-m-d H:i:s',###}</li>
+                                            <li>失效时间：{$vo.endtime|date='Y-m-d H:i:s',###}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -133,39 +119,5 @@
     		parent.location.href = "{:U('login')}";
     	}
     }
-
-    // function checkTime(id,value) {
-    // 	var time = new Date(value.replace(/-/g,'/')).getTime();
-    // 	var nowTime = new Date().getTime();
-    // 	if(time <= nowTime) {
-    // 		if(id === 'max') {
-    // 			var min = document.getElementById("min").value;
-    // 			min = new Date(min.replace(/-/g,'/')).getTime();
-    // 			if(min) {
-    // 				if(time <= min) {
-    // 					alert('请大于最小时间！');
-    // 					document.getElementById(id).value = '';
-    // 				} else {
-    // 					search('Notice');
-    // 				}
-    // 			} else {
-    // 				alert('请先选择最小时间！');
-    // 				document.getElementById(id).value = '';
-    // 			}
-    // 		}
-    // 	} else {
-    // 		alert('请选择正确时间！');
-    // 		document.getElementById(id).value = '';
-    // 	}
-    // }
-
-    // function search(table = '') {
-    // 	var value = {
-    // 		'min' : new Date((document.getElementById("min").value).replace(/-/g,'/')).getTime(),
-    // 		'max' : new Date((document.getElementById("max").value).replace(/-/g,'/')).getTime(),
-    // 	};
-    // 	var addtime = JSON.stringify(['between',[Number(value['min'].toString().slice(0,-3)),Number(value['max'].toString().slice(0,-3))+86400]]);
-    // 	window.location.href = "{:U('search')}?table="+table+"&where[addtime]="+addtime;
-    // }
 </script>
 </html>

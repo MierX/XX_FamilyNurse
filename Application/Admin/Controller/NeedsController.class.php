@@ -7,7 +7,6 @@ class NeedsController extends BaseController {
     public function index() {
         $value = parent::index();
         $table = $value[0];
-        $count = $value[1];
         $info_list = $value[2];
         foreach ($info_list as $k => &$v) {
             if($v['endtime'] <= time()) {

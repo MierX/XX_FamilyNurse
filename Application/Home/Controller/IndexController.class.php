@@ -3,18 +3,37 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index() {
-        if($_SESSION['role']) {
+        if ($_SESSION['role']) {
             $user_info = D($_SESSION['role']) -> field('*') -> where(['account' => $_SESSION['account'], 'name' => $_SESSION['name']]) -> find();
-            $collection = json_decode(D($_SESSION['role'].'Collection') -> field('ids') -> where(['uid' => $_SESSION['id']]) -> find()['ids'],true);
-            if($collection) {
-                if($_SESSION['role'] == 'User') {
-                    $collection_count = D('Nurse') -> where(['id' => ['in', $collection],'status' => 1]) -> count();
-                    $collection_info = D('Nurse') -> where(['id' => ['in', $collection],'status' => 1]) -> limit('10') -> select();
+            if ($_SESSION['role'] == 'User') {
+                $collection = json_decode(D($_SESSION['role'] . 'Collection') -> field('ids') -> where(['uid' => $_SESSION['id']]) -> find()['ids'], true);
+                if ($collection) {
+                    $collection_info = D('Nurse') -> where(['id' => ['in', $collection], 'status' => 1]) -> limit('15') -> select();
+                    $collection_count = count($collection_info);
                     $this -> collection_count = $collection_count;
                     $this -> collection = $collection_info;
                 }
+            } elseif ($_SESSION['role'] == 'Nurse') {
+                $collection = json_decode(D($_SESSION['role'] . 'Collection') -> field('ids') -> where(['nid' => $_SESSION['id']]) -> find()['ids'], true);
+                if ($collection) {
+                    $collection_info = D('Needs') -> where(['id' => ['in', $collection], 'status' => 1]) -> limit('15') -> select();
+                    foreach ($collection_info as $k => &$v) {
+                        if($v['endtime'] <= time()) {
+                            $v['status'] = 4;
+                            D('Needs') -> where(['id' => $v['id']]) -> save($v);
+                            unset($collection_info[$k]);
+                            continue;
+                        }
+                        $user = D('User') -> field('status') -> where(['id' => $v['uid']]) -> find()['status'];
+                        if($user == 2) unset($collection_info[$k]);
+                    }
+                    $collection_info = array_values($collection_info);
+                    $collection_count = count($collection_info);
+                    $this -> collection_count = $collection_count;
+                    $this -> collection = $collection_info;
+                }
+                $this -> user = $user_info;
             }
-            $this -> user = $user_info;
         }
         $this -> display('index');
     }
@@ -22,15 +41,21 @@ class IndexController extends Controller {
     public function noticeList() {
         if($_GET['order']) {
             $order = $_GET['order'];
-            unset($_GET);
         } else {
             $order = 'addtime desc,hot desc';
         }
-        $notice_info = D('Notice') -> where(['status' => 1]) -> order($order) -> select();
-        $length = 10 - count($notice_info);
-        if($length > 0) {
-            for ($i = 0; $i < $length; $i++) {
-                $notice_info[] = $notice_info[0];
+        if($_GET['keyword']) {
+            $keyword = ['status' => 1, 'title' => ['like','%'.$_GET['keyword'].'%']];
+        } else {
+            $keyword = ['status' => 1];
+        }
+        $notice_info = D('Notice') -> where($keyword) -> order($order) -> select();
+        if(count($notice_info) > 0) {
+            $length = 10 - count($notice_info);
+            if($length > 0) {
+                for ($i = 0; $i < $length; $i++) {
+                    $notice_info[] = $notice_info[0];
+                }
             }
         }
         $this -> Notice = $notice_info;
@@ -38,40 +63,45 @@ class IndexController extends Controller {
     }
 
     public function needsList() {
-        $notice_info = D('Notice') -> where(['status' => 1]) -> order('addtime desc,hot desc') -> select();
-        $length = 10 - count($notice_info);
-        if($length > 0) {
-            for ($i = 0; $i < $length; $i++) {
-                $notice_info[] = $notice_info[0];
+        if($_GET['keyword']) {
+            $keyword = ['status' => 1, 'title' => ['like','%'.$_GET['keyword'].'%']];
+        } else {
+            $keyword = ['status' => 1];
+        }
+        $info_list = D('Needs') -> where($keyword) -> select();
+        foreach ($info_list as $k => &$v) {
+            if($v['endtime'] <= time()) {
+                $v['status'] = 4;
+                D('Needs') -> where(['id' => $v['id']]) -> save($v);
+                unset($info_list[$k]);
+                continue;
+            }
+            $user = D('User') -> field('sex,name,status') -> where(['id' => $v['uid']]) -> find();
+            if($user['status'] == 2) {
+                unset($info_list[$k]);
+            } else {
+                if($user['sex'] == 1) {
+                    $v['sex'] = '男';
+                } else {
+                    $v['sex'] = '女';
+                }
+                $v['name'] = $user['name'];
             }
         }
-        $this -> Notice = $notice_info;
+        $info_list = array_values($info_list);
+        $this -> Needs = $info_list;
         $this -> display();
     }
 
     public function nurseList() {
-        $nurse_info = D('Nurse') -> where(['status' => 1]) -> order('addtime desc,merits desc') -> select();
-        $length = 10 - count($nurse_info);
-        if($length > 0) {
-            for ($i = 0; $i < $length; $i++) {
-                $nurse_info[] = $nurse_info[0];
-            }
+        if($_GET['keyword']) {
+            $keyword = ['status' => 1, 'name' => ['like','%'.$_GET['keyword'].'%']];
+        } else {
+            $keyword = ['status' => 1];
         }
+        $nurse_info = D('Nurse') -> where($keyword) -> order('addtime desc,merits desc') -> select();
         $this -> Nurse = $nurse_info;
         $this -> display();
-    }
-
-    public function search() {
-        if($_GET) {
-            foreach ($_GET['where'] as $key => &$value) {
-                if(stristr($value,'null')) unset($_GET['where'][$key]);
-                if(stristr($value,'like')) $value = json_decode(str_replace('|','',$value),true);
-                if(stristr($value,'between')) $value = json_decode($value,true);
-            }
-            $info = D($_GET['table']) -> where($_GET['where']) -> select();
-            $_GET['search_info'] = $info;
-            $this -> index();
-        }
     }
 
     public function register() {
@@ -85,6 +115,7 @@ class IndexController extends Controller {
             $_POST['status'] = 1;
             $result = D($_POST['role']) -> add($_POST);
             if($result) {
+                $_SESSION['id'] = D($_POST['role']) -> field('id') -> where(['account' => $_POST['account'], 'name' => $_POST['name']]) -> find()['id'];
                 $_SESSION['account'] = $_POST['account'];
                 $_SESSION['role'] = $_POST['role'];
                 $_SESSION['name'] = $_POST['name'];
@@ -95,11 +126,8 @@ class IndexController extends Controller {
     }
 
     public function checkValue() {
-        $role = $_GET['role'];
-        $name = $_GET['name'];
-        $value = $_GET['value'];
-        if($role && $name && $value) {
-            $info = D($role) -> field('name') -> where([$name => $value]) -> find();
+        if($_GET['role'] && $_GET['name'] && $_GET['value']) {
+            $info = D($_GET['role']) -> field('name') -> where([$_GET['name'] => $_GET['value']]) -> find();
             if(!$info) {
                 echo true;
             } else {

@@ -8,7 +8,7 @@ class UserController extends BaseController {
         }
         if($_POST) {
             if(stristr($_POST['sex'],'女')) {
-                $_POST['sex'] = 0;
+                $_POST['sex'] = 2;
             } else if(stristr($_POST['sex'],'男')) {
                 $_POST['sex'] = 1;
             } else {

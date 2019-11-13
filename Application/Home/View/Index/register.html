@@ -40,7 +40,7 @@
           </label>
           <div class="formControls col-xs-8">
             <label>
-              <input type="text" name="account" class="input-text size-L" value="" placeholder="请设置你的账号(不少于6位)" onfocusout="checkValue(this.name,this.value)" />
+              <input type="text" id="account" name="account" class="input-text size-L" value="" placeholder="请设置你的账号(不少于6位)" onfocusout="checkValue(this.name,this.value)" />
               <i id="i_account" class="Hui-iconfont"></i>
             </label>
           </div>
@@ -62,7 +62,7 @@
           </label>
           <div class="formControls col-xs-8">
             <label>
-              <input type="text" name="name" class="input-text size-L" value="" placeholder="请输入你的真实姓名" onfocusout="checkValue(this.name,this.value)" />
+              <input type="text" id="name" name="name" class="input-text size-L" value="" placeholder="请输入你的真实姓名" onfocusout="checkValue(this.name,this.value)" />
               <i id="i_name" class="Hui-iconfont"></i>
             </label>
           </div>
@@ -74,7 +74,7 @@
           <div class="formControls col-xs-8" style="margin-top: 5px;">
             <label style="font-size: 20px">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;男：<input type="radio" name="sex" class="radio-box size-L" value="1" />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;女：<input type="radio" name="sex" class="radio-box size-L" value="0" />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;女：<input type="radio" name="sex" class="radio-box size-L" value="2" />
             </label>
           </div>
         </div>
@@ -95,7 +95,7 @@
           </label>
           <div class="formControls col-xs-8">
             <label>
-              <input type="number" name="phone" class="input-text size-L" value="" placeholder="请输入联系电话" onfocusout="checkValue(this.name,this.value)" />
+              <input type="number" id="phone" name="phone" class="input-text size-L" value="" placeholder="请输入联系电话" onfocusout="checkValue(this.name,this.value)" />
               <i id="i_phone" class="Hui-iconfont"></i>
             </label>
           </div>
@@ -106,7 +106,7 @@
           </label>
           <div class="formControls col-xs-8">
             <label>
-              <input type="number" name="card" class="input-text size-L" value="" placeholder="请输入身份证号" onfocusout="checkValue(this.name,this.value)" />
+              <input type="number" id="card" name="card" class="input-text size-L" value="" placeholder="请输入身份证号" onfocusout="checkValue(this.name,this.value)" />
               <i id="i_card" class="Hui-iconfont"></i>
             </label>
           </div>
@@ -172,6 +172,10 @@
       document.getElementById("year").style.display = 'none';
       document.getElementById("add").style.display = 'none';
       document.getElementById("re").style.display = 'none';
+      document.getElementById("account").value = '';
+      document.getElementById("name").value = '';
+      document.getElementById("phone").value = '';
+      document.getElementById("card").value = '';
       document.getElementById("wordYear").value = '';
       document.getElementById("workAdd").value = '';
       document.getElementById("remark").value = '';
@@ -179,6 +183,10 @@
       document.getElementById("loginform").style.borderBottom = '1px #78b5b8 solid';
       role = 'User';
     } else if(value === 'Nurse') {
+      document.getElementById("account").value = '';
+      document.getElementById("name").value = '';
+      document.getElementById("phone").value = '';
+      document.getElementById("card").value = '';
       document.getElementById("year").style.display = '';
       document.getElementById("add").style.display = '';
       document.getElementById("re").style.display = '';

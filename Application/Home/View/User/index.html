@@ -73,9 +73,9 @@
 				<input class="input-text size-L radius" type="text" value="护士" readonly="readonly" />
 			</if>
 			<if condition="$user.sex eq 1">
-				<input class="input-text size-L radius" type="text" name="sex" value="男性" />
-				<elseif condition="$user.sex eq 0" />
-				<input class="input-text size-L radius" type="text" name="sex" value="女性" />
+				<input class="input-text size-L radius" type="text" name="sex" value="男" />
+				<elseif condition="$user.sex eq 2" />
+				<input class="input-text size-L radius" type="text" name="sex" value="女" />
 			</if>
 			<input class="input-text size-L radius" type="text" name="age" value="{$user.age}周岁" />
 			<input class="input-text size-L radius" type="text" name="phone" value="{$user.phone}" />

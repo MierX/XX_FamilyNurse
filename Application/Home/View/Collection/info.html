@@ -42,6 +42,16 @@
 	</style>
 </head>
 <body>
+	<if condition="$Think.SESSION.role eq 'Nurse'">
+		<p onclick="collection1()" style="margin-left: 15px;font-size: 20px;cursor: default;">
+			<i class="Hui-iconfont" style="cursor: pointer" title="收藏">&#xe630;</i>
+		</p>
+	</if>
+	<if condition="$Think.SESSION.role eq 'User'">
+		<p onclick="collection2()" style="margin-left: 15px;font-size: 20px;cursor: default;">
+			<i class="Hui-iconfont" style="cursor: pointer" title="收藏">&#xe630;</i>
+		</p>
+	</if>
 	<div style="margin-left: 35%;margin-top: 3%;float: left;">{$info}</div>
 </body>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
@@ -51,4 +61,48 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/My97DatePicker/4.8/WdatePicker.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+	function collection1() {
+		$.ajax({
+			url:"{:U('Collection/nurseCollection')}",
+			type:"get",
+			data:{
+				"nurse":"{$Think.SESSION.id}",
+				"needs":"{$needs}",
+				"status":"{$collection}",
+			},
+			success:function (data) {
+				if(data) {
+					parent.location.reload();
+				} else {
+					alert('出错了~');
+				}
+			},
+			error:function () {
+				alert('未知错误！请调试！');
+			}
+		})
+	}
+	function collection2() {
+		$.ajax({
+			url:"{:U('Collection/userCollection')}",
+			type:"get",
+			data:{
+				"user":"{$Think.SESSION.id}",
+				"nurse":"{$nurse}",
+				"status":"{$collection}",
+			},
+			success:function (data) {
+				if(data) {
+					window.location.reload();
+				} else {
+					alert('出错了~');
+				}
+			},
+			error:function () {
+				alert('未知错误！请调试！');
+			}
+		})
+	}
+</script>
 </html>
