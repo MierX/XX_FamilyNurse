@@ -32,8 +32,8 @@ class IndexController extends Controller {
                     $this -> collection_count = $collection_count;
                     $this -> collection = $collection_info;
                 }
-                $this -> user = $user_info;
             }
+            $this -> user = $user_info;
         }
         $this -> display('index');
     }
@@ -68,7 +68,7 @@ class IndexController extends Controller {
         } else {
             $keyword = ['status' => 1];
         }
-        $info_list = D('Needs') -> where($keyword) -> select();
+        $info_list = D('Needs') -> where($keyword) -> order('addtime desc') -> select();
         foreach ($info_list as $k => &$v) {
             if($v['endtime'] <= time()) {
                 $v['status'] = 4;

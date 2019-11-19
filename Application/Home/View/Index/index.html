@@ -348,9 +348,30 @@
 		layer.confirm('请选择', {
 			btn: ['看需求','发需求']
 		}, function(){
-			show('个人需求','{:U(\'Needs/myList\')}?id={$user.id}','0','0');
+			$.ajax({
+				url:"{:U('User/myNeeds')}",
+				type:"get",
+				data:{
+					"id":"{$user.id}",
+				},
+				success:function (data) {
+					if(data) {
+						var needs = confirm('您没有有效需求，先去发布需求吧~');
+						if(needs) {
+							show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
+						} else {
+							layer_close();
+						}
+					} else {
+						show('个人需求','{:U(\'User/myNeeds\')}?id={$user.id}','0','0');
+					}
+				},
+				error:function () {
+					alert('未知错误！请调试！');
+				}
+			});
 		}, function(){
-			show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0')
+			show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
 		});
 	}
 </script>

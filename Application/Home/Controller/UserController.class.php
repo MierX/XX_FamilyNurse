@@ -24,4 +24,13 @@ class UserController extends BaseController {
         $this -> user = $user_info;
         $this -> display();
     }
+
+    public function myNeeds() {
+        $needs = D('Needs') -> where(['uid' => $_GET['id']]) -> select();
+        if(!$needs) {
+            echo true;
+        } else {
+            echo false;
+        }
+    }
 }
