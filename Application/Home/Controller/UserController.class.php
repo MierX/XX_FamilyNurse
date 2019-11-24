@@ -26,11 +26,27 @@ class UserController extends BaseController {
     }
 
     public function myNeeds() {
-        $needs = D('Needs') -> where(['uid' => $_GET['id']]) -> select();
-        if(!$needs) {
-            echo true;
+        $needs = D('Needs') -> where(['uid' => $_GET['id'], 'status' => 1]) -> select();
+        foreach ($needs as $k => &$v) {
+            if($v['endtime'] <= time()) {
+                $v['status'] = 4;
+                D('Needs') -> where(['id' => $v['id']]) -> save($v);
+                unset($needs[$k]);
+                continue;
+            }
+            $user = D('User') -> field('status') -> where(['id' => $v['uid']]) -> find();
+            if($user['status'] == 2) unset($needs[$k]);
+        }
+        $needs = array_values($needs);
+        if($_GET['check']) {
+            if(!$needs) {
+                echo true;
+            } else {
+                echo false;
+            }
         } else {
-            echo false;
+            $this -> needs = $needs;
+            $this -> display();
         }
     }
 }

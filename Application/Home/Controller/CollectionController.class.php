@@ -43,23 +43,28 @@ class CollectionController extends BaseController {
 
     public function userCollection() {
         if($_GET) {
-            $info = D('UserCollection') -> field('id,ids') -> where(['uid' => $_GET['user']]) -> find();
-            if(!$info['id']) {
-                $data['uid'] = $_GET['user'];
-                $data['ids'] = json_encode([intval($_GET['nurse'])]);
-                D('UserCollection') -> add($data);
-            } else {
-                $info_id = $info['id'];
-                $info = json_decode($info['ids'],true);
-                if($_GET['status'] == true) {
-                    unset($info[array_search(intval($_GET['nurse']),$info)]);
-                    D('UserCollection') -> where(['id' => $info_id]) -> save(['ids' => json_encode($info)]);
-                } else if($_GET['status'] == false) {
-                    $info[] = intval($_GET['nurse']);
-                    D('UserCollection') -> where(['id' => $info_id]) -> save(['ids' => json_encode($info)]);
+            $nurse = D('nurse') -> field('status') -> where(['id' => $_GET['nurse'], 'status' => 1])['status'];
+            if($nurse) {
+                $info = D('UserCollection') -> field('id,ids') -> where(['uid' => $_GET['user']]) -> find();
+                if(!$info['id']) {
+                    $data['uid'] = $_GET['user'];
+                    $data['ids'] = json_encode([intval($_GET['nurse'])]);
+                    D('UserCollection') -> add($data);
+                } else {
+                    $info_id = $info['id'];
+                    $info = json_decode($info['ids'],true);
+                    if($_GET['status'] == true) {
+                        unset($info[array_search(intval($_GET['nurse']),$info)]);
+                        D('UserCollection') -> where(['id' => $info_id]) -> save(['ids' => json_encode($info)]);
+                    } else if($_GET['status'] == false) {
+                        $info[] = intval($_GET['nurse']);
+                        D('UserCollection') -> where(['id' => $info_id]) -> save(['ids' => json_encode($info)]);
+                    }
                 }
+                echo true;
+            } else {
+                echo false;
             }
-            echo true;
         } else {
             echo false;
         }
@@ -67,23 +72,28 @@ class CollectionController extends BaseController {
 
     public function nurseCollection() {
         if($_GET) {
-            $info = D('NurseCollection') -> field('id,ids') -> where(['nid' => $_GET['nurse']]) -> find();
-            if(!$info['id']) {
-                $data['nid'] = $_GET['nurse'];
-                $data['ids'] = json_encode([intval($_GET['needs'])]);
-                D('NurseCollection') -> add($data);
-            } else {
-                $info_id = $info['id'];
-                $info = json_decode($info['ids'],true);
-                if($_GET['status'] == true) {
-                    unset($info[array_search(intval($_GET['needs']),$info)]);
-                    D('NurseCollection') -> where(['id' => $info_id]) -> save(['ids' => json_encode($info)]);
-                } else if($_GET['status'] == false) {
-                    $info[] = intval($_GET['needs']);
-                    D('NurseCollection') -> where(['id' => $info_id]) -> save(['ids' => json_encode($info)]);
+            $needs = D('needs') -> field('status') -> where(['id' => $_GET['needs'], 'status' => 1])['status'];
+            if($needs) {
+                $info = D('NurseCollection') -> field('id,ids') -> where(['nid' => $_GET['nurse']]) -> find();
+                if(!$info['id']) {
+                    $data['nid'] = $_GET['nurse'];
+                    $data['ids'] = json_encode([intval($_GET['needs'])]);
+                    D('NurseCollection') -> add($data);
+                } else {
+                    $info_id = $info['id'];
+                    $info = json_decode($info['ids'],true);
+                    if($_GET['status'] == true) {
+                        unset($info[array_search(intval($_GET['needs']),$info)]);
+                        D('NurseCollection') -> where(['id' => $info_id]) -> save(['ids' => json_encode($info)]);
+                    } else if($_GET['status'] == false) {
+                        $info[] = intval($_GET['needs']);
+                        D('NurseCollection') -> where(['id' => $info_id]) -> save(['ids' => json_encode($info)]);
+                    }
                 }
+                echo true;
+            } else {
+                echo false;
             }
-            echo true;
         } else {
             echo false;
         }

@@ -30,63 +30,32 @@
 	<div style="width: 90%;margin-left: 5%;">
 		<div class="mt-20">
 			<table class="table table-border table-bordered table-hover table-bg table-sort">
-				<if condition="$Think.SESSION.role eq 'User'">
-					<thead>
-						<tr class="text-c">
-							<th>序号</th>
-							<th>姓名</th>
-							<th>性别</th>
-							<th>绩效</th>
-							<th>手机</th>
-							<th>自我介绍</th>
-						</tr>
-					</thead>
-					<tbody>
-						<volist name="data" id="vo">
-							<tr class="text-c">
-								<td>{$vo.id}</td>
-								<td>{$vo.name}</td>
-								<td>
-									<if condition="$vo.sex eq 1">
-										男
-										<else />
-										女
-									</if>
-								</td>
-								<td>{$vo.merits}</td>
-								<td>{$vo.phone}</td>
-								<td style="cursor: pointer" onclick="show('护士详情','{:U(\'info\')}?table=Nurse&id={$vo.id}&field=remark','1600','1200')">查看详情</td>
-							</tr>
-						</volist>
-					</tbody>
-				<else />
-					<thead>
-						<tr class="text-c">
-							<th>序号</th>
-							<th>标题</th>
-							<th>发布人</th>
-							<th>病症</th>
-							<th>报酬</th>
-							<th>工时</th>
-							<th>失效时间</th>
-							<th>需求详情</th>
-						</tr>
-					</thead>
-					<tbody>
-						<volist name="data" id="vo">
-							<tr class="text-c">
-								<td>{$vo.id}</td>
-								<td>{$vo.title}</td>
-								<td>{$vo.name}</td>
-								<td>{$vo.disease}</td>
-								<td>{$vo.reward}</td>
-								<td>{$vo.worktime}</td>
-								<td>{$vo.endtime|date='Y-m-d H:i:s',###}</td>
-								<td style="cursor: pointer" onclick="show('需求详情','{:U(\'info\')}?table=Needs&id={$vo.id}&field=needs','1600','1200')">查看详情</td>
-							</tr>
-						</volist>
-					</tbody>
-				</if>
+				<thead>
+				<tr class="text-c">
+					<th>序号</th>
+					<th>标题</th>
+					<th>病症</th>
+					<th>报酬</th>
+					<th>工时</th>
+					<th>发布时间</th>
+					<th>失效时间</th>
+					<th>详情</th>
+				</tr>
+				</thead>
+				<tbody>
+				<volist name="needs" id="no">
+					<tr class="text-c">
+						<td>{$no.id}</td>
+						<td>{$no.title}</td>
+						<td>{$no.disease}</td>
+						<td>{$no.reward}</td>
+						<td>{$no.worktime}</td>
+						<td>{$no.addtime|default='Y-m-d H:i:s'}</td>
+						<td>{$no.endtime|default='Y-m-d H:i:s'}</td>
+						<td style="cursor: pointer" onclick="show('护士详情','{:U(\'Needs/index\')}?id={$no.id}','1600','1200')">查看详情</td>
+					</tr>
+				</volist>
+				</tbody>
 			</table>
 		</div>
 	</div>

@@ -191,13 +191,7 @@
                         </li>
                     </ul>
                     <ul id="ul_2">
-						<li>
-							<if condition="$user.role eq 'Nurse'">
-								看需求
-							<else />
-								&nbsp;&nbsp;需求&nbsp;&nbsp;
-							</if>
-						</li>
+						<li>看需求</li>
                         <li style="margin-left: 6.5%">看信箱</li>
                         <li style="margin-left: 7%">查记录</li>
                     </ul>
@@ -345,31 +339,36 @@
 		}
 	}
 	function chooseNeeds() {
+		var account = "{$Think.SESSION.account}";
+		if(!account) {
+			alert('请先登录');
+			parent.location.href = "{:U('login')}";
+		}
+		$.ajax({
+			url:"{:U('User/myNeeds')}",
+			type:"get",
+			data:{
+				"check":1,
+				"id":"{$user.id}",
+			},
+			success:function (data) {
+				if(data) {
+					alert("您当前没有有效需求，先去发布需求吧！");
+					show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
+				} else {
+					checkNeeds();
+				}
+			},
+			error:function () {
+				alert('未知错误！请调试！');
+			}
+		});
+	}
+	function checkNeeds() {
 		layer.confirm('请选择', {
 			btn: ['看需求','发需求']
 		}, function(){
-			$.ajax({
-				url:"{:U('User/myNeeds')}",
-				type:"get",
-				data:{
-					"id":"{$user.id}",
-				},
-				success:function (data) {
-					if(data) {
-						var needs = confirm('您没有有效需求，先去发布需求吧~');
-						if(needs) {
-							show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
-						} else {
-							layer_close();
-						}
-					} else {
-						show('个人需求','{:U(\'User/myNeeds\')}?id={$user.id}','0','0');
-					}
-				},
-				error:function () {
-					alert('未知错误！请调试！');
-				}
-			});
+			show('个人需求列表','{:U(\'User/myNeeds\')}?id={$user.id}','0','0');
 		}, function(){
 			show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
 		});
