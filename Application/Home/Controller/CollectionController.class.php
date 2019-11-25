@@ -43,7 +43,7 @@ class CollectionController extends BaseController {
 
     public function userCollection() {
         if($_GET) {
-            $nurse = D('nurse') -> field('status') -> where(['id' => $_GET['nurse'], 'status' => 1])['status'];
+            $nurse = D('Nurse') -> field('status') -> where(['id' => $_GET['nurse'], 'status' => 1]) -> find()['status'];
             if($nurse) {
                 $info = D('UserCollection') -> field('id,ids') -> where(['uid' => $_GET['user']]) -> find();
                 if(!$info['id']) {
@@ -63,7 +63,7 @@ class CollectionController extends BaseController {
                 }
                 echo true;
             } else {
-                echo false;
+                echo 222;
             }
         } else {
             echo false;
@@ -72,7 +72,7 @@ class CollectionController extends BaseController {
 
     public function nurseCollection() {
         if($_GET) {
-            $needs = D('needs') -> field('status') -> where(['id' => $_GET['needs'], 'status' => 1])['status'];
+            $needs = D('needs') -> field('status') -> where(['id' => $_GET['needs'], 'status' => 1]) -> find()['status'];
             if($needs) {
                 $info = D('NurseCollection') -> field('id,ids') -> where(['nid' => $_GET['nurse']]) -> find();
                 if(!$info['id']) {

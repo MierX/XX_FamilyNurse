@@ -31,30 +31,44 @@
 		<div class="mt-20">
 			<table class="table table-border table-bordered table-hover table-bg table-sort">
 				<thead>
-				<tr class="text-c">
-					<th>序号</th>
-					<th>标题</th>
-					<th>病症</th>
-					<th>报酬</th>
-					<th>工时</th>
-					<th>发布时间</th>
-					<th>失效时间</th>
-					<th>详情</th>
-				</tr>
+					<tr class="text-c">
+						<th>标题</th>
+						<th>病症</th>
+						<th>报酬</th>
+						<th>工时</th>
+						<th>发布时间</th>
+						<th>失效时间</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
 				</thead>
 				<tbody>
-				<volist name="needs" id="no">
-					<tr class="text-c">
-						<td>{$no.id}</td>
-						<td>{$no.title}</td>
-						<td>{$no.disease}</td>
-						<td>{$no.reward}</td>
-						<td>{$no.worktime}</td>
-						<td>{$no.addtime|default='Y-m-d H:i:s'}</td>
-						<td>{$no.endtime|default='Y-m-d H:i:s'}</td>
-						<td style="cursor: pointer" onclick="show('护士详情','{:U(\'Needs/index\')}?id={$no.id}','1600','1200')">查看详情</td>
-					</tr>
-				</volist>
+					<volist name="needs" id="no">
+						<tr class="text-c">
+							<td>{$no.title}</td>
+							<td>{$no.disease}</td>
+							<td>{$no.reward}</td>
+							<td>{$no.worktime}</td>
+							<td>{$no.addtime|default='Y-m-d H:i:s'}</td>
+							<td>{$no.endtime|default='Y-m-d H:i:s'}</td>
+							<td>
+								<if condition="$no.status eq 1">
+									未开始
+								<elseif condition="$no.status eq 2" />
+									进行中
+								<elseif condition="$no.status eq 3" />
+									已结束
+								<elseif condition="$no.status eq 4" />
+									已失效
+								</if>
+							</td>
+							<td>
+								<u style="cursor: pointer;text-decoration: none" onclick="show('需求编辑','{:U(\'Needs/editNeeds\')}?id={$no.id}','1600','1200')">编辑</u>
+								|
+								<u style="cursor: pointer;text-decoration: none" onclick="offNeeds('{$no.id}','{$no.status}')">关闭</u>
+							</td>
+						</tr>
+					</volist>
 				</tbody>
 			</table>
 		</div>
@@ -72,7 +86,20 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/ueditor.config.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="../../../../Public/h-ui/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../../../Public/h-ui/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
+	$(function(){
+		$('.table-sort').dataTable({
+			"aaSorting": [[ 6, "desc" ]],//默认第几个排序
+			"aoColumnDefs": [
+				{"orderable":false,"aTargets":[0,1,5,7]}// 制定列不参与排序
+			],
+			"searching":false,
+			"bLengthChange":false,
+		});
+
+	});
 	function show(title,url,w,h) {
 		var account = "{$Think.SESSION.account}";
 		if(account) {
@@ -82,6 +109,30 @@
 		} else {
 			alert('请先登录');
 			parent.location.href = "{:U('login')}";
+		}
+	}
+	function offNeeds(id,status) {
+		if(status === '1') {
+			$.ajax({
+				url:"{:U('Needs/offNeeds')}",
+				type:"get",
+				data:{
+					"id":id,
+				},
+				success:function (data) {
+					if(data) {
+						alert('关闭需求成功！');
+						location.reload();
+					} else {
+						alert('出错了~刷新一下！');
+					}
+				},
+				error:function () {
+					alert("未知错误，请重试~");
+				},
+			});
+		} else {
+			alert('该需求无法关闭！');
 		}
 	}
 </script>

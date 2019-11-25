@@ -63,46 +63,50 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 	function collection1() {
-		$.ajax({
-			url:"{:U('Collection/nurseCollection')}",
-			type:"get",
-			data:{
-				"nurse":"{$Think.SESSION.id}",
-				"needs":"{$needs}",
-				"status":"{$collection}",
-			},
-			success:function (data) {
-				if(data) {
-					parent.location.reload();
-				} else {
-					alert('出错了~');
+		if("{$Think.SESSION.role}" === 'Nurse') {
+			$.ajax({
+				url:"{:U('Collection/nurseCollection')}",
+				type:"get",
+				data:{
+					"nurse":"{$Think.SESSION.id}",
+					"needs":"{$needs}",
+					"status":"{$collection}",
+				},
+				success:function (data) {
+					if(data) {
+						parent.location.reload();
+					} else {
+						alert('出错了~');
+					}
+				},
+				error:function () {
+					alert('未知错误！请调试！');
 				}
-			},
-			error:function () {
-				alert('未知错误！请调试！');
-			}
-		})
+			})
+		}
 	}
 	function collection2() {
-		$.ajax({
-			url:"{:U('Collection/userCollection')}",
-			type:"get",
-			data:{
-				"user":"{$Think.SESSION.id}",
-				"nurse":"{$nurse}",
-				"status":"{$collection}",
-			},
-			success:function (data) {
-				if(data) {
-					parent.location.reload();
-				} else {
-					alert('出错了~');
+		if("{$Think.SESSION.role}" === 'User') {
+			$.ajax({
+				url:"{:U('Collection/userCollection')}",
+				type:"get",
+				data:{
+					"user":"{$Think.SESSION.id}",
+					"nurse":"{$nurse}",
+					"status":"{$collection}",
+				},
+				success:function (data) {
+					if(data) {
+						parent.location.reload();
+					} else {
+						alert('出错了~');
+					}
+				},
+				error:function () {
+					alert('未知错误！请调试！');
 				}
-			},
-			error:function () {
-				alert('未知错误！请调试！');
-			}
-		})
+			});
+		}
 	}
 </script>
 </html>

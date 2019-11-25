@@ -42,12 +42,13 @@
 </head>
 <body style="padding-top: 1%">
 	<div id="content">
-		<form method="post" action="{:U('edit')}">
+		<form method="post" action="{:U('editNeeds')}" onsubmit="return checkStatus()">
+			<input type="hidden" class="input-text" name="id" value="{$info.id}" />
 			<input type="hidden" class="input-text" name="uid" value="{$user.id}" />
 			<ul>
 				<li>
 					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="标题：" readonly="readonly" />
-					<input id="input-title" type="text" class="input-text radius size-M" name="title" value="" placeholder="请输入标题，尽量简短直接" required="required" />
+					<input id="input-title" type="text" class="input-text radius size-M" name="title" value="{$info.title}" placeholder="请输入标题，尽量简短直接" required="required" />
 				</li>
 				<li>
 					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="发布人：" readonly="readonly" />
@@ -66,31 +67,31 @@
 					<input type="text" class="input-text radius size-M" value="{$user.phone}" readonly="readonly" />
 				</li>
 				<li>
-					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="发布时间：" readonly="readonly" />
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="修改时间：" readonly="readonly" />
 					<input type="text" class="input-text radius size-M" value="{$addtime|date='Y-m-d H:i:s',###}" readonly="readonly" />
 				</li>
 				<li>
 					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="失效时间：" readonly="readonly" />
-					<input type="text" class="input-text radius size-M" value="{$endtime|date='Y-m-d H:i:s',###}" />
+					<input type="text" class="input-text radius size-M" value="{$endtime|date='Y-m-d H:i:s',###}" readonly="readonly" />
 				</li>
 				<li>
 					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="病症：" readonly="readonly" />
-					<input type="text" class="input-text radius size-M" name="disease" value="" placeholder="请简要填写需要护理的病症" required="required" />
+					<input type="text" class="input-text radius size-M" name="disease" value="{$info.disease}" placeholder="请简要填写需要护理的病症" required="required" />
 				</li>
 				<li>
 					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="报酬（小时）：" readonly="readonly" />
-					<input type="number" class="input-text radius size-M" name="reward" value="" placeholder="请填写单时报酬" required="required" />
+					<input type="number" class="input-text radius size-M" name="reward" value="{$info.reward}" placeholder="请填写单时报酬" required="required" />
 				</li>
 				<li>
 					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="预计总工时（小时）：" readonly="readonly" />
-					<input type="text" class="input-text radius size-M" name="worktime" value="" placeholder="请填写总工时" required="required" />
+					<input type="text" class="input-text radius size-M" name="worktime" value="{$info.worktime}" placeholder="请填写总工时" required="required" />
 				</li>
 				<li>
 					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="请填写具体需求内容：" readonly="readonly" />
-					<script id="editor" name="needs" type="text/plain" style="width:600px;height:300px;background-color: #E6E6E6;border: none;margin-left: 200px;margin-top: -20px;"></script>
+					<script id="editor" name="needs" type="text/plain" style="width:600px;height:300px;background-color: #E6E6E6;border: none;margin-left: 200px;margin-top: -20px;">{$info.needs|default='无'}</script>
 				</li>
 				<li style="margin-top: 35px;margin-left: 25%">
-					<button type="submit" class="radius btn" style="border: 1px black solid">&nbsp;&nbsp;&nbsp;&nbsp;发&nbsp;&nbsp;布&nbsp;&nbsp;&nbsp;&nbsp;</button>
+					<button type="submit" class="radius btn" style="border: 1px black solid">&nbsp;&nbsp;&nbsp;&nbsp;保&nbsp;&nbsp;存&nbsp;&nbsp;&nbsp;&nbsp;</button>
 					<button type="button" class="btn radius" onclick="layer_close()" style="margin-left: 25%;border: 1px black solid">&nbsp;&nbsp;&nbsp;&nbsp;关&nbsp;&nbsp;闭&nbsp;&nbsp;&nbsp;&nbsp;</button>
 				</li>
 			</ul>
@@ -207,5 +208,16 @@
 			toolbars: [['indent','bold','italic','underline','forecolor','fontfamily','fontsize','simpleupload','insertimage','emotion','spechars','inserttable']],
 		});
 	});
+</script>
+<script>
+	function checkStatus() {
+		var value = "{$info.status}";
+		if(value === '1' || value === '4') {
+			return true;
+		} else {
+			alert("该需求已经开始或结束，无法修改！");
+			return false;
+		}
+	}
 </script>
 </html>
