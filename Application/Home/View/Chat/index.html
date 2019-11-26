@@ -36,11 +36,11 @@
 </head>
 <body>
 	<div id="left" style="position: fixed;height: 60%;margin-left: 1%;width: 98%;margin-top: 5%" class="show_iframe">
-		<iframe id="list" style="border: none;" scrolling="auto" name="targetText" src="{:U('chatList')}"></iframe>
+		<iframe id="list" style="border: none;" scrolling="auto" name="targetText" src="{:U('chatList')}?uid={$user.id}&nid={$nurse.id}"></iframe>
 	</div>
 	<div style="position: fixed;margin-left: 1%;width: 98%;bottom: 0;text-align: left;">
 		<script id="editor" name="remark" type="text/plain" style="height: 120px;background-color: #E6E6E6;border: none;"></script>
-		<button style="margin-left: 83%" class="btn radius size-L">&nbsp;发&nbsp;&nbsp;&nbsp;&nbsp;送&nbsp;</button>
+		<a href="{:U('chatList')}?uid={$user.id}&nid={$nurse.id}" target="targetText" style="margin-left: 83%" class="btn radius size-L" onclick="return sendChat()">&nbsp;发&nbsp;&nbsp;&nbsp;&nbsp;送&nbsp;</a>
 	</div>
 </body>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
@@ -170,5 +170,33 @@
 			focus:true,
 		});
 	});
+</script>
+<script>
+	function sendChat() {
+		var value = UE.getEditor('editor').getContent();
+		if(value) {
+			$.ajax({
+				url:"{:U('save')}",
+				type:"get",
+				data:{
+					'uid':"{$user.id}",
+					'nid':"{$nurse.id}",
+					'author':"{$Think.SESSION.id}",
+					"content":value,
+				},
+				success:function (data) {
+					if(data) {
+						return true;
+					} else {
+						alert("消息发送失败");
+						return false;
+					}
+				},
+			});
+		} else {
+			alert("不能发送空消息");
+			return false;
+		}
+	}
 </script>
 </html>

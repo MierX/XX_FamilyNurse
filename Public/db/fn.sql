@@ -11,7 +11,7 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 26/11/2019 21:00:13
+ Date: 27/11/2019 02:05:30
 */
 
 SET NAMES utf8mb4;
@@ -43,10 +43,23 @@ CREATE TABLE `chat`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL DEFAULT 0,
   `nid` int(11) NOT NULL DEFAULT 0,
+  `author` int(11) NOT NULL DEFAULT 0,
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `addtime` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of chat
+-- ----------------------------
+INSERT INTO `chat` VALUES (1, 2, 1, 2, '<p>123<br/></p>', 1574790963);
+INSERT INTO `chat` VALUES (2, 2, 1, 2, '<p>123123<br/></p>', 1574790978);
+INSERT INTO `chat` VALUES (3, 2, 1, 2, '<p>123123<br/></p>', 1574790991);
+INSERT INTO `chat` VALUES (4, 2, 1, 2, '<p>123123<br/></p>', 1574790998);
+INSERT INTO `chat` VALUES (5, 2, 1, 2, '<p>123123123<br/></p>', 1574791004);
+INSERT INTO `chat` VALUES (6, 2, 1, 2, '<p>1231<br/></p>', 1574791011);
+INSERT INTO `chat` VALUES (7, 2, 1, 2, '<p>1231asd<br/></p>', 1574791023);
+INSERT INTO `chat` VALUES (8, 2, 1, 2, '<p>阿瑟东<br/>阿瑟东<br/>阿德亲吻请问</p>', 1574791076);
 
 -- ----------------------------
 -- Table structure for needs
@@ -180,7 +193,7 @@ CREATE TABLE `nurse_needs`  (
   `nurse` int(11) NOT NULL DEFAULT 0,
   `addtime` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
+) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
 
 -- ----------------------------
 -- Records of nurse_needs

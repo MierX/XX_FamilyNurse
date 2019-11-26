@@ -43,7 +43,11 @@
 </head>
 <body>
     <div id="content">
+        <volist name="chats" id="co">
+            <if condition="$Think.SESSION.id eq $co.uid">
 
+            </if>
+        </volist>
     </div>
 </body>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
