@@ -28,13 +28,16 @@
 </head>
 <body>
     <if condition="$Think.SESSION.role eq 'User'">
-        <p onclick="collection()" style="margin-left: 15px;font-size: 20px;cursor: default;">
+        <div style="margin-left: 15px;font-size: 20px;cursor: default;">
             <if condition="$collection eq true">
-                <i class="Hui-iconfont" style="cursor: pointer" title="收藏">&#xe630;</i>
+                <i class="Hui-iconfont" onclick="collection()"  style="cursor: pointer" title="收藏">&#xe630;</i>
                 <elseif condition="$collection eq false" />
-                <i class="Hui-iconfont" style="cursor: pointer" title="收藏">&#xe61b;</i>
+                <i class="Hui-iconfont" onclick="collection()"  style="cursor: pointer" title="收藏">&#xe61b;</i>
             </if>
-        </p>
+        </div>
+        <div style="float: left;margin-left: 15px;font-size: 20px;cursor: default;">
+            <i class="Hui-iconfont" onclick="show('title','{:U(\'Chat/index\')}?uid={$Think.SESSION.id}&nid={$nurse}','0','0')"  style="cursor: pointer" title="私聊">&#xe6c5;</i>
+        </div>
     </if>
     <div id="content">{$data.remark}</div>
 </body>
@@ -50,6 +53,8 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/ueditor.config.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="../../../../Public/h-ui/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../../../Public/h-ui/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
     function collection() {
         $.ajax({
@@ -71,6 +76,18 @@
                 alert('未知错误！请调试！');
             }
         })
+    }
+    function show(title,url,w,h) {
+        var account = "{$Think.SESSION.account}";
+        if(account) {
+            title = "与{$data.name}的私聊";
+            w = parent.document.body.clientWidth*0.3;
+            h = parent.document.body.clientHeight*0.6;
+            parent.layer_show(title,url,w,h);
+        } else {
+            alert('请先登录');
+            parent.location.href = "{:U('login')}";
+        }
     }
 </script>
 </html>

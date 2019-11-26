@@ -49,8 +49,8 @@
 							<td>{$no.disease}</td>
 							<td>{$no.reward}</td>
 							<td>{$no.worktime}</td>
-							<td>{$no.addtime|date='Y-m-d H:i:s',###}</td>
-							<td>{$no.endtime|date='Y-m-d H:i:s',###}</td>
+							<td>{$no.addtime|default='Y-m-d H:i:s'}</td>
+							<td>{$no.endtime|default='Y-m-d H:i:s'}</td>
 							<td>
 								<if condition="$no.status eq 1">
 									未开始

@@ -132,13 +132,13 @@
 					<a href="{:U('index')}" style="font-size: 32px;">XXXXXXXXXX</a>
 				</li>
 				<li>
-					<a href="{:U('noticeList')}" target="targetText" onclick="changerTag(this.href)">公告</a>
+					<a id="notice_tag" href="{:U('noticeList')}" target="targetText" onclick="changerTag(this.href)">公告</a>
 				</li>
 				<li>
-					<a href="{:U('needsList')}" target="targetText" onclick="changerTag(this.href)">患者需求</a>
+					<a id="needs_tag" href="{:U('needsList')}" target="targetText" onclick="changerTag(this.href)">患者需求</a>
 				</li>
 				<li>
-					<a href="{:U('nurseList')}" target="targetText" onclick="changerTag(this.href)">驻站护士</a>
+					<a id="nurse_tag" href="{:U('nurseList')}" target="targetText" onclick="changerTag(this.href)">驻站护士</a>
 				</li>
 				<li style="background-color: #E6E6E6;margin-top: 0.8%;margin-left: 3.5%;">
 					<input id="keyword" type="text" class="input-text" style="width: 180px;" name="keyword" value="" placeholder="请输入公告标题" />
@@ -172,7 +172,7 @@
                         <li>
                             <if condition="$user.role eq 'Nurse'">
                                 <i class="Hui-iconfont">
-                                    <a href="javascript:void(0);" onClick="show('查看需求','{:U(\'Needs/watch\')}?id={$user.id}','0','0')">&#xe627;</a>
+                                    <a href="javascript:void(0);" onClick="alert('非普通用户无法使用该功能！');">&#xe627;</a>
                                 </i>
                             <else />
                                 <i class="Hui-iconfont">
@@ -186,9 +186,15 @@
                             </i>
                         </li>
                         <li>
-                            <i class="Hui-iconfont">
-                                <a href="{:U('User/index')}">&#xe686;</a>
-                            </i>
+							<if condition="$user.role eq 'Nurse'">
+								<i class="Hui-iconfont">
+									<a href="javascript:void(0);" onClick="checkNurse()">&#xe72d;</a>
+								</i>
+								<else />
+								<i class="Hui-iconfont">
+									<a href="javascript:void(0);" onClick="chooseNeeds()">&#xe72d;</a>
+								</i>
+							</if>
                         </li>
                     </ul>
                     <ul id="ul_2">
@@ -372,6 +378,25 @@
 			show('个人需求列表','{:U(\'User/myNeeds\')}?id={$user.id}','0','0');
 		}, function(){
 			show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
+		});
+	}
+	function checkNurse() {
+		$.ajax({
+			url:"{:U('Nurse/myNeeds')}",
+			type:"get",
+			data:{
+				"id":"{$user.id}",
+			},
+			success:function (data) {
+				if(data) {
+					show('查看需求','{:U(\'Nurse/myNeeds\')}?id={$user.id}&list=1','0','0')
+				} else {
+					alert('您还没有医护记录');
+				}
+			},
+			error:function () {
+				alert('未知错误！请调试！');
+			},
 		});
 	}
 </script>
