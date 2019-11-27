@@ -35,12 +35,12 @@
 	</style>
 </head>
 <body>
-	<div id="left" style="position: fixed;height: 60%;margin-left: 1%;width: 98%;margin-top: 5%" class="show_iframe">
+	<div id="chatList" style="position: fixed;height: 75%;margin-left: 1%;width: 98%;margin-top: 1%;overflow-y:auto;overflow-x: hidden;" class="show_iframe">
 		<iframe id="list" style="border: none;" scrolling="auto" name="targetText" src="{:U('chatList')}?uid={$user.id}&nid={$nurse.id}"></iframe>
 	</div>
 	<div style="position: fixed;margin-left: 1%;width: 98%;bottom: 0;text-align: left;">
 		<script id="editor" name="remark" type="text/plain" style="height: 120px;background-color: #E6E6E6;border: none;"></script>
-		<a href="{:U('chatList')}?uid={$user.id}&nid={$nurse.id}" target="targetText" style="margin-left: 83%" class="btn radius size-L" onclick="return sendChat()">&nbsp;发&nbsp;&nbsp;&nbsp;&nbsp;送&nbsp;</a>
+		<a href="{:U('chatList')}?uid={$user.id}&nid={$nurse.id}" target="targetText" style="margin-left: 80%;float: right;" class="btn radius size-L" onclick="return sendChat()">&nbsp;发&nbsp;&nbsp;&nbsp;&nbsp;送&nbsp;</a>
 	</div>
 </body>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
@@ -182,10 +182,12 @@
 					'uid':"{$user.id}",
 					'nid':"{$nurse.id}",
 					'author':"{$Think.SESSION.id}",
+					'role':"{$Think.SESSION.role}",
 					"content":value,
 				},
 				success:function (data) {
 					if(data) {
+						UE.getEditor('editor').setContent('');
 						return true;
 					} else {
 						alert("消息发送失败");

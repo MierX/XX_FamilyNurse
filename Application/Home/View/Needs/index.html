@@ -28,13 +28,16 @@
 </head>
 <body>
     <if condition="$Think.SESSION.role eq 'Nurse'">
-        <p onclick="collection()" style="margin-left: 15px;font-size: 20px;cursor: default;">
+        <div style="margin-left: 15px;font-size: 20px;cursor: default;">
             <if condition="$collection eq true">
-                <i class="Hui-iconfont" style="cursor: pointer" title="收藏">&#xe630;</i>
+                <i class="Hui-iconfont" onclick="collection()"  style="cursor: pointer" title="收藏">&#xe630;</i>
             <elseif condition="$collection eq false" />
-                <i class="Hui-iconfont" style="cursor: pointer" title="收藏">&#xe61b;</i>
+                <i class="Hui-iconfont" onclick="collection()"  style="cursor: pointer" title="收藏">&#xe61b;</i>
             </if>
-        </p>
+        </div>
+        <div style="float: left;margin-left: 15px;font-size: 20px;cursor: default;">
+            <i class="Hui-iconfont" onclick="show('title','{:U(\'Chat/index\')}?nid={$Think.SESSION.id}&uid={$data.uid}','0','0')"  style="cursor: pointer" title="私聊">&#xe6c5;</i>
+        </div>
     </if>
     <div id="content">{$data.needs}</div>
 </body>
@@ -71,6 +74,18 @@
                 alert('未知错误！请调试！');
             }
         })
+    }
+    function show(title,url,w,h) {
+        var account = "{$Think.SESSION.account}";
+        if(account) {
+            title = "与{$data.name}的私聊";
+            w = parent.document.body.clientWidth*0.25;
+            h = parent.document.body.clientHeight*0.75;
+            parent.layer_show(title,url,w,h);
+        } else {
+            alert('请先登录');
+            parent.location.href = "{:U('login')}";
+        }
     }
 </script>
 </html>

@@ -11,7 +11,7 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 27/11/2019 02:05:30
+ Date: 27/11/2019 18:24:45
 */
 
 SET NAMES utf8mb4;
@@ -44,22 +44,50 @@ CREATE TABLE `chat`  (
   `uid` int(11) NOT NULL DEFAULT 0,
   `nid` int(11) NOT NULL DEFAULT 0,
   `author` int(11) NOT NULL DEFAULT 0,
+  `role` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `addtime` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of chat
 -- ----------------------------
-INSERT INTO `chat` VALUES (1, 2, 1, 2, '<p>123<br/></p>', 1574790963);
-INSERT INTO `chat` VALUES (2, 2, 1, 2, '<p>123123<br/></p>', 1574790978);
-INSERT INTO `chat` VALUES (3, 2, 1, 2, '<p>123123<br/></p>', 1574790991);
-INSERT INTO `chat` VALUES (4, 2, 1, 2, '<p>123123<br/></p>', 1574790998);
-INSERT INTO `chat` VALUES (5, 2, 1, 2, '<p>123123123<br/></p>', 1574791004);
-INSERT INTO `chat` VALUES (6, 2, 1, 2, '<p>1231<br/></p>', 1574791011);
-INSERT INTO `chat` VALUES (7, 2, 1, 2, '<p>1231asd<br/></p>', 1574791023);
-INSERT INTO `chat` VALUES (8, 2, 1, 2, '<p>阿瑟东<br/>阿瑟东<br/>阿德亲吻请问</p>', 1574791076);
+INSERT INTO `chat` VALUES (1, 2, 1, 2, 'User', '<p>123<br/></p>', 1574790963);
+INSERT INTO `chat` VALUES (2, 2, 1, 2, 'User', '<p>123123<br/></p>', 1574790978);
+INSERT INTO `chat` VALUES (3, 2, 1, 2, 'User', '<p>123123<br/></p>', 1574790991);
+INSERT INTO `chat` VALUES (4, 2, 1, 2, 'User', '<p>123123<br/></p>', 1574790998);
+INSERT INTO `chat` VALUES (5, 2, 1, 2, 'User', '<p>123123123<br/></p>', 1574791004);
+INSERT INTO `chat` VALUES (6, 2, 1, 2, 'User', '<p>1231<br/></p>', 1574791011);
+INSERT INTO `chat` VALUES (7, 2, 1, 2, 'User', '<p>1231asd<br/></p>', 1574791023);
+INSERT INTO `chat` VALUES (8, 2, 1, 2, 'User', '<p>阿瑟东<br/>阿瑟东<br/>阿德亲吻请问</p>', 1574791076);
+INSERT INTO `chat` VALUES (9, 2, 1, 2, 'User', '<p>wqeqw<br/></p>', 1574822966);
+INSERT INTO `chat` VALUES (10, 2, 1, 2, 'User', '<p>1231531651516<br/></p>', 1574823056);
+INSERT INTO `chat` VALUES (11, 2, 1, 2, 'User', '<p>1231531651516456<br/></p>', 1574823067);
+INSERT INTO `chat` VALUES (12, 2, 1, 2, 'User', '<p>123<br/></p>', 1574825320);
+INSERT INTO `chat` VALUES (13, 2, 1, 1, 'Nurse', '<p>123<br/></p>', 1574822966);
+INSERT INTO `chat` VALUES (14, 2, 1, 2, 'User', '<p>123213<br/></p>', 1574835842);
+INSERT INTO `chat` VALUES (15, 2, 1, 2, 'User', '<p>阿三大苏打<br/></p>', 1574840702);
+INSERT INTO `chat` VALUES (16, 2, 1, 2, 'User', '<p>阿三大苏打<br/></p>', 1574840706);
+INSERT INTO `chat` VALUES (17, 2, 1, 2, 'User', '<p>阿三大苏打<br/></p>', 1574840709);
+INSERT INTO `chat` VALUES (18, 2, 1, 2, 'User', '<p>阿三大苏打<br/></p>', 1574840711);
+INSERT INTO `chat` VALUES (19, 2, 1, 2, 'User', '<p>阿大撒<br/></p>', 1574840827);
+INSERT INTO `chat` VALUES (20, 2, 1, 2, 'User', '<p>阿萨大<br/></p>', 1574841030);
+INSERT INTO `chat` VALUES (21, 2, 1, 2, 'User', '<p>阿萨大<br/></p>', 1574841162);
+INSERT INTO `chat` VALUES (22, 2, 1, 2, 'User', '<p>阿萨大123<br/></p>', 1574841182);
+INSERT INTO `chat` VALUES (23, 2, 1, 2, 'User', '<p>单哈哈<br/></p>', 1574841195);
+INSERT INTO `chat` VALUES (24, 2, 1, 2, 'User', '<p>123奥错</p>', 1574841206);
+INSERT INTO `chat` VALUES (25, 2, 1, 1, 'Nurse', '<p>asd&nbsp;<br/></p>', 1574843115);
+INSERT INTO `chat` VALUES (26, 2, 1, 1, 'Nurse', '<p>asdsadasd</p>', 1574843121);
+INSERT INTO `chat` VALUES (27, 2, 1, 1, 'Nurse', '<p>123阿萨大</p>', 1574843127);
+INSERT INTO `chat` VALUES (28, 2, 1, 2, 'User', '<p>阿萨大<br/></p>', 1574843163);
+INSERT INTO `chat` VALUES (29, 2, 1, 1, 'Nurse', '<p>阿三大苏打</p>', 1574843166);
+INSERT INTO `chat` VALUES (30, 2, 1, 2, 'User', '<p>阿三大苏打</p>', 1574843180);
+INSERT INTO `chat` VALUES (31, 2, 1, 2, 'User', '<p>阿斯顿萨达</p>', 1574843189);
+INSERT INTO `chat` VALUES (32, 2, 1, 1, 'Nurse', '<p>萨达萨达<br/></p>', 1574843193);
+INSERT INTO `chat` VALUES (33, 2, 1, 1, 'Nurse', '<p>你是煞笔</p>', 1574843225);
+INSERT INTO `chat` VALUES (34, 2, 1, 2, 'User', '<p>你才是</p>', 1574843231);
+INSERT INTO `chat` VALUES (35, 2, 1, 2, 'User', '<p>你才是</p>', 1574843242);
 
 -- ----------------------------
 -- Table structure for needs
@@ -155,7 +183,7 @@ CREATE TABLE `nurse`  (
 -- ----------------------------
 -- Records of nurse
 -- ----------------------------
-INSERT INTO `nurse` VALUES (1, 'Nurse', 'test001', '123456', 'test1', 1, 18, 12312312300, 12345678900987654, '2', 'qwadasd', NULL, 0, 'asdasdasdaf', 1, 1572687086);
+INSERT INTO `nurse` VALUES (1, 'Nurse', 'test001', '123456', 'test1', 1, 18, 12312312300, 12345678900987654, '2', 'qwadasd', '感冒', 0, '<p>我我我我我我我我我</p>', 1, 1572687086);
 INSERT INTO `nurse` VALUES (2, 'Nurse', 'test002', '123456', 'test2', 2, 41, 12312312301, 123123123123123123, '15', '123213', NULL, 0, 'testtest', 1, 1572687086);
 INSERT INTO `nurse` VALUES (3, 'Nurse', 'test003', '123456', 'test3', 1, 41, 12312312302, 123123123123123124, '10', '123213', '感冒', 0, 'testtest', 1, 1572687086);
 INSERT INTO `nurse` VALUES (4, 'Nurse', 'test004', '123456', 'test4', 2, 41, 12312312303, 123123123123123125, '10', '123213', '感冒', 0, 'testtest', 1, 1572687086);
@@ -176,12 +204,13 @@ CREATE TABLE `nurse_collection`  (
   `nid` int(11) NOT NULL DEFAULT 0,
   `ids` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of nurse_collection
 -- ----------------------------
 INSERT INTO `nurse_collection` VALUES (8, 2, '{\"1\":8,\"2\":7,\"4\":12,\"5\":1,\"6\":2,\"7\":6,\"8\":15}');
+INSERT INTO `nurse_collection` VALUES (9, 1, '[6]');
 
 -- ----------------------------
 -- Table structure for nurse_needs

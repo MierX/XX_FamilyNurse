@@ -3,8 +3,11 @@ namespace Home\Controller;
 use Think\Controller;
 class NeedsController extends BaseController {
     public function index() {
-        $info = D('Needs') -> field('needs') -> where(['id' => $_GET['id']]) -> find();
-        $collections = json_decode(D($_SESSION['role'].'Collection') -> field('ids') -> where(['uid' => $_SESSION['id']]) -> find()['ids'],true);
+        $info = D('Needs')  -> field('uid,needs') -> where(['id' => $_GET['id']]) -> find();
+        $info['name'] = D('User') -> field('name') -> where(['id' => $info['uid']]) -> find()['name'];
+        $where = ['uid' => $_SESSION['id']];
+        if($_SESSION['role'] == 'Nurse') $where = ['nid' => $_SESSION['id']];
+        $collections = json_decode(D($_SESSION['role'].'Collection') -> field('ids') -> where($where) -> find()['ids'],true);
         in_array($_GET['id'],$collections) ? $collection = true : $collection = false;
         $this -> collection = $collection;
         $this -> needs = $_GET['id'];
