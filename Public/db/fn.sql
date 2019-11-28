@@ -11,7 +11,7 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 27/11/2019 18:24:45
+ Date: 28/11/2019 18:25:11
 */
 
 SET NAMES utf8mb4;
@@ -48,7 +48,7 @@ CREATE TABLE `chat`  (
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `addtime` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 37 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of chat
@@ -88,6 +88,7 @@ INSERT INTO `chat` VALUES (32, 2, 1, 1, 'Nurse', '<p>萨达萨达<br/></p>', 157
 INSERT INTO `chat` VALUES (33, 2, 1, 1, 'Nurse', '<p>你是煞笔</p>', 1574843225);
 INSERT INTO `chat` VALUES (34, 2, 1, 2, 'User', '<p>你才是</p>', 1574843231);
 INSERT INTO `chat` VALUES (35, 2, 1, 2, 'User', '<p>你才是</p>', 1574843242);
+INSERT INTO `chat` VALUES (36, 2, 2, 2, 'User', '<p>asd<br/></p>', 1574850403);
 
 -- ----------------------------
 -- Table structure for needs
