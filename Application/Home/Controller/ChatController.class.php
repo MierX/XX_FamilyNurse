@@ -40,24 +40,42 @@ class ChatController extends BaseController {
         }
     }
 
-    public function setTime($time) {
-        $nowTime = time();
-        $differenceTime = $nowTime - $time;
-        $yesterdayTime = strtotime('yesterday');
-        $weekTime = strtotime(date('Y-m-d 0:0:0', (time() - ((date('w') == 0 ? 7 : date('w')) - 1) * 24 * 36000)));
-        if(date('Y-m-d', time()) == date('Y-m-d', $time)) {
-            $rs = '今天'.date('H:i', $time);
-        } else if(date('Y-m-d', $yesterdayTime) == date('Y-m-d', $time)) {
-            $rs = '昨天'.date('H:i', $time);
-        } else if($differenceTime < 60 * 60 * 24 * 7 && $time > $weekTime) {
-            $newDay = date('w', $time);
-            $week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
-            $rs = $week[$newDay]." ".date('H:i', $time);
-        } else if(date('y', time()) == date('y', $time)) {
-            $rs = date('m', $time).'月'.date('d', $time).'日'.' '.date('H:i', $time);
-        } else {
-            $rs = date('Y', $time).'年'.date('m', $time).'月'.date('d', $time).'日'.' '.date('H:i', $time);
+    public function list() {
+        if($_GET) {
+            if($_GET['role'] == 'User') {
+                $group = 'nid';
+                $me = 'uid';
+                $he = 'nid';
+                $he_table = 'Nurse';
+            } else if($_GET['role'] == 'Nurse') {
+                $group = 'uid';
+                $me = 'nid';
+                $he = 'uid';
+                $he_table = 'User';
+            }
+            $list = D('Chat') -> field('*') -> where([$me => $_GET['id']]) -> order('nid asc,addtime desc') -> select();
+            $k = 0;
+            foreach ($list as $key => $value) {
+                if($value[$group] != $k) {
+                    $k = $value[$group];
+                    unset($value['id']);
+                    $me_info = D($_GET['role']) -> field('id,name') -> where(['id' => $value[$me]]) -> find();
+                    $value['me_id'] = $me_info['id'];
+                    $value['me'] = $me_info['name'];
+                    unset($value[$me]);
+                    unset($value['author']);
+                    unset($value['role']);
+                    $he_info = D($he_table) -> field('id,name') -> where(['id' => $value[$he]]) -> find();
+                    $value['he_id'] = $he_info['id'];
+                    $value['he'] = $he_info['name'];
+                    unset($value[$he]);
+                    $info[] = $value;
+                }
+            }
+            $addtime = array_column($info,'addtime');
+            array_multisort($addtime,SORT_DESC,$info);
+            $this -> info = $info;
+            $this -> display();
         }
-        return $rs;
     }
 }
