@@ -11,11 +11,31 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 28/11/2019 18:25:11
+ Date: 01/12/2019 17:58:31
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for accept
+-- ----------------------------
+DROP TABLE IF EXISTS `accept`;
+CREATE TABLE `accept`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) NULL DEFAULT 0,
+  `nid` int(11) NULL DEFAULT 0,
+  `needs` int(11) NULL DEFAULT 0,
+  `score` int(11) NULL DEFAULT 0,
+  `addtime` int(11) NULL DEFAULT 0,
+  `endtime` int(11) NULL DEFAULT 0,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
+
+-- ----------------------------
+-- Records of accept
+-- ----------------------------
+INSERT INTO `accept` VALUES (2, 2, 1, 6, 0, 1575191383, 0);
 
 -- ----------------------------
 -- Table structure for admin
@@ -36,6 +56,23 @@ CREATE TABLE `admin`  (
 INSERT INTO `admin` VALUES (1, 'admin', '管理员', 'admin', '123456');
 
 -- ----------------------------
+-- Table structure for apply
+-- ----------------------------
+DROP TABLE IF EXISTS `apply`;
+CREATE TABLE `apply`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `needs` int(11) NOT NULL DEFAULT 0,
+  `nurse` int(11) NOT NULL DEFAULT 0,
+  `addtime` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
+
+-- ----------------------------
+-- Records of apply
+-- ----------------------------
+INSERT INTO `apply` VALUES (2, 9, 2, 1575188478);
+
+-- ----------------------------
 -- Table structure for chat
 -- ----------------------------
 DROP TABLE IF EXISTS `chat`;
@@ -48,7 +85,7 @@ CREATE TABLE `chat`  (
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `addtime` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 37 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 38 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of chat
@@ -89,6 +126,10 @@ INSERT INTO `chat` VALUES (33, 2, 1, 1, 'Nurse', '<p>你是煞笔</p>', 15748432
 INSERT INTO `chat` VALUES (34, 2, 1, 2, 'User', '<p>你才是</p>', 1574843231);
 INSERT INTO `chat` VALUES (35, 2, 1, 2, 'User', '<p>你才是</p>', 1574843242);
 INSERT INTO `chat` VALUES (36, 2, 2, 2, 'User', '<p>asd<br/></p>', 1574850403);
+INSERT INTO `chat` VALUES (37, 2, 1, 2, 'User', '<p>哈咯哈咯<br/></p>', 1575107826);
+INSERT INTO `chat` VALUES (38, 2, 2, 2, 'User', '<p>恩呐呐呐<br/></p>', 1575169082);
+INSERT INTO `chat` VALUES (39, 2, 2, 2, 'Nurse', '<p>123123<br/></p>', 1575169584);
+INSERT INTO `chat` VALUES (40, 2, 2, 2, 'Nurse', '<p>adsdasd<br/></p>', 1575169827);
 
 -- ----------------------------
 -- Table structure for needs
@@ -111,12 +152,12 @@ CREATE TABLE `needs`  (
 -- ----------------------------
 -- Records of needs
 -- ----------------------------
-INSERT INTO `needs` VALUES (1, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457087, 1574061887, 2);
-INSERT INTO `needs` VALUES (2, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457163, 1574061963, 3);
+INSERT INTO `needs` VALUES (1, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457087, 1574061887, 4);
+INSERT INTO `needs` VALUES (2, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457163, 1574061963, 4);
 INSERT INTO `needs` VALUES (3, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457180, 1574061980, 4);
 INSERT INTO `needs` VALUES (4, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457183, 1574061983, 4);
 INSERT INTO `needs` VALUES (5, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457186, 1574061986, 4);
-INSERT INTO `needs` VALUES (6, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574681270, 1575286070, 1);
+INSERT INTO `needs` VALUES (6, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574681270, 1575286070, 2);
 INSERT INTO `needs` VALUES (7, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457194, 1574061994, 4);
 INSERT INTO `needs` VALUES (8, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457199, 1574061999, 4);
 INSERT INTO `needs` VALUES (9, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574681016, 1575285816, 1);
@@ -147,7 +188,7 @@ CREATE TABLE `notice`  (
 -- ----------------------------
 INSERT INTO `notice` VALUES (1, 'test1', 6, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
 INSERT INTO `notice` VALUES (2, 'test2', 5, '管理员', '<p>test22222222</p>', 1, 1573056000);
-INSERT INTO `notice` VALUES (3, 'test3', 42, '管理员', '<p>请新编辑内容</p>', 1, 1573117385);
+INSERT INTO `notice` VALUES (3, 'test3', 43, '管理员', '<p>请新编辑内容</p>', 1, 1573117385);
 INSERT INTO `notice` VALUES (4, 'test1', 10, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
 INSERT INTO `notice` VALUES (5, 'test1', 7, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
 INSERT INTO `notice` VALUES (6, 'test1', 1, '管理员', '<p>test1</p><p><span style=\"font-size: 20px;\">test1</span></p><p><span style=\"font-size: 24px;\">test1</span></p><p><span style=\"font-size: 24px;\"><img src=\"/ueditor/php/upload/image/20191107/1573107649761427.gif\" title=\"1573107649761427.gif\" alt=\"ball.gif\"/></span></p>', 1, 1522101156);
@@ -271,6 +312,6 @@ CREATE TABLE `user_collection`  (
 -- ----------------------------
 -- Records of user_collection
 -- ----------------------------
-INSERT INTO `user_collection` VALUES (1, 2, '{\"2\":3,\"3\":6,\"4\":8}');
+INSERT INTO `user_collection` VALUES (1, 2, '{\"2\":3,\"3\":6,\"4\":8,\"5\":1,\"6\":2}');
 
 SET FOREIGN_KEY_CHECKS = 1;
