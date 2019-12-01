@@ -186,15 +186,9 @@
                             </i>
                         </li>
                         <li>
-							<if condition="$user.role eq 'Nurse'">
-								<i class="Hui-iconfont">
-									<a href="javascript:void(0);" onClick="checkNurse()">&#xe72d;</a>
-								</i>
-								<else />
-								<i class="Hui-iconfont">
-									<a href="javascript:void(0);" onClick="chooseNeeds()">&#xe72d;</a>
-								</i>
-							</if>
+							<i class="Hui-iconfont">
+								<a href="javascript:void(0);" onClick="show('我的记录','{:U(\'Record/list\')}?id={$user.id}&role={$user.role}','0','0');">&#xe72d;</a>
+							</i>
                         </li>
                     </ul>
                     <ul id="ul_2">

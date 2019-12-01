@@ -9,6 +9,12 @@ class NeedsController extends BaseController {
         if($_SESSION['role'] == 'Nurse') $where = ['nid' => $_SESSION['id']];
         $collections = json_decode(D($_SESSION['role'].'Collection') -> field('ids') -> where($where) -> find()['ids'],true);
         in_array($_GET['id'],$collections) ? $collection = true : $collection = false;
+        $apply_list = D('Apply') -> field('nurse') -> where(['needs' => $_GET['id']]) -> order('addtime asc') -> select();
+        foreach ($apply_list as $key => $value) {
+            $nurse = D('Nurse') -> field('id as nid,name') -> where(['id' => $value['nurse'], 'status' => 1]) -> find();
+            if($nurse) $applyer[] = $nurse;
+        }
+        $this -> applyer = $applyer;
         $this -> collection = $collection;
         $this -> needs = $_GET['id'];
         $this -> data = $info;
@@ -86,6 +92,32 @@ class NeedsController extends BaseController {
             }
         } else {
             echo false;
+        }
+    }
+
+    public function checkStatus() {
+        if($_GET) {
+            $rs = D('Apply') -> field('id') -> where(['needs' => $_GET['id'], 'nurse' => $_GET['nid']]) -> find();
+            if($rs) {
+                echo false;
+            } else {
+                D('Apply') -> add(['needs' => $_GET['id'], 'nurse' => $_GET['nid'], 'addtime' => time()]);
+                echo true;
+            }
+        }
+    }
+
+    public function accept() {
+        if($_GET) {
+            $rs = D('Accept') -> field('id') -> where(['needs' => $_GET['needs'], 'uid' => $_GET['user'], 'nid' => $_GET['nurse']]) -> find();
+            if($rs) {
+                echo false;
+            } else {
+                D('Accept') -> add(['needs' => $_GET['needs'], 'uid' => $_GET['user'], 'nid' => $_GET['nurse'], 'addtime' => time()]);
+                D('Needs') -> where(['id' => $_GET['needs']]) -> save(['status' => 2]);
+                D('Apply') -> where(['needs' => $_GET['needs']]) -> delete();
+                echo true;
+            }
         }
     }
 }
