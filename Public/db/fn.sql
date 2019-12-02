@@ -11,7 +11,7 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 01/12/2019 17:58:31
+ Date: 02/12/2019 21:49:27
 */
 
 SET NAMES utf8mb4;
@@ -30,12 +30,13 @@ CREATE TABLE `accept`  (
   `addtime` int(11) NULL DEFAULT 0,
   `endtime` int(11) NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
+) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
 
 -- ----------------------------
 -- Records of accept
 -- ----------------------------
 INSERT INTO `accept` VALUES (2, 2, 1, 6, 0, 1575191383, 0);
+INSERT INTO `accept` VALUES (3, 2, 2, 9, 0, 1575283502, 0);
 
 -- ----------------------------
 -- Table structure for admin
@@ -65,12 +66,7 @@ CREATE TABLE `apply`  (
   `nurse` int(11) NOT NULL DEFAULT 0,
   `addtime` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
-
--- ----------------------------
--- Records of apply
--- ----------------------------
-INSERT INTO `apply` VALUES (2, 9, 2, 1575188478);
+) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
 
 -- ----------------------------
 -- Table structure for chat
@@ -85,7 +81,7 @@ CREATE TABLE `chat`  (
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `addtime` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 38 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 41 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of chat
@@ -160,11 +156,11 @@ INSERT INTO `needs` VALUES (5, 1, '【重病求医！】帮我买个板蓝根！
 INSERT INTO `needs` VALUES (6, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574681270, 1575286070, 2);
 INSERT INTO `needs` VALUES (7, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457194, 1574061994, 4);
 INSERT INTO `needs` VALUES (8, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457199, 1574061999, 4);
-INSERT INTO `needs` VALUES (9, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574681016, 1575285816, 1);
-INSERT INTO `needs` VALUES (10, 2, 'aaa！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574676397, 1575281197, 1);
+INSERT INTO `needs` VALUES (9, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574681016, 1575285816, 2);
+INSERT INTO `needs` VALUES (10, 2, 'aaa！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574676397, 1575281197, 4);
 INSERT INTO `needs` VALUES (11, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457277, 1573457277, 4);
 INSERT INTO `needs` VALUES (12, 3, 'wo shi xin lai de ', 'wuliao', 12, 1, '<p>超级无聊boring</p>', 1573612216, 1574217016, 4);
-INSERT INTO `needs` VALUES (13, 2, 'test', 'wuliao', 24, 24, '<p>23232321231344</p>', 1574676411, 1575281211, 1);
+INSERT INTO `needs` VALUES (13, 2, 'test', 'wuliao', 24, 24, '<p>23232321231344</p>', 1574676411, 1575281211, 4);
 INSERT INTO `needs` VALUES (14, 2, 'test1', 'test1', 112, 1232, '<p>2222222222222222222222222222222</p><p>test1<img src=\"/ueditor/php/upload/image/20191125/1574669382117603.jpg\" title=\"1574669382117603.jpg\" alt=\"07datun.jpg\"/></p><p>test12222222</p><p><br/></p>', 1574673131, 1575277931, 4);
 INSERT INTO `needs` VALUES (15, 2, '123', '3213', 12, 123, '<p>123213adsadadasdaasd</p><p>asdasdad</p>', 1574676420, 1575281220, 4);
 
@@ -271,6 +267,18 @@ CREATE TABLE `nurse_needs`  (
 -- ----------------------------
 INSERT INTO `nurse_needs` VALUES (1, 1, 2, 1575281220);
 INSERT INTO `nurse_needs` VALUES (2, 2, 2, 1575281220);
+
+-- ----------------------------
+-- Table structure for record
+-- ----------------------------
+DROP TABLE IF EXISTS `record`;
+CREATE TABLE `record`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `aid` int(11) NULL DEFAULT 0,
+  `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '',
+  `addtime` int(11) NULL DEFAULT 0,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for user
