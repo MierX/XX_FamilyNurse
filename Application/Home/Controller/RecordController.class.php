@@ -4,13 +4,9 @@ use Think\Controller;
 class RecordController extends BaseController {
     public function index(){
         if($_GET) {
-            $info = D('Needs') -> field('*') -> where(['id' => $_GET['needs']]) -> find();
+            $info = D('Needs') -> field('id,uid') -> where(['id' => $_GET['needs']]) -> find();
             $info = array_merge($info, D('User') -> field('name as u_name, sex as u_sex, age as u_age, phone as u_phone') -> where(['id' => $info['uid']]) -> find());
             $info = array_merge($info, D('Nurse') -> field('id as nid, name as n_name, sex as n_sex, age as n_age, phone as n_phone, work-year, work-add, work-expertise,merits') -> where(['id' => $_GET['nid']]) -> find());
-
-            unset($info['id']);
-            unset($info['addtime']);
-            unset($info['endtime']);
             $this -> info = $info;
             $this -> display();
         }
@@ -29,5 +25,11 @@ class RecordController extends BaseController {
             $this -> info = $info;
             $this -> display();
         }
+    }
+
+    public function content() {
+        $info = D('Needs') -> field('*') -> where(['id' => $_GET['id']]) -> find();
+        $this -> info = $info;
+        $this -> display();
     }
 }
