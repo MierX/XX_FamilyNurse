@@ -11,7 +11,7 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 02/12/2019 21:49:27
+ Date: 05/12/2019 09:12:47
 */
 
 SET NAMES utf8mb4;
@@ -30,7 +30,7 @@ CREATE TABLE `accept`  (
   `addtime` int(11) NULL DEFAULT 0,
   `endtime` int(11) NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
+) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
 
 -- ----------------------------
 -- Records of accept
@@ -142,27 +142,28 @@ CREATE TABLE `needs`  (
   `addtime` int(10) NOT NULL DEFAULT 0,
   `endtime` int(10) NOT NULL DEFAULT 0,
   `status` int(1) NOT NULL DEFAULT 1 COMMENT '1未开始，2已开始，3已结束，4已失效',
+  `score` int(11) NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of needs
 -- ----------------------------
-INSERT INTO `needs` VALUES (1, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457087, 1574061887, 4);
-INSERT INTO `needs` VALUES (2, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457163, 1574061963, 4);
-INSERT INTO `needs` VALUES (3, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457180, 1574061980, 4);
-INSERT INTO `needs` VALUES (4, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457183, 1574061983, 4);
-INSERT INTO `needs` VALUES (5, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457186, 1574061986, 4);
-INSERT INTO `needs` VALUES (6, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574681270, 1575286070, 2);
-INSERT INTO `needs` VALUES (7, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457194, 1574061994, 4);
-INSERT INTO `needs` VALUES (8, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457199, 1574061999, 4);
-INSERT INTO `needs` VALUES (9, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574681016, 1575285816, 2);
-INSERT INTO `needs` VALUES (10, 2, 'aaa！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574676397, 1575281197, 4);
-INSERT INTO `needs` VALUES (11, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457277, 1573457277, 4);
-INSERT INTO `needs` VALUES (12, 3, 'wo shi xin lai de ', 'wuliao', 12, 1, '<p>超级无聊boring</p>', 1573612216, 1574217016, 4);
-INSERT INTO `needs` VALUES (13, 2, 'test', 'wuliao', 24, 24, '<p>23232321231344</p>', 1574676411, 1575281211, 4);
-INSERT INTO `needs` VALUES (14, 2, 'test1', 'test1', 112, 1232, '<p>2222222222222222222222222222222</p><p>test1<img src=\"/ueditor/php/upload/image/20191125/1574669382117603.jpg\" title=\"1574669382117603.jpg\" alt=\"07datun.jpg\"/></p><p>test12222222</p><p><br/></p>', 1574673131, 1575277931, 4);
-INSERT INTO `needs` VALUES (15, 2, '123', '3213', 12, 123, '<p>123213adsadadasdaasd</p><p>asdasdad</p>', 1574676420, 1575281220, 4);
+INSERT INTO `needs` VALUES (1, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457087, 1574061887, 4, 0);
+INSERT INTO `needs` VALUES (2, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457163, 1574061963, 4, 0);
+INSERT INTO `needs` VALUES (3, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457180, 1574061980, 4, 0);
+INSERT INTO `needs` VALUES (4, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457183, 1574061983, 4, 0);
+INSERT INTO `needs` VALUES (5, 1, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457186, 1574061986, 4, 0);
+INSERT INTO `needs` VALUES (6, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574681270, 1575286070, 2, 0);
+INSERT INTO `needs` VALUES (7, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457194, 1574061994, 4, 0);
+INSERT INTO `needs` VALUES (8, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457199, 1574061999, 4, 0);
+INSERT INTO `needs` VALUES (9, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574681016, 1575285816, 3, 5);
+INSERT INTO `needs` VALUES (10, 2, 'aaa！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1574676397, 1575281197, 4, 0);
+INSERT INTO `needs` VALUES (11, 2, '【重病求医！】帮我买个板蓝根！', '感冒', 20, 5, '<p>帮我买盒板蓝根！</p><p><img src=\"/ueditor/php/upload/image/20191111/1573457078877817.jpg\" title=\"1573457078877817.jpg\" alt=\"chan.jpg\"/></p>', 1573457277, 1573457277, 4, 0);
+INSERT INTO `needs` VALUES (12, 3, 'wo shi xin lai de ', 'wuliao', 12, 1, '<p>超级无聊boring</p>', 1573612216, 1574217016, 4, 0);
+INSERT INTO `needs` VALUES (13, 2, 'test', 'wuliao', 24, 24, '<p>23232321231344</p>', 1574676411, 1575281211, 4, 0);
+INSERT INTO `needs` VALUES (14, 2, 'test1', 'test1', 112, 1232, '<p>2222222222222222222222222222222</p><p>test1<img src=\"/ueditor/php/upload/image/20191125/1574669382117603.jpg\" title=\"1574669382117603.jpg\" alt=\"07datun.jpg\"/></p><p>test12222222</p><p><br/></p>', 1574673131, 1575277931, 4, 0);
+INSERT INTO `needs` VALUES (15, 2, '123', '3213', 12, 123, '<p>123213adsadadasdaasd</p><p>asdasdad</p>', 1574676420, 1575281220, 4, 0);
 
 -- ----------------------------
 -- Table structure for notice
@@ -222,7 +223,7 @@ CREATE TABLE `nurse`  (
 -- Records of nurse
 -- ----------------------------
 INSERT INTO `nurse` VALUES (1, 'Nurse', 'test001', '123456', 'test1', 1, 18, 12312312300, 12345678900987654, '2', 'qwadasd', '感冒', 0, '<p>我我我我我我我我我</p>', 1, 1572687086);
-INSERT INTO `nurse` VALUES (2, 'Nurse', 'test002', '123456', 'test2', 2, 41, 12312312301, 123123123123123123, '15', '123213', NULL, 0, 'testtest', 1, 1572687086);
+INSERT INTO `nurse` VALUES (2, 'Nurse', 'test002', '123456', 'test2', 2, 41, 12312312301, 123123123123123123, '15', '123213', NULL, 3, 'testtest', 1, 1572687086);
 INSERT INTO `nurse` VALUES (3, 'Nurse', 'test003', '123456', 'test3', 1, 41, 12312312302, 123123123123123124, '10', '123213', '感冒', 0, 'testtest', 1, 1572687086);
 INSERT INTO `nurse` VALUES (4, 'Nurse', 'test004', '123456', 'test4', 2, 41, 12312312303, 123123123123123125, '10', '123213', '感冒', 0, 'testtest', 1, 1572687086);
 INSERT INTO `nurse` VALUES (5, 'Nurse', 'test005', '123456', 'test5', 1, 41, 12312312304, 123123123123123126, '10', '123213', '感冒', 0, 'testtest', 1, 1572687086);
@@ -274,11 +275,19 @@ INSERT INTO `nurse_needs` VALUES (2, 2, 2, 1575281220);
 DROP TABLE IF EXISTS `record`;
 CREATE TABLE `record`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `aid` int(11) NULL DEFAULT 0,
+  `needs` int(11) NULL DEFAULT 0,
   `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '',
   `addtime` int(11) NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of record
+-- ----------------------------
+INSERT INTO `record` VALUES (1, 9, 'test', 1575506130);
+INSERT INTO `record` VALUES (2, 9, 'testtest', 1575506284);
+INSERT INTO `record` VALUES (3, 9, 'asdasdasdddddddddddddddddddddddddasd', 1575506293);
+INSERT INTO `record` VALUES (4, 9, 'asddddddddddddddasdasdacxzccccccccccccccccc', 1575506310);
 
 -- ----------------------------
 -- Table structure for user
