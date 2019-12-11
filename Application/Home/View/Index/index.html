@@ -121,6 +121,10 @@
 		#collection2 {
 			text-align: center;
 		}
+		.my-skin .layui-layer-btn a {
+			background-color: #ffffff;
+			color: #000000;
+		}
 	</style>
 </head>
 <body>
@@ -146,7 +150,8 @@
 				</li>
 				<li style="margin-left: 7%">
 					<i class="Hui-iconfont">
-						<a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')" title="{$user.name}">&#xe625;</a>
+<!--						<a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')" title="{$user.name}">&#xe625;</a>-->
+						<a href="javascript:void(0);" onClick="self()" title="{$user.name}">&#xe625;</a>
 					</i>
 				</li>
 				<li>
@@ -198,8 +203,8 @@
                     </ul>
                     <ul style="margin-top: 40%">
                         <li style="margin-left: 5%;font-size: 14px">
-                            <i class="Hui-iconfont" style="color: red">&#xe600;</i>
-                            <a href="{:U('Nurse/index')}">查看医生</a>
+<!--                            <i class="Hui-iconfont" style="color: red">&#xe600;</i>-->
+<!--                            <a href="{:U('Nurse/index')}">查看医生</a>-->
                         </li>
                         <li>
                             <Hr style="width: 90%; margin-left: 5%; background-color: #E6E6E6;margin-top: 10px;margin-bottom: 10px;" size="4">
@@ -311,6 +316,41 @@
 			document.getElementById("keyword").value = '';
 			document.getElementById("keyword").placeholder = '请输入护士名称';
 		}
+	}
+	
+	function self() {
+		layer.open({
+			title: "个人中心导航",
+			btn: ['个人信息','发布需求','查看需求','查看信箱','收藏列表','查看记录'],
+			btnAlign:'c',
+			skin:'my-skin',
+			btn1: function(index, layero){
+				show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0');
+				return false;
+			},
+			btn2: function(index, layero){
+				show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
+				return false;
+			},
+			btn3: function(index, layero){
+				show('个人需求列表','{:U(\'User/myNeeds\')}?id={$user.id}','0','0');
+				return false;
+			},
+			btn4: function(index, layero){
+				show('我的信箱','{:U(\'Chat/list\')}?id={$user.id}&role={$user.role}','0','0');
+				return false;
+			},
+			btn5: function(index, layero){
+				show('收藏列表','{:U(\'Collection/index\')}?id={$user.id}&role={$user.role}','0','0')
+				return false;
+			},
+			btn6: function(index, layero){
+				show('我的记录','{:U(\'Record/list\')}?id={$user.id}&role={$user.role}','0','0');
+				return false;
+			},
+			cancel: function(){
+			}
+		});
 	}
 
 	function seaList() {

@@ -130,6 +130,9 @@
                                 <input id="record" type="text" class="input-text size-S radius" value="" placeholder="请输入医嘱" style="width: 80%" />
                                 <button type="button" class="btn radius size-S" onclick="setRecord()">保存</button>
                             </if>
+                        <elseif condtion="$info.status eq 3" />
+                            <if condition="$Think.SESSION.role eq Nurse">
+                            </if>
                         </if>
                     </li>
                 </ul>
