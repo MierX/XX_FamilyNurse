@@ -14,14 +14,11 @@ class NeedsController extends BaseController {
                     $v['status'] = 4;
                     D('Needs') -> where(['id' => $v['id']]) -> save($v);
                 }
-                unset($info_list[$k]);
-                continue;
             }
             $user = D('User') -> field('name,status') -> where(['id' => $v['uid']]) -> find();
-            if($user['status'] == 2) {
+            $v['name'] = $user['name'];
+            if($v['status'] == 3 || $v['status'] == 2) {
                 unset($info_list[$k]);
-            } else {
-                $v['name'] = $user['name'];
             }
         }
         $info_list = array_values($info_list);

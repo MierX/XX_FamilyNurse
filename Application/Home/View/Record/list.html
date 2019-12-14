@@ -65,7 +65,7 @@
 							</td>
 							<td>{$io.addtime|date='Y-m-d H:i:s',###}</td>
 							<td>
-								<if condition="$id.endtime eq 0">
+								<if condition="$io.endtime eq 0">
 									尚未完成
 								<else />
 									{$io.endtime|date='Y-m-d H:i:s',###}

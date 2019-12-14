@@ -69,7 +69,7 @@
                     <volist name="Notice" id="vo">
                         <tr class="text-c" style="background-color: #ffffff">
                             <td style="height: 185px;margin-top: 50px;border: none;">
-                                <div id="content" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','{:U(\'Notice/index\')}?id={$vo.id}','0','0')">
+                                <div id="content" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','{:U(\'Notice/index\')}?id={$vo.id}','1000','0')">
                                     <div id="up1" style="text-align: left">
                                         <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #1A1A1A" onmousemove="this.style.color='blue'" onmouseout="this.style.color = '#1A1A1A'">{$vo.title}</u>
                                     </div>
@@ -113,8 +113,8 @@
     function show(title,url,w,h) {
     	var account = "{$Think.SESSION.account}";
     	if(account) {
-    		w = parent.document.body.clientWidth*0.95;
-    		h = parent.document.body.clientHeight*0.85;
+            if(w == 0) w = parent.document.body.clientWidth*0.95;
+            if(h == 0) h = parent.document.body.clientHeight*0.85;
     		parent.layer_show(title,url,w,h);
     	} else {
     		alert('请先登录');

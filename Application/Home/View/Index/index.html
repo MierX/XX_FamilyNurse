@@ -121,9 +121,18 @@
 		#collection2 {
 			text-align: center;
 		}
+		.my-skin {
+			text-align: center;
+		}
+		.my-skin .layui-layer-btn {
+			text-align: center;
+		}
 		.my-skin .layui-layer-btn a {
-			background-color: #ffffff;
-			color: #000000;
+			background-color: #3385ff;
+			color: #dff3ff;
+		}
+		.my-skin .layui-layer-content a {
+			height: 0;
 		}
 	</style>
 </head>
@@ -203,8 +212,8 @@
                     </ul>
                     <ul style="margin-top: 40%">
                         <li style="margin-left: 5%;font-size: 14px">
-<!--                            <i class="Hui-iconfont" style="color: red">&#xe600;</i>-->
-<!--                            <a href="{:U('Nurse/index')}">查看医生</a>-->
+                            <i class="Hui-iconfont" style="color: red">&#xe600;</i>
+                            <a href="#">查看医生</a>
                         </li>
                         <li>
                             <Hr style="width: 90%; margin-left: 5%; background-color: #E6E6E6;margin-top: 10px;margin-bottom: 10px;" size="4">
@@ -319,22 +328,37 @@
 	}
 	
 	function self() {
+		var role = "{$user.role}";
+		console.log(role);
 		layer.open({
-			title: "个人中心导航",
+			title: false,
+			content:false,
 			btn: ['个人信息','发布需求','查看需求','查看信箱','收藏列表','查看记录'],
 			btnAlign:'c',
+			closeBtn:false,
+			shadow:0.3,
+			area: ['100px','150px'],
+			shadeClose: true,
 			skin:'my-skin',
 			btn1: function(index, layero){
 				show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0');
 				return false;
 			},
 			btn2: function(index, layero){
-				show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
-				return false;
+				if(role == 'User') {
+					show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
+					return false;
+				} else {
+					alert("请使用普通用户身份！");
+				}
 			},
 			btn3: function(index, layero){
-				show('个人需求列表','{:U(\'User/myNeeds\')}?id={$user.id}','0','0');
-				return false;
+				if(role == 'User') {
+					show('个人需求列表','{:U(\'User/myNeeds\')}?id={$user.id}','0','0');
+					return false;
+				} else {
+					alert("请使用普通用户身份！");
+				}
 			},
 			btn4: function(index, layero){
 				show('我的信箱','{:U(\'Chat/list\')}?id={$user.id}&role={$user.role}','0','0');
@@ -371,8 +395,8 @@
 	function show(title,url,w,h) {
 		var account = "{$Think.SESSION.account}";
 		if(account) {
-			w = parent.document.body.clientWidth*0.95;
-			h = parent.document.body.clientHeight*0.85;
+			if(w == 0) w = parent.document.body.clientWidth*0.95;
+			if(h == 0) h = parent.document.body.clientHeight*0.85;
 			parent.layer_show(title,url,w,h);
 		} else {
 			alert('请先登录');

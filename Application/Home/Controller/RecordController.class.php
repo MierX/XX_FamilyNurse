@@ -7,6 +7,7 @@ class RecordController extends BaseController {
             $info = D('Needs') -> field('id,uid,disease,reward,worktime,status') -> where(['id' => $_GET['needs']]) -> find();
             $info = array_merge($info, D('User') -> field('name as u_name, sex as u_sex, age as u_age, phone as u_phone') -> where(['id' => $info['uid']]) -> find());
             $info = array_merge($info, D('Nurse') -> field('id as nid, name as n_name, sex as n_sex, age as n_age, phone as n_phone, work-year, work-add, work-expertise,merits') -> where(['id' => $_GET['nid']]) -> find());
+            $info['ntou'] = D('Accept') -> field('ntou') -> where(['needs' => $_GET['needs']]) -> find()['ntou'];
             $this -> info = $info;
             $this -> display();
         }
@@ -48,8 +49,19 @@ class RecordController extends BaseController {
 
     public function saveScore() {
         if($_GET) {
-            $rs = D('Needs') -> where(['id' => $_GET['id']]) -> save(['score' => $_GET['score'], 'status' => 3]);
-            if($rs) $rs = D('Nurse') -> where(['id' => $_GET['nid']]) -> setInc('merits',$_GET['score']-2);
+            $rs = D('Accept') -> where(['needs' => $_GET['id']]) -> save(['score' => $_GET['score'], 'endtime' => time()]);
+            if($rs) {
+                D('Needs') -> where(['id' => $_GET['id']]) -> save(['status' => 3]);
+                D('Nurse') -> where(['id' => $_GET['nid']]) -> setInc('merits',$_GET['score']-2);
+            }
+            echo $rs;
+        }
+    }
+
+    public function saveScoreNurse() {
+        if($_GET) {
+            $rs = D('User') -> where(['id' => $_GET['uid']]) -> setInc('score',$_GET['score']-2);
+            if($rs) D('Accept') -> where(['needs' => $_GET['id']]) -> save(['ntou' => 1]);
             echo $rs;
         }
     }

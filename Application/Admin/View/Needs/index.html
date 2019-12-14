@@ -70,7 +70,7 @@
                                 <elseif condition="$vo.status eq 3" />
                                     已完成
                                 <else />
-                                    <u style="cursor:pointer" class="text-primary" href="javascript:;" onclick="edit('?table={$table}&where[id]={$vo.id}&data[status]=1')">取消</u>
+                                    <u style="cursor:pointer" class="text-primary" href="javascript:;" onclick="edit('?table={$table}&where[id]={$vo.id}&data[status]=1&data[addtime]={:time()}&data[endtime]={:strtotime(\'+1 week\')}')">取消</u>
                                 </if>
                             </td>
                         </tr>

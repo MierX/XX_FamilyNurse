@@ -130,8 +130,16 @@
                                 <input id="record" type="text" class="input-text size-S radius" value="" placeholder="请输入医嘱" style="width: 80%" />
                                 <button type="button" class="btn radius size-S" onclick="setRecord()">保存</button>
                             </if>
-                        <elseif condtion="$info.status eq 3" />
+                        <elseif condition="$info.status eq 3" />
                             <if condition="$Think.SESSION.role eq Nurse">
+                                <eq name="info.ntou" value="0">
+                                    <p>给这位用户一个评价吧：<span id="score_nurse"></span></p>
+                                    <button id="star_nurse1" type="button" class="btn radius size-L" style="background-color: #E6E6E6" onmouseover="changerStarNurse(1)" onmouseout="changerNullStarNurse(1)" onclick="saveScoreNurse(1)">☆</button>
+                                    <button id="star_nurse2" type="button" class="btn radius size-L" style="background-color: #E6E6E6" onmouseover="changerStarNurse(2)" onmouseout="changerNullStarNurse(2)" onclick="saveScoreNurse(2)">☆</button>
+                                    <button id="star_nurse3" type="button" class="btn radius size-L" style="background-color: #E6E6E6" onmouseover="changerStarNurse(3)" onmouseout="changerNullStarNurse(3)" onclick="saveScoreNurse(3)">☆</button>
+                                    <button id="star_nurse4" type="button" class="btn radius size-L" style="background-color: #E6E6E6" onmouseover="changerStarNurse(4)" onmouseout="changerNullStarNurse(4)" onclick="saveScoreNurse(4)">☆</button>
+                                    <button id="star_nurse5" type="button" class="btn radius size-L" style="background-color: #E6E6E6" onmouseover="changerStarNurse(5)" onmouseout="changerNullStarNurse(5)" onclick="saveScoreNurse(5)">☆</button>
+                                </eq>
                             </if>
                         </if>
                     </li>
@@ -198,6 +206,40 @@
                 data:{
                     "id":"{$info.id}",
                     "nid":"{$info.nid}",
+                    "score":value,
+                },
+                success:function (data) {
+                    if(data) {
+                        location.reload();
+                    }
+                }
+            });
+        }
+    }
+    function changerStarNurse(id) {
+        for(var i = 1; i <= id; i++) {
+            document.getElementById('star_nurse'+i).innerHTML = "★";
+        }
+        if(id === 1) document.getElementById('score_nurse').innerText = "很差";
+        if(id === 2) document.getElementById('score_nurse').innerText = "差";
+        if(id === 3) document.getElementById('score_nurse').innerText = "一般";
+        if(id === 4) document.getElementById('score_nurse').innerText = "好";
+        if(id === 5) document.getElementById('score_nurse').innerText = "优秀";
+    }
+    function changerNullStarNurse(id) {
+        for(var i = 1; i <= id; i++) {
+            document.getElementById('star_nurse'+i).innerHTML = "☆";
+        }
+        document.getElementById('score_nurse').innerText = "";
+    }
+    function saveScoreNurse(value) {
+        if(value) {
+            $.ajax({
+                url:"{:U('saveScoreNurse')}",
+                type:"get",
+                data:{
+                    "id":"{$info.id}",
+                    "uid":"{$info.uid}",
                     "score":value,
                 },
                 success:function (data) {
