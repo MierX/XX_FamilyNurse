@@ -90,7 +90,7 @@
 			<input class="input-text size-L radius" type="text" value="{$data.merits}" readonly="readonly" />
 			<input class="input-text size-L radius" type="text" name="work-year" value="{$data.work-year}年" readonly="readonly" />
 			<input class="input-text size-L radius" type="text" name="work-add" value="{$data.work-add}" readonly="readonly" />
-			<textarea name="remark" style="width: 450px;height: 180px;background-color: #E6E6E6;border: none;" class="textarea" readonly="readonly">{$data.remark}</textarea>
+			<div>{:htmlspecialchars_decode($data[remark])}</div>
 		</if>
 	</form>
 </div>

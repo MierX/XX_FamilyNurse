@@ -8,6 +8,7 @@
       <w>endtime</w>
       <w>fontfamily</w>
       <w>forecolor</w>
+      <w>htmlspecialchars</w>
       <w>huiadminmenu</w>
       <w>insertimage</w>
       <w>inserttable</w>
