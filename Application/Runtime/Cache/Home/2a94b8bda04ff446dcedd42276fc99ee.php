@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -142,17 +142,17 @@
 		<div id="top">
 			<ul>
 				<li style="margin-top: 0">
-					<a href="{:U('index')}" style="font-size: 32px;">XX家庭护士网</a>
-<!--					<a href="{:U('index')}" style="font-size: 32px;">XXXXXXXXXX</a>-->
+					<a href="<?php echo U('index');?>" style="font-size: 32px;">XX家庭护士网</a>
+<!--					<a href="<?php echo U('index');?>" style="font-size: 32px;">XXXXXXXXXX</a>-->
 				</li>
 				<li>
-					<a id="notice_tag" href="{:U('noticeList')}" target="targetText" onclick="changerTag(this.href)">公告</a>
+					<a id="notice_tag" href="<?php echo U('noticeList');?>" target="targetText" onclick="changerTag(this.href)">公告</a>
 				</li>
 				<li>
-					<a id="needs_tag" href="{:U('needsList')}" target="targetText" onclick="changerTag(this.href)">患者需求</a>
+					<a id="needs_tag" href="<?php echo U('needsList');?>" target="targetText" onclick="changerTag(this.href)">患者需求</a>
 				</li>
 				<li>
-					<a id="nurse_tag" href="{:U('nurseList')}" target="targetText" onclick="changerTag(this.href)">驻站护士</a>
+					<a id="nurse_tag" href="<?php echo U('nurseList');?>" target="targetText" onclick="changerTag(this.href)">驻站护士</a>
 				</li>
 				<li style="background-color: #E6E6E6;margin-top: 0.8%;margin-left: 3.5%;">
 					<input id="keyword" type="text" class="input-text" style="width: 180px;" name="keyword" value="" placeholder="请输入公告标题" />
@@ -160,49 +160,45 @@
 				</li>
 				<li style="margin-left: 7%">
 					<i class="Hui-iconfont">
-<!--						<a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')" title="{$user.name}">&#xe625;</a>-->
-						<a href="javascript:void(0);" onClick="self()" title="{$user.name}">&#xe625;</a>
+<!--						<a href="javascript:void(0);" onClick="show('个人中心','<?php echo U('User/index');?>?id=<?php echo ($user["id"]); ?>&role=<?php echo ($user["role"]); ?>','0','0')" title="<?php echo ($user["name"]); ?>">&#xe625;</a>-->
+						<a href="javascript:void(0);" onClick="self()" title="<?php echo ($user["name"]); ?>">&#xe625;</a>
 					</i>
 				</li>
 				<li>
-					<empty name="user.name">
-						<i class="Hui-iconfont">
-							<a href="{:U('login')}" title="登陆">&#xe645;</a>
+					<?php if(empty($user["name"])): ?><i class="Hui-iconfont">
+							<a href="<?php echo U('login');?>" title="登陆">&#xe645;</a>
 						</i>
-					<else />
+					<?php else: ?>
 						<i class="Hui-iconfont">
-							<a href="{:U('logout')}" title="注销">&#xe634;</a>
-						</i>
-					</empty>
+							<a href="<?php echo U('logout');?>" title="注销">&#xe634;</a>
+						</i><?php endif; ?>
 				</li>
 			</ul>
 		</div>
 		<div id="body">
             <div id="left" class="show_iframe">
-                <iframe id="list" scrolling="auto" frameborder="0" name="targetText" src="{:U('noticeList')}"></iframe>
+                <iframe id="list" scrolling="auto" frameborder="0" name="targetText" src="<?php echo U('noticeList');?>"></iframe>
             </div>
             <div id="right">
                 <div id="right_1">
                     <ul id="ul_1">
                         <li>
-                            <if condition="$user.role eq 'Nurse'">
-                                <i class="Hui-iconfont">
+                            <?php if($user["role"] == 'Nurse'): ?><i class="Hui-iconfont">
                                     <a href="javascript:void(0);" onClick="alert('非普通用户无法使用该功能！');">&#xe627;</a>
                                 </i>
-                            <else />
+                            <?php else: ?>
                                 <i class="Hui-iconfont">
                                     <a href="javascript:void(0);" onClick="chooseNeeds()">&#xe60c;</a>
-                                </i>
-                            </if>
+                                </i><?php endif; ?>
                         </li>
                         <li>
                             <i class="Hui-iconfont">
-                                <a href="javascript:void(0);" onclick="show('我的信箱','{:U(\'Chat/list\')}?id={$user.id}&role={$user.role}','0','0');">&#xe68a;</a>
+                                <a href="javascript:void(0);" onclick="show('我的信箱','<?php echo U('Chat/list');?>?id=<?php echo ($user["id"]); ?>&role=<?php echo ($user["role"]); ?>','0','0');">&#xe68a;</a>
                             </i>
                         </li>
                         <li>
 							<i class="Hui-iconfont">
-								<a href="javascript:void(0);" onClick="show('我的记录','{:U(\'Record/list\')}?id={$user.id}&role={$user.role}','0','0');">&#xe72d;</a>
+								<a href="javascript:void(0);" onClick="show('我的记录','<?php echo U('Record/list');?>?id=<?php echo ($user["id"]); ?>&role=<?php echo ($user["role"]); ?>','0','0');">&#xe72d;</a>
 							</i>
                         </li>
                     </ul>
@@ -221,61 +217,51 @@
                         </li>
                         <li style="margin-left: 5%;font-size: 14px">
                             <i class="Hui-iconfont">&#xe62c;</i>
-                            <a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')">个人中心</a>
+                            <a href="javascript:void(0);" onClick="show('个人中心','<?php echo U('User/index');?>?id=<?php echo ($user["id"]); ?>&role=<?php echo ($user["role"]); ?>','0','0')">个人中心</a>
                         </li>
                     </ul>
                 </div>
 				<div id="right2">
 					<ul id="ul_3">
-						<li style="margin-top: 8%;">姓名：{$user.name|default='未登录'}</li>
-						<if condition="$user.role eq 'User'">
-							<li>身份：用户</li>
-						<elseif condition="$user.role eq 'Nurse'" />
+						<li style="margin-top: 8%;">姓名：<?php echo ((isset($user["name"]) && ($user["name"] !== ""))?($user["name"]):'未登录'); ?></li>
+						<?php if($user["role"] == 'User'): ?><li>身份：用户</li>
+						<?php elseif($user["role"] == 'Nurse'): ?>
 							<li>身份：护士</li>
-						<else />
-							<li>身份：未登录</li>
-						</if>
-						<if condition="$user.sex eq 1">
-							<li>性别：男</li>
-						<elseif condition="$user.sex eq 2" />
+						<?php else: ?>
+							<li>身份：未登录</li><?php endif; ?>
+						<?php if($user["sex"] == 1): ?><li>性别：男</li>
+						<?php elseif($user["sex"] == 2): ?>
 							<li>性别：女</li>
-						<else />
-							<li>性别：未登录</li>
-						</if>
-						<li>年龄：{$user.age|default='未登录'}</li>
-						<li>手机：{$user.phone|default='未登录'}</li>
-						<notempty name="user.addtime">
-							<li>注册时间：{$user.addtime|date='Y-m-d H:i:s', ###}</li>
-						<else />
-							<li>注册时间：未登录</li>
-						</notempty>
+						<?php else: ?>
+							<li>性别：未登录</li><?php endif; ?>
+						<li>年龄：<?php echo ((isset($user["age"]) && ($user["age"] !== ""))?($user["age"]):'未登录'); ?></li>
+						<li>手机：<?php echo ((isset($user["phone"]) && ($user["phone"] !== ""))?($user["phone"]):'未登录'); ?></li>
+						<?php if(!empty($user["addtime"])): ?><li>注册时间：<?php echo (date('Y-m-d H:i:s', $user["addtime"])); ?></li>
+						<?php else: ?>
+							<li>注册时间：未登录</li><?php endif; ?>
 					</ul>
 				</div>
 				<div id="right3">
 					<p style="margin-top: 10px;margin-left: 15px;cursor: default">
-						<i class="Hui-iconfont" style="font-size: 18px;cursor: pointer;" onClick="show('收藏列表','{:U(\'Collection/index\')}?id={$user.id}&role={$user.role}','0','0')">&#xe69d;&nbsp;&nbsp;我的收藏</i>
-						<input type="text" class="input-text" style="float: right;width: 25px;height: 25px;margin-right: 20px;margin-top: 2px;background-color: #E6E6E6;border: none;text-align: center;cursor: default" value="{$collection_count|default=0}" readonly="readonly" />
+						<i class="Hui-iconfont" style="font-size: 18px;cursor: pointer;" onClick="show('收藏列表','<?php echo U('Collection/index');?>?id=<?php echo ($user["id"]); ?>&role=<?php echo ($user["role"]); ?>','0','0')">&#xe69d;&nbsp;&nbsp;我的收藏</i>
+						<input type="text" class="input-text" style="float: right;width: 25px;height: 25px;margin-right: 20px;margin-top: 2px;background-color: #E6E6E6;border: none;text-align: center;cursor: default" value="<?php echo ((isset($collection_count) && ($collection_count !== ""))?($collection_count):0); ?>" readonly="readonly" />
 					</p>
 					<hr style="width: 90%;background-color: #E6E6E6;margin-left: 5%;" size="5" />
-					<notempty name="Think.SESSION.account">
-						<if condition="$Think.SESSION.role eq 'User'">
-							<table id="collection1">
+					<?php if(!empty($_SESSION['account'])): if($_SESSION['role']== 'User'): ?><table id="collection1">
 								<tr>
 									<td>工号</td>
 									<td>护士</td>
 									<td>绩效</td>
 									<td>电话</td>
 								</tr>
-								<volist name="collection" id="co">
-									<tr>
-										<td>{$co.id}</td>
-										<td>{$co.name}</td>
-										<td>{$co.merits}</td>
-										<td>{$co.phone}</td>
-									</tr>
-								</volist>
+								<?php if(is_array($collection)): $i = 0; $__LIST__ = $collection;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$co): $mod = ($i % 2 );++$i;?><tr>
+										<td><?php echo ($co["id"]); ?></td>
+										<td><?php echo ($co["name"]); ?></td>
+										<td><?php echo ($co["merits"]); ?></td>
+										<td><?php echo ($co["phone"]); ?></td>
+									</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 							</table>
-						<else />
+						<?php else: ?>
 							<table id="collection2">
 								<tr>
 									<td>标题</td>
@@ -284,20 +270,16 @@
 									<td>工时</td>
 									<td>截止时间</td>
 								</tr>
-								<volist name="collection" id="co">
-									<tr>
-										<td>{$co.title|substr=3,12}</td>
-										<td>{$co.disease}</td>
-										<td>{$co.reward}</td>
-										<td>{$co.worktime}</td>
-										<td>{$co.endtime|date='Y-m-d H:i:s',###}</td>
-									</tr>
-								</volist>
-							</table>
-						</if>
-					<else />
-						&nbsp;&nbsp;&nbsp;&nbsp;未登录
-					</notempty>
+								<?php if(is_array($collection)): $i = 0; $__LIST__ = $collection;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$co): $mod = ($i % 2 );++$i;?><tr>
+										<td><?php echo (substr($co["title"],3,12)); ?></td>
+										<td><?php echo ($co["disease"]); ?></td>
+										<td><?php echo ($co["reward"]); ?></td>
+										<td><?php echo ($co["worktime"]); ?></td>
+										<td><?php echo (date('Y-m-d H:i:s',$co["endtime"])); ?></td>
+									</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+							</table><?php endif; ?>
+					<?php else: ?>
+						&nbsp;&nbsp;&nbsp;&nbsp;未登录<?php endif; ?>
 				</div>
             </div>
 		</div>
@@ -312,24 +294,24 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
-	var tag = "{:U('noticeList')}";
+	var tag = "<?php echo U('noticeList');?>";
 
 	function changerTag(href) {
 		tag = href;
-		if(tag.indexOf("{:U('noticeList')}") !== -1) {
+		if(tag.indexOf("<?php echo U('noticeList');?>") !== -1) {
 			document.getElementById("keyword").value = '';
 			document.getElementById("keyword").placeholder = '请输入公告标题';
-		} else if(tag.indexOf("{:U('needsList')}") !== -1) {
+		} else if(tag.indexOf("<?php echo U('needsList');?>") !== -1) {
 			document.getElementById("keyword").value = '';
 			document.getElementById("keyword").placeholder = '请输入需求标题';
-		} else if(tag.indexOf("{:U('nurseList')}") !== -1) {
+		} else if(tag.indexOf("<?php echo U('nurseList');?>") !== -1) {
 			document.getElementById("keyword").value = '';
 			document.getElementById("keyword").placeholder = '请输入护士名称';
 		}
 	}
 	
 	function self() {
-		var role = "{$user.role}";
+		var role = "<?php echo ($user["role"]); ?>";
 		console.log(role);
 		layer.open({
 			title: false,
@@ -342,12 +324,12 @@
 			shadeClose: true,
 			skin:'my-skin',
 			btn1: function(index, layero){
-				show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0');
+				show('个人中心','<?php echo U('User/index');?>?id=<?php echo ($user["id"]); ?>&role=<?php echo ($user["role"]); ?>','0','0');
 				return false;
 			},
 			btn2: function(index, layero){
 				if(role == 'User') {
-					show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
+					show('发布需求','<?php echo U('Needs/edit');?>?id=<?php echo ($user["id"]); ?>','0','0');
 					return false;
 				} else {
 					alert("请使用普通用户身份！");
@@ -355,22 +337,22 @@
 			},
 			btn3: function(index, layero){
 				if(role == 'User') {
-					show('个人需求列表','{:U(\'User/myNeeds\')}?id={$user.id}','0','0');
+					show('个人需求列表','<?php echo U('User/myNeeds');?>?id=<?php echo ($user["id"]); ?>','0','0');
 					return false;
 				} else {
 					alert("请使用普通用户身份！");
 				}
 			},
 			btn4: function(index, layero){
-				show('我的信箱','{:U(\'Chat/list\')}?id={$user.id}&role={$user.role}','0','0');
+				show('我的信箱','<?php echo U('Chat/list');?>?id=<?php echo ($user["id"]); ?>&role=<?php echo ($user["role"]); ?>','0','0');
 				return false;
 			},
 			btn5: function(index, layero){
-				show('收藏列表','{:U(\'Collection/index\')}?id={$user.id}&role={$user.role}','0','0')
+				show('收藏列表','<?php echo U('Collection/index');?>?id=<?php echo ($user["id"]); ?>&role=<?php echo ($user["role"]); ?>','0','0')
 				return false;
 			},
 			btn6: function(index, layero){
-				show('我的记录','{:U(\'Record/list\')}?id={$user.id}&role={$user.role}','0','0');
+				show('我的记录','<?php echo U('Record/list');?>?id=<?php echo ($user["id"]); ?>&role=<?php echo ($user["role"]); ?>','0','0');
 				return false;
 			},
 			cancel: function(){
@@ -381,12 +363,12 @@
 	function seaList() {
 		var keyword = document.getElementById("keyword").value;
 		if(keyword) {
-			if(tag.indexOf("{:U('noticeList')}") !== -1) {
-				document.getElementById("search").href = "{:U('noticeList')}?keyword="+keyword;
-			} else if(tag.indexOf("{:U('needsList')}") !== -1) {
-				document.getElementById("search").href = "{:U('needsList')}?keyword="+keyword;
-			} else if(tag.indexOf("{:U('nurseList')}") !== -1) {
-				document.getElementById("search").href = "{:U('nurseList')}?keyword="+keyword;
+			if(tag.indexOf("<?php echo U('noticeList');?>") !== -1) {
+				document.getElementById("search").href = "<?php echo U('noticeList');?>?keyword="+keyword;
+			} else if(tag.indexOf("<?php echo U('needsList');?>") !== -1) {
+				document.getElementById("search").href = "<?php echo U('needsList');?>?keyword="+keyword;
+			} else if(tag.indexOf("<?php echo U('nurseList');?>") !== -1) {
+				document.getElementById("search").href = "<?php echo U('nurseList');?>?keyword="+keyword;
 			}
 		} else {
 			document.getElementById("search").href = tag;
@@ -394,33 +376,33 @@
 	}
 
 	function show(title,url,w,h) {
-		var account = "{$Think.SESSION.account}";
+		var account = "<?php echo (session('account')); ?>";
 		if(account) {
 			if(w == 0) w = parent.document.body.clientWidth*0.95;
 			if(h == 0) h = parent.document.body.clientHeight*0.85;
 			parent.layer_show(title,url,w,h);
 		} else {
 			alert('请先登录');
-			parent.location.href = "{:U('login')}";
+			parent.location.href = "<?php echo U('login');?>";
 		}
 	}
 	function chooseNeeds() {
-		var account = "{$Think.SESSION.account}";
+		var account = "<?php echo (session('account')); ?>";
 		if(!account) {
 			alert('请先登录');
-			parent.location.href = "{:U('login')}";
+			parent.location.href = "<?php echo U('login');?>";
 		}
 		$.ajax({
-			url:"{:U('User/myNeeds')}",
+			url:"<?php echo U('User/myNeeds');?>",
 			type:"get",
 			data:{
 				"check":1,
-				"id":"{$user.id}",
+				"id":"<?php echo ($user["id"]); ?>",
 			},
 			success:function (data) {
 				if(data) {
 					alert("您当前没有有效需求，先去发布需求吧！");
-					show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
+					show('发布需求','<?php echo U('Needs/edit');?>?id=<?php echo ($user["id"]); ?>','0','0');
 				} else {
 					checkNeeds();
 				}
@@ -434,21 +416,21 @@
 		layer.confirm('请选择', {
 			btn: ['看需求','发需求']
 		}, function(){
-			show('个人需求列表','{:U(\'User/myNeeds\')}?id={$user.id}','0','0');
+			show('个人需求列表','<?php echo U('User/myNeeds');?>?id=<?php echo ($user["id"]); ?>','0','0');
 		}, function(){
-			show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
+			show('发布需求','<?php echo U('Needs/edit');?>?id=<?php echo ($user["id"]); ?>','0','0');
 		});
 	}
 	function checkNurse() {
 		$.ajax({
-			url:"{:U('Nurse/myNeeds')}",
+			url:"<?php echo U('Nurse/myNeeds');?>",
 			type:"get",
 			data:{
-				"id":"{$user.id}",
+				"id":"<?php echo ($user["id"]); ?>",
 			},
 			success:function (data) {
 				if(data) {
-					show('查看需求','{:U(\'Nurse/myNeeds\')}?id={$user.id}&list=1','0','0')
+					show('查看需求','<?php echo U('Nurse/myNeeds');?>?id=<?php echo ($user["id"]); ?>&list=1','0','0')
 				} else {
 					alert('您还没有医护记录');
 				}

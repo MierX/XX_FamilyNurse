@@ -15,6 +15,7 @@ class AcceptController extends BaseController {
             $v['user_name'] = $user['name'];
             $v['nurse_name'] = $nurse['name'];
             $v['needs_name'] = $needs['title'];
+            if($v['cancel'] == 1) unset($info_list[$k]);
         }
         $info_list = array_values($info_list);
         $count = count($info_list);
@@ -60,5 +61,20 @@ class AcceptController extends BaseController {
         $this -> data = $info;
         $this -> count = count($info);
         $this -> display();
+    }
+
+    public function cancelRecord() {
+        if($_GET) {
+            $accept = D('Accept') -> field('*') -> where(['id' => $_GET['id']]) -> find();
+            $score = $accept['score'] - 2;
+            $ntou = $accept['ntou'];
+            $rs = D('Accept') -> where(['id' => $_GET['id']]) -> save(['cancel' => 1]);
+            if($rs) {
+                D('User') -> where(['id' => $accept['uid']]) -> setInc('score',-$ntou);
+                D('Nurse') -> where(['id' => $accept['nid']]) -> setInc('merits',-$score);
+                D('Needs') -> where(['id' => $accept['needs']]) -> save(['status' => 4]);
+            }
+            echo $rs;
+        }
     }
 }

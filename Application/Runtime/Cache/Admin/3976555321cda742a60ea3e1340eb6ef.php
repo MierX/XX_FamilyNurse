@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -33,7 +33,7 @@
                 <i class="Hui-iconfont">&#xe665;</i> 搜记录
             </button>
             <span class="r">
-                统计：<strong>{$count}</strong> 条数据
+                统计：<strong><?php echo ($count); ?></strong> 条数据
             </span>
 		</div>
 		<div class="mt-20">
@@ -51,50 +51,42 @@
                     </tr>
 				</thead>
 				<tbody>
-                    <volist name="data" id="vo">
-                        <tr class="text-c">
-                            <td>{$vo.id}</td>
+                    <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c">
+                            <td><?php echo ($vo["id"]); ?></td>
                             <td>
-                                <u style="cursor:pointer" class="text-primary" onclick="show('需求详情','{:U(\'Needs/info\')}?table=Needs&where[id]={$vo.needs}','1600','1200')">{$vo.needs_name}</u>
+                                <u style="cursor:pointer" class="text-primary" onclick="show('需求详情','<?php echo U('Needs/info');?>?table=Needs&where[id]=<?php echo ($vo["needs"]); ?>','1600','1200')"><?php echo ($vo["needs_name"]); ?></u>
                             </td>
                             <td>
-                                <u style="cursor:pointer" class="text-primary" onclick="show('用户信息','{:U(\'User/info\')}?table=User&where[id]={$vo.uid}','1600','1200')">{$vo.user_name}</u>
+                                <u style="cursor:pointer" class="text-primary" onclick="show('用户信息','<?php echo U('User/info');?>?table=User&where[id]=<?php echo ($vo["uid"]); ?>','1600','1200')"><?php echo ($vo["user_name"]); ?></u>
                             </td>
                             <td>
-                                <u style="cursor:pointer" class="text-primary" onclick="show('用户信息','{:U(\'User/info\')}?table=Nurse&where[id]={$vo.nid}','1600','1200')">{$vo.nurse_name}</u>
+                                <u style="cursor:pointer" class="text-primary" onclick="show('用户信息','<?php echo U('User/info');?>?table=Nurse&where[id]=<?php echo ($vo["nid"]); ?>','1600','1200')"><?php echo ($vo["nurse_name"]); ?></u>
                             </td>
                             <td>
-                                <if condition="$vo.score eq 0">
-                                    尚未评价
-                                <elseif condition="$vo.score eq 1" />
+                                <?php if($vo["score"] == 0): ?>尚未评价
+                                <?php elseif($vo["score"] == 1): ?>
                                     很差
-                                <elseif condition="$vo.score eq 2" />
+                                <?php elseif($vo["score"] == 2): ?>
                                     差
-                                <elseif condition="$vo.score eq 3" />
+                                <?php elseif($vo["score"] == 3): ?>
                                     一般
-                                <elseif condition="$vo.score eq 4" />
+                                <?php elseif($vo["score"] == 4): ?>
                                     好
-                                <elseif condition="$vo.score eq 5" />
-                                    很好
-                                </if>
+                                <?php elseif($vo["score"] == 5): ?>
+                                    很好<?php endif; ?>
                             </td>
-                            <td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+                            <td><?php echo (date('Y-m-d H:i:s',$vo["addtime"])); ?></td>
                             <td>
-                                <if condition="$vo.endtime eq 0">
-                                    尚未完成
-                                    <else />
-                                    {$vo.endtime|date='Y-m-d H:i:s',###}
-                                </if>
+                                <?php if($vo["endtime"] == 0): ?>尚未完成
+                                    <?php else: ?>
+                                    <?php echo (date('Y-m-d H:i:s',$vo["endtime"])); endif; ?>
                             </td>
                             <td>
-                                <u style="cursor:pointer" class="text-primary" onclick="show('医嘱','{:U(\'record\')}?table=Record&where[needs]={$vo.needs}','1600','1200')">查看</u>
-                                <if condition="$vo.endtime neq 0">
-                                     |
-                                    <u style="cursor:pointer" class="text-primary" onclick="cancelRecord('{$vo.id}')">取消</u>
-                                </if>
+                                <u style="cursor:pointer" class="text-primary" onclick="show('医嘱','<?php echo U('record');?>?table=Record&where[needs]=<?php echo ($vo["needs"]); ?>','1600','1200')">查看</u>
+                                <?php if($vo["endtime"] != 0): ?>|
+                                    <u style="cursor:pointer" class="text-primary" onclick="cancelRecord('<?php echo ($vo["id"]); ?>')">取消</u><?php endif; ?>
                             </td>
-                        </tr>
-                    </volist>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 				</tbody>
 			</table>
 		</div>
@@ -121,31 +113,30 @@
 	});
 
 	function cancelRecord(id) {
-        // var q1 = confirm('您确定要取消本次医护记录吗？');
-        // if(q1) {
-        //     var q2 = confirm('取消本次医护记录将会相应地扣去该护士的绩效！');
-        //     if(q2) {
-        //
-        //     }
-        // }
-        var q3 = confirm('本操作一旦执行不可逆！！！');
-        if(q3) {
-            $.ajax({
-                url:"cancelRecord",
-                type:"get",
-                data:{
-                    id:id,
-                },
-                success:function (data) {
-                    if(data) {
-                        alert('取消成功！');
-                        location.reload();
-                    }
-                },
-                error:function () {
-                    alert('未知错误！请重试！');
+        var q1 = confirm('您确定要取消本次医护记录吗？');
+        if(q1) {
+            var q2 = confirm('取消本次医护记录将会相应地扣去该护士的绩效！');
+            if(q2) {
+                var q3 = confirm('本操作一旦执行不可逆！！！');
+                if(q3) {
+                    $.ajax({
+                        url:"cancelRecord",
+                        type:"get",
+                        data:{
+                            id:id,
+                        },
+                        success:function (data) {
+                            if(data) {
+                                alert('取消成功！');
+                                location.reload();
+                            }
+                        },
+                        error:function () {
+                            alert('未知错误！请重试！');
+                        }
+                    });
                 }
-            });
+            }
         }
     }
 
@@ -155,7 +146,7 @@
 	function edit(get) {
         var choose = confirm("该操作将改变此用户的状态");
         if(choose) {
-            window.location.href = "{:U(edit)}"+get;
+            window.location.href = "<?php echo U(edit);?>"+get;
         }
     }
     function checkTime(id,value) {
@@ -183,9 +174,9 @@
     function search() {
 	    var value = document.getElementById("keyword").value;
         if(value) {
-            window.location.href = "{:U('search')}?table=Accept&where[id]="+value;
+            window.location.href = "<?php echo U('search');?>?table=Accept&where[id]="+value;
         } else {
-            window.location.href = "{:U('Accept/index')}?table=Accept";
+            window.location.href = "<?php echo U('Accept/index');?>?table=Accept";
         }
     }
 </script>

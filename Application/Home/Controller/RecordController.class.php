@@ -61,7 +61,7 @@ class RecordController extends BaseController {
     public function saveScoreNurse() {
         if($_GET) {
             $rs = D('User') -> where(['id' => $_GET['uid']]) -> setInc('score',$_GET['score']-2);
-            if($rs) D('Accept') -> where(['needs' => $_GET['id']]) -> save(['ntou' => 1]);
+            if($rs) D('Accept') -> where(['needs' => $_GET['id']]) -> save(['ntou' => $_GET['score']-2]);
             echo $rs;
         }
     }
