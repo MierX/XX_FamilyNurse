@@ -17,7 +17,7 @@ class NoticeController extends BaseController {
 
     public function edit() {
         parent::edit();
-        $this -> index();
+        echo "<script>parent.location.reload();</script>";
     }
 
     public function info() {
