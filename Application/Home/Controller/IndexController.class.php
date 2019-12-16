@@ -50,14 +50,14 @@ class IndexController extends Controller {
             $keyword = ['status' => 1];
         }
         $notice_info = D('Notice') -> where($keyword) -> order($order) -> select();
-        if(count($notice_info) > 0) {
-            $length = 10 - count($notice_info);
-            if($length > 0) {
-                for ($i = 0; $i < $length; $i++) {
-                    $notice_info[] = $notice_info[0];
-                }
-            }
-        }
+//        if(count($notice_info) > 0) {
+//            $length = 10 - count($notice_info);
+//            if($length > 0) {
+//                for ($i = 0; $i < $length; $i++) {
+//                    $notice_info[] = $notice_info[0];
+//                }
+//            }
+//        }
         $this -> Notice = $notice_info;
         $this -> display();
     }

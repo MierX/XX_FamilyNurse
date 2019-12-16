@@ -42,7 +42,7 @@
             float: left;
 			width: 100%;
 			height: 5%;
-			padding-left: 21.5%;
+			padding-left: 18%;
 			border-bottom: 1px #E6E6E6 solid;
 			background-color: #ffffff;
 			position: fixed;
@@ -63,14 +63,14 @@
 			border: none;
 		}
 		#body {
-			width: 53%;
+			width: 59.5%;
             height: 100%;
-			margin-left: 23.5%;
+			margin-left: 20%;
             position: fixed;
 		}
         #left {
             float: left;
-			width: 68%;
+			width: 68.5%;
 			border: 1px #E6E6E6 solid;
 			background-color: #ffffff;
 			margin-top: 6%;
@@ -146,19 +146,19 @@
 <!--					<a href="{:U('index')}" style="font-size: 32px;">XXXXXXXXXX</a>-->
 				</li>
 				<li>
-					<a id="notice_tag" href="{:U('noticeList')}" target="targetText" onclick="changerTag(this.href)">公告</a>
-				</li>
-				<li>
 					<a id="needs_tag" href="{:U('needsList')}" target="targetText" onclick="changerTag(this.href)">患者需求</a>
 				</li>
 				<li>
 					<a id="nurse_tag" href="{:U('nurseList')}" target="targetText" onclick="changerTag(this.href)">驻站护士</a>
 				</li>
+				<li>
+					<a id="notice_tag" href="{:U('noticeList')}" target="targetText" onclick="changerTag(this.href)">公告</a>
+				</li>
 				<li style="background-color: #E6E6E6;margin-top: 0.8%;margin-left: 3.5%;">
-					<input id="keyword" type="text" class="input-text" style="width: 180px;" name="keyword" value="" placeholder="请输入公告标题" />
+					<input id="keyword" type="text" class="input-text" style="width: 180px;" name="keyword" value="" placeholder="请输入需求标题" />
 					<a id="search" href="javascript:void(0);" target="targetText" class="btn radius" onclick="seaList()">搜索</a>
 				</li>
-				<li style="margin-left: 7%">
+				<li style="margin-left: 14%">
 					<i class="Hui-iconfont">
 <!--						<a href="javascript:void(0);" onClick="show('个人中心','{:U(\'User/index\')}?id={$user.id}&role={$user.role}','0','0')" title="{$user.name}">&#xe625;</a>-->
 						<a href="javascript:void(0);" onClick="self()" title="{$user.name}">&#xe625;</a>
@@ -179,7 +179,7 @@
 		</div>
 		<div id="body">
             <div id="left" class="show_iframe">
-                <iframe id="list" scrolling="auto" frameborder="0" name="targetText" src="{:U('noticeList')}"></iframe>
+                <iframe id="list" scrolling="auto" frameborder="0" name="targetText" src="{:U('needsList')}"></iframe>
             </div>
             <div id="right">
                 <div id="right_1">
@@ -211,7 +211,7 @@
                         <li style="margin-left: 6.5%">看信箱</li>
                         <li style="margin-left: 7%">查记录</li>
                     </ul>
-                    <ul style="margin-top: 40%">
+                    <ul style="margin-top: 38.5%">
                         <li style="margin-left: 5%;font-size: 14px">
                             <i class="Hui-iconfont" style="color: red">&#xe600;</i>
                             <a href="#">查看医生</a>

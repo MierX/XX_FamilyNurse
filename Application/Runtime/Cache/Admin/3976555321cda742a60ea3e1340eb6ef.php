@@ -113,30 +113,31 @@
 	});
 
 	function cancelRecord(id) {
-        var q1 = confirm('您确定要取消本次医护记录吗？');
-        if(q1) {
-            var q2 = confirm('取消本次医护记录将会相应地扣去该护士的绩效！');
-            if(q2) {
-                var q3 = confirm('本操作一旦执行不可逆！！！');
-                if(q3) {
-                    $.ajax({
-                        url:"cancelRecord",
-                        type:"get",
-                        data:{
-                            id:id,
-                        },
-                        success:function (data) {
-                            if(data) {
-                                alert('取消成功！');
-                                location.reload();
-                            }
-                        },
-                        error:function () {
-                            alert('未知错误！请重试！');
-                        }
-                    });
+        // var q1 = confirm('您确定要取消本次医护记录吗？');
+        // if(q1) {
+        //     var q2 = confirm('取消本次医护记录将会相应地扣去该护士的绩效！');
+        //     if(q2) {
+        //
+        //     }
+        // }
+        var q3 = confirm('本操作一旦执行不可逆！！！');
+        if(q3) {
+            $.ajax({
+                url:"cancelRecord",
+                type:"get",
+                data:{
+                    id:id,
+                },
+                success:function (data) {
+                    if(data) {
+                        alert('取消成功！');
+                        location.reload();
+                    }
+                },
+                error:function () {
+                    alert('未知错误！请重试！');
                 }
-            }
+            });
         }
     }
 

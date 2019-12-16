@@ -276,19 +276,19 @@
         return false;
       } else {
         for(var i in value) {
-          if(!i) {
+          if(!value[i]) {
             alert('请确认所有信息填写正确！');
             return false;
           }
         }
       }
     } else if(role === 'Nurse') {
-      if(Object.keys(value).length !== 9) {
+      if(Object.keys(value).length != 9) {
         alert('请确认所有信息填写正确！');
         return false;
       } else {
         for(var j in value) {
-          if(!j) {
+          if(!value[j]) {
             alert('请确认所有信息填写正确！');
             return false;
           }

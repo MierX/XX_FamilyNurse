@@ -40,6 +40,7 @@
 					</tr>
 				</thead>
 				<tbody>
+<!--					循环后端渲染到页面的数据， name指被命名的数据名，id指键-->
 					<volist name="info" id="io">
 						<tr class="text-c">
 							<td>{$io.me}</td>
@@ -47,7 +48,7 @@
 							<td>{$io.content}</td>
 							<td>{$io.addtime|date='Y-m-d H:i:s',###}</td>
 							<td>
-								<u style="cursor: pointer;text-decoration: none" onclick="show('title','{:U(\'index\')}?uid={$io.me_id}&nid={$io.he_id}','0','0')" title="私聊">私聊</u>
+								<u style="cursor: pointer;text-decoration: none" onclick="show('与{$io.he}的私聊','{:U(\'index\')}?uid={$io.me_id}&nid={$io.he_id}','0','0')" title="私聊">私聊</u>
 							</td>
 						</tr>
 					</volist>
@@ -85,7 +86,6 @@
 	function show(title,url,w,h) {
 		var account = "{$Think.SESSION.account}";
 		if(account) {
-			title = "与{$data.name}的私聊";
 			w = parent.document.body.clientWidth*0.25;
 			h = parent.document.body.clientHeight*0.75;
 			parent.layer_show(title,url,w,h);

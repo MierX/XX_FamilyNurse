@@ -79,7 +79,7 @@
 				<input class="input-text size-L radius" type="text" name="work-year" value="<?php echo ($user["work-year"]); ?>年" />
 				<input class="input-text size-L radius" type="text" name="work-add" value="<?php echo ($user["work-add"]); ?>" />
 				<input class="input-text size-L radius" type="text" name="work-expertise" value="<?php echo ((isset($user["work-expertise"]) && ($user["work-expertise"] !== ""))?($user["work-expertise"]):'无'); ?>" />
-				<script id="editor" name="remark" type="text/plain" style="width:450px;height:180px;background-color: #E6E6E6;border: none;"><?php echo ((isset($data["content"]) && ($data["content"] !== ""))?($data["content"]):请新编辑内容); ?></script><?php endif; ?>
+				<script id="editor" name="remark" type="text/plain" style="width:450px;height:180px;background-color: #E6E6E6;border: none;"><?php echo ((isset($user["remark"]) && ($user["remark"] !== ""))?($user["remark"]):请新编辑内容); ?></script><?php endif; ?>
             <button type="button" class="btn radius size-L" onclick="layer_close()">&nbsp;关&nbsp;&nbsp;&nbsp;&nbsp;闭&nbsp;</button>
             <button type="submit" class="btn radius size-L">&nbsp;保&nbsp;&nbsp;&nbsp;&nbsp;存&nbsp;</button>
 		</form>

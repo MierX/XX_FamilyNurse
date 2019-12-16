@@ -72,7 +72,7 @@
 			<?php elseif($data["role"] == 'Nurse'): ?>
 			<input class="input-text size-L radius" type="text" value="护士" readonly="readonly" /><?php endif; ?>
 		<?php if($data["sex"] == 1): ?><input class="input-text size-L radius" type="text" name="sex" value="男性" readonly="readonly" />
-			<?php elseif($data["sex"] == 0): ?>
+			<?php elseif($data["sex"] == 2): ?>
 			<input class="input-text size-L radius" type="text" name="sex" value="女性" readonly="readonly" /><?php endif; ?>
 		<input class="input-text size-L radius" type="text" name="age" value="<?php echo ($data["age"]); ?>周岁" readonly="readonly" />
 		<input class="input-text size-L radius" type="text" name="phone" value="<?php echo ($data["phone"]); ?>" readonly="readonly" />
@@ -81,7 +81,7 @@
 			<input class="input-text size-L radius" type="text" value="<?php echo ($data["merits"]); ?>" readonly="readonly" />
 			<input class="input-text size-L radius" type="text" name="work-year" value="<?php echo ($data["work-year"]); ?>年" readonly="readonly" />
 			<input class="input-text size-L radius" type="text" name="work-add" value="<?php echo ($data["work-add"]); ?>" readonly="readonly" />
-			<textarea name="remark" style="width: 450px;height: 180px;background-color: #E6E6E6;border: none;" class="textarea" readonly="readonly"><?php echo ($data["remark"]); ?></textarea><?php endif; ?>
+			<div><?php echo htmlspecialchars_decode($data[remark]);?></div><?php endif; ?>
 	</form>
 </div>
 </body>

@@ -36,9 +36,9 @@
             overflow-x: hidden;
             overflow-y: scroll;
         }
-        body::-webkit-scrollbar {
-            display: none;
-        }
+        /*body::-webkit-scrollbar {*/
+        /*    display: none;*/
+        /*}*/
         #down ul > li {
             float: left;
             padding-left: 10px;

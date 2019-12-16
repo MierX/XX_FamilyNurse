@@ -69,7 +69,7 @@
             </div>
             <p style="margin-top: 1%">医嘱记录：</p>
             <div id="bottom">
-                <iframe scrolling="auto" frameborder="0" name="targetText" src="<?php echo U('record');?>?id=<?php echo ($info["id"]); ?>" ></iframe>
+                <iframe frameborder="0" name="targetText" src="<?php echo U('record');?>?id=<?php echo ($info["id"]); ?>" ></iframe>
             </div>
         </div>
         <div id="right">
@@ -171,6 +171,7 @@
     function changerStar(id) {
         for(var i = 1; i <= id; i++) {
             document.getElementById('star'+i).innerHTML = "★";
+            document.getElementById('star'+i).style.color = "red";
         }
         if(id === 1) document.getElementById('score').innerText = "很差";
         if(id === 2) document.getElementById('score').innerText = "差";
@@ -181,6 +182,7 @@
     function changerNullStar(id) {
         for(var i = 1; i <= id; i++) {
             document.getElementById('star'+i).innerHTML = "☆";
+            document.getElementById('star'+i).style.color = "black";
         }
         document.getElementById('score').innerText = "";
     }
@@ -205,6 +207,7 @@
     function changerStarNurse(id) {
         for(var i = 1; i <= id; i++) {
             document.getElementById('star_nurse'+i).innerHTML = "★";
+            document.getElementById('star_nurse'+i).style.color = "red";
         }
         if(id === 1) document.getElementById('score_nurse').innerText = "很差";
         if(id === 2) document.getElementById('score_nurse').innerText = "差";
@@ -215,6 +218,7 @@
     function changerNullStarNurse(id) {
         for(var i = 1; i <= id; i++) {
             document.getElementById('star_nurse'+i).innerHTML = "☆";
+            document.getElementById('star_nurse'+i).style.color = "black";
         }
         document.getElementById('score_nurse').innerText = "";
     }

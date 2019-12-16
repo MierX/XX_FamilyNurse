@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -20,76 +20,81 @@
 	<![endif]-->
 	<title></title>
 	<style type="text/css">
-		body {
+		* {
 			border: 0;
 			padding: 0;
 			margin: 0;
-			background-color: #e6e6e6;
+			text-decoration: none;
+			background-color: #E6E6E6!important;
 		}
-		input{
-			width: 450px!important;
-			display: block;
+		#content {
+			width: 50%;
+			margin-left: 25%;
+		}
+		input {
+			text-align: left!important;
+			width: 500px!important;
+			height: 100% !important;
 			border: none!important;
-			border-bottom: 1px #ffffff dashed!important;
-			outline: none;
-			background-color: #E6E6E6;
-		}
-		ul > li {
-			font-size: 16px;
-			font-weight: bold;
-			text-align: right;
+			line-height: 1!important;
 		}
 	</style>
 </head>
-<body>
-	<div style="margin-left: 35%;margin-top: 3%;float: left;">
-		<ul>
-			<li style="margin-top: 9px">账号：</li>
-			<li style="margin-top: 15px">用户名：</li>
-			<li style="margin-top: 16px">身份：</li>
-			<li style="margin-top: 17px">性别：</li>
-			<li style="margin-top: 15px">年龄：</li>
-			<li style="margin-top: 15px">联系电话：</li>
-			<li style="margin-top: 18px">身份证号：</li>
-			<if condition="$user.role eq 'Nurse'">
-				<li style="margin-top: 15px">工号：</li>
-				<li style="margin-top: 17px">绩效点：</li>
-				<li style="margin-top: 15px">工龄：</li>
-				<li style="margin-top: 15px">现在就职医院：</li>
-				<li style="margin-top: 15px">专长领域：</li>
-				<li style="margin-top: 8px">自我介绍：</li>
-			</if>
-		</ul>
-	</div>
-	<div style="width: 460px;float: left;margin-top: 3%;text-align: left;">
-		<form style="border: none;outline: none;background-color: #E6E6E6" name="form1" method="post" action="{:U('index')}">
-			<input class="input-text size-L radius" type="hidden" name="id" value="{$user.id}" />
-			<input class="input-text size-L radius" type="hidden" name="role" value="{$user.role}" />
-            <input class="input-text radius size-L" type="text" value="{$user.account}" readonly="readonly" />
-            <input class="input-text radius size-L" type="text" value="{$user.name}" readonly="readonly" />
-			<if condition="$user.role eq 'User'">
-				<input class="input-text size-L radius" type="text" value="用户" readonly="readonly" />
-			<elseif condition="$user.role eq 'Nurse'" />
-				<input class="input-text size-L radius" type="text" value="护士" readonly="readonly" />
-			</if>
-			<if condition="$user.sex eq 1">
-				<input class="input-text size-L radius" type="text" name="sex" value="男" />
-				<elseif condition="$user.sex eq 2" />
-				<input class="input-text size-L radius" type="text" name="sex" value="女" />
-			</if>
-			<input class="input-text size-L radius" type="text" name="age" value="{$user.age}周岁" />
-			<input class="input-text size-L radius" type="text" name="phone" value="{$user.phone}" />
-			<input class="input-text size-L radius" type="text" value="{$user.card}" readonly="readonly" />
-			<if condition="$user.role eq 'Nurse'">
-				<input class="input-text size-L radius" type="text" value="{$user.id}" readonly="readonly" />
-				<input class="input-text size-L radius" type="text" value="{$user.merits}" readonly="readonly" />
-				<input class="input-text size-L radius" type="text" name="work-year" value="{$user.work-year}年" />
-				<input class="input-text size-L radius" type="text" name="work-add" value="{$user.work-add}" />
-				<input class="input-text size-L radius" type="text" name="work-expertise" value="{$user.work-expertise|default='无'}" />
-				<script id="editor" name="remark" type="text/plain" style="width:450px;height:180px;background-color: #E6E6E6;border: none;">{$user.remark|default=请新编辑内容}</script>
-			</if>
-            <button type="button" class="btn radius size-L" onclick="layer_close()">&nbsp;关&nbsp;&nbsp;&nbsp;&nbsp;闭&nbsp;</button>
-            <button type="submit" class="btn radius size-L">&nbsp;保&nbsp;&nbsp;&nbsp;&nbsp;存&nbsp;</button>
+<body style="padding-top: 1%">
+	<div id="content">
+		<form method="post" action="<?php echo U('editNeeds');?>" onsubmit="return checkStatus()">
+			<input type="hidden" class="input-text" name="id" value="<?php echo ($info["id"]); ?>" />
+			<input type="hidden" class="input-text" name="uid" value="<?php echo ($user["id"]); ?>" />
+			<ul>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="标题：" readonly="readonly" />
+					<input id="input-title" type="text" class="input-text radius size-M" name="title" value="<?php echo ($info["title"]); ?>" placeholder="请输入标题，尽量简短直接" required="required" />
+				</li>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="发布人：" readonly="readonly" />
+					<input type="text" class="input-text radius size-M" value="<?php echo ($user["name"]); ?>" readonly="readonly" />
+				</li>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="性别：" readonly="readonly" />
+					<input type="text" class="input-text radius size-M" value="<?php echo ($user["sex"]); ?>" readonly="readonly" />
+				</li>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="年龄：" readonly="readonly" />
+					<input type="text" class="input-text radius size-M" value="<?php echo ($user["age"]); ?>周岁" readonly="readonly" />
+				</li>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="联系电话：" readonly="readonly" />
+					<input type="text" class="input-text radius size-M" value="<?php echo ($user["phone"]); ?>" readonly="readonly" />
+				</li>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="修改时间：" readonly="readonly" />
+					<input type="text" class="input-text radius size-M" value="<?php echo (date('Y-m-d H:i:s',$addtime)); ?>" readonly="readonly" />
+				</li>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="失效时间：" readonly="readonly" />
+					<input type="text" class="input-text radius size-M" value="<?php echo (date('Y-m-d H:i:s',$endtime)); ?>" readonly="readonly" />
+				</li>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="病症：" readonly="readonly" />
+					<input type="text" class="input-text radius size-M" name="disease" value="<?php echo ($info["disease"]); ?>" placeholder="请简要填写需要护理的病症" required="required" />
+				</li>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="报酬（小时）：" readonly="readonly" />
+					<input type="number" class="input-text radius size-M" name="reward" value="<?php echo ($info["reward"]); ?>" placeholder="请填写单时报酬" required="required" />
+				</li>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="预计总工时（小时）：" readonly="readonly" />
+					<input type="text" class="input-text radius size-M" name="worktime" value="<?php echo ($info["worktime"]); ?>" placeholder="请填写总工时" required="required" />
+				</li>
+				<li>
+					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="请填写具体需求内容：" readonly="readonly" />
+					<script id="editor" name="needs" type="text/plain" style="width:600px;height:300px;background-color: #E6E6E6;border: none;margin-left: 200px;margin-top: -20px;"><?php echo ((isset($info["needs"]) && ($info["needs"] !== ""))?($info["needs"]):'无'); ?></script>
+				</li>
+				<li style="margin-top: 35px;margin-left: 25%">
+					<button type="submit" class="radius btn" style="border: 1px black solid">&nbsp;&nbsp;&nbsp;&nbsp;保&nbsp;&nbsp;存&nbsp;&nbsp;&nbsp;&nbsp;</button>
+					<button type="button" class="btn radius" onclick="layer_close()" style="margin-left: 25%;border: 1px black solid">&nbsp;&nbsp;&nbsp;&nbsp;关&nbsp;&nbsp;闭&nbsp;&nbsp;&nbsp;&nbsp;</button>
+				</li>
+			</ul>
 		</form>
 	</div>
 </body>
@@ -112,23 +117,18 @@
 			radioClass: 'iradio-blue',
 			increaseArea: '20%'
 		});
-
 		$list = $("#fileList"),
 				$btn = $("#btn-star"),
 				state = "pending",
 				uploader;
-
 		var uploader = WebUploader.create({
 			auto: true,
 			swf: '../../../../Public/h-ui/lib/webuploader/0.1.5/Uploader.swf',
-
 			// 文件接收服务端。
 			server: 'fileupload.php',
-
 			// 选择文件的按钮。可选。
 			// 内部根据当前运行是创建，可能是input元素，也可能是flash.
 			pick: '#filePicker',
-
 			// 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
 			resize: false,
 			// 只允许选择图片文件。
@@ -148,7 +148,6 @@
 					),
 					$img = $li.find('img');
 			$list.append( $li );
-
 			// 创建缩略图
 			// 如果为非图片文件，可以不用调用此方法。
 			// thumbnailWidth x thumbnailHeight 为 100 x 100
@@ -157,7 +156,6 @@
 					$img.replaceWith('<span>不能预览</span>');
 					return;
 				}
-
 				$img.attr( 'src', src );
 			}, thumbnailWidth, thumbnailHeight );
 		});
@@ -165,7 +163,6 @@
 		uploader.on( 'uploadProgress', function( file, percentage ) {
 			var $li = $( '#'+file.id ),
 					$percent = $li.find('.progress-box .sr-only');
-
 			// 避免重复创建
 			if ( !$percent.length ) {
 				$percent = $('<div class="progress-box"><span class="progress-bar radius"><span class="sr-only" style="width:0%"></span></span></div>').appendTo( $li ).find('.sr-only');
@@ -173,17 +170,14 @@
 			$li.find(".state").text("上传中");
 			$percent.css( 'width', percentage * 100 + '%' );
 		});
-
 		// 文件上传成功，给item添加成功class, 用样式标记上传成功。
 		uploader.on( 'uploadSuccess', function( file ) {
 			$( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
 		});
-
 		// 文件上传失败，显示上传出错。
 		uploader.on( 'uploadError', function( file ) {
 			$( '#'+file.id ).addClass('upload-state-error').find(".state").text("上传出错");
 		});
-
 		// 完成上传完了，成功或者失败，先删除进度条。
 		uploader.on( 'uploadComplete', function( file ) {
 			$( '#'+file.id ).find('.progress-box').fadeOut();
@@ -203,7 +197,6 @@
 				$btn.text('开始上传');
 			}
 		});
-
 		$btn.on('click', function () {
 			if (state === 'uploading') {
 				uploader.stop();
@@ -211,12 +204,20 @@
 				uploader.upload();
 			}
 		});
-
 		var ue = UE.getEditor('editor',{
-			toolbars: [['indent','bold','italic','underline','forecolor','fontfamily','fontsize','simpleupload','insertimage','emotion','spechars','inserttable']]
+			toolbars: [['indent','bold','italic','underline','forecolor','fontfamily','fontsize','simpleupload','insertimage','emotion','spechars','inserttable']],
 		});
-
-
 	});
+</script>
+<script>
+	function checkStatus() {
+		var value = "<?php echo ($info["status"]); ?>";
+		if(value === '1' || value === '4') {
+			return true;
+		} else {
+			alert("该需求已经开始或结束，无法修改！");
+			return false;
+		}
+	}
 </script>
 </html>

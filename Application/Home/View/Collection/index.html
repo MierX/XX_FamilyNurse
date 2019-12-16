@@ -82,7 +82,8 @@
 								<td>{$vo.reward}</td>
 								<td>{$vo.worktime}</td>
 								<td>{$vo.endtime|date='Y-m-d H:i:s',###}</td>
-								<td style="cursor: pointer" onclick="show('需求详情','{:U(\'info\')}?table=Needs&id={$vo.id}&field=needs','1600','1200')">查看详情</td>
+<!--								<td style="cursor: pointer" onclick="show('需求详情','{:U(\'info\')}?table=Needs&id={$vo.id}&field=needs','1600','1200')">查看详情</td>-->
+								<td style="cursor: pointer" onclick="show('需求详情','{:U(\'Needs/index\')}?id={$vo.id}','1000','0')">查看详情</td>
 							</tr>
 						</volist>
 					</tbody>

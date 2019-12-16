@@ -19,7 +19,7 @@
 	<script>DD_belatedPNG.fix('*');</script>
 	<![endif]-->
 	<!--/meta 作为公共模版分离出去-->
-	<title>我的信箱</title>
+	<title>公告内容</title>
 	<style type="text/css">
 		#content {
 			margin: 5px 100px 0 100px;
@@ -30,26 +30,56 @@
 	<div style="width: 90%;margin-left: 5%;">
 		<div class="mt-20">
 			<table class="table table-border table-bordered table-hover table-bg table-sort">
-				<thead>
-					<tr class="text-c">
-						<th>我</th>
-						<th>对方</th>
-						<th>最新消息</th>
-						<th>时间</th>
-						<th>操作</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$io): $mod = ($i % 2 );++$i;?><tr class="text-c">
-							<td><?php echo ($io["me"]); ?></td>
-							<td><?php echo ($io["he"]); ?></td>
-							<td><?php echo ($io["content"]); ?></td>
-							<td><?php echo (date('Y-m-d H:i:s',$io["addtime"])); ?></td>
-							<td>
-								<u style="cursor: pointer;text-decoration: none" onclick="show('与<?php echo ($io["he"]); ?>的私聊','<?php echo U('index');?>?uid=<?php echo ($io["me_id"]); ?>&nid=<?php echo ($io["he_id"]); ?>','0','0')" title="私聊">私聊</u>
-							</td>
-						</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-				</tbody>
+				<?php if($_SESSION['role']== 'User'): ?><thead>
+						<tr class="text-c">
+							<th>序号</th>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>绩效</th>
+							<th>手机</th>
+							<th>自我介绍</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c">
+								<td><?php echo ($vo["id"]); ?></td>
+								<td><?php echo ($vo["name"]); ?></td>
+								<td>
+									<?php if($vo["sex"] == 1): ?>男
+										<?php else: ?>
+										女<?php endif; ?>
+								</td>
+								<td><?php echo ($vo["merits"]); ?></td>
+								<td><?php echo ($vo["phone"]); ?></td>
+								<td style="cursor: pointer" onclick="show('护士详情','<?php echo U('info');?>?table=Nurse&id=<?php echo ($vo["id"]); ?>&field=remark','1600','1200')">查看详情</td>
+							</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+					</tbody>
+				<?php else: ?>
+					<thead>
+						<tr class="text-c">
+							<th>序号</th>
+							<th>标题</th>
+							<th>发布人</th>
+							<th>病症</th>
+							<th>报酬</th>
+							<th>工时</th>
+							<th>失效时间</th>
+							<th>需求详情</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c">
+								<td><?php echo ($vo["id"]); ?></td>
+								<td><?php echo ($vo["title"]); ?></td>
+								<td><?php echo ($vo["name"]); ?></td>
+								<td><?php echo ($vo["disease"]); ?></td>
+								<td><?php echo ($vo["reward"]); ?></td>
+								<td><?php echo ($vo["worktime"]); ?></td>
+								<td><?php echo (date('Y-m-d H:i:s',$vo["endtime"])); ?></td>
+<!--								<td style="cursor: pointer" onclick="show('需求详情','<?php echo U('info');?>?table=Needs&id=<?php echo ($vo["id"]); ?>&field=needs','1600','1200')">查看详情</td>-->
+								<td style="cursor: pointer" onclick="show('需求详情','<?php echo U('Needs/index');?>?id=<?php echo ($vo["id"]); ?>','1000','0')">查看详情</td>
+							</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+					</tbody><?php endif; ?>
 			</table>
 		</div>
 	</div>
@@ -66,25 +96,12 @@
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/ueditor.config.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
-<script type="text/javascript" src="../../../../Public/h-ui/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="../../../../Public/h-ui/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
-	$(function(){
-		$('.table-sort').dataTable({
-			"aaSorting": false,
-			"aoColumnDefs": [
-				{"orderable":false,"aTargets":[0,2,4]}
-			],
-			"searching":false,
-			"bLengthChange":false,
-		});
-
-	});
 	function show(title,url,w,h) {
 		var account = "<?php echo (session('account')); ?>";
 		if(account) {
-			w = parent.document.body.clientWidth*0.25;
-			h = parent.document.body.clientHeight*0.75;
+			w = parent.document.body.clientWidth*0.95;
+			h = parent.document.body.clientHeight*0.85;
 			parent.layer_show(title,url,w,h);
 		} else {
 			alert('请先登录');

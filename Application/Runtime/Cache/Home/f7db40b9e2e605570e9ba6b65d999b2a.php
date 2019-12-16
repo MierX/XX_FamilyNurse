@@ -39,6 +39,10 @@
             height: 0;
             display: none;
         }
+        span > p {
+            width: 140px!important;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -47,15 +51,15 @@
                     <div><?php echo ($co["time"]); ?></div>
                 </div><?php endif; ?>
             <?php if(($co["author"]) == $_SESSION['id']): if(($co["role"]) == $_SESSION['role']): ?><div style="text-align: right;">
-                        <div style="background-color: #9eea6a;width: auto;display: inline-block!important;color: #232323;margin-right: 30px;padding: 10px 15px 0 15px;margin-bottom: 3px"><?php echo ($co["content"]); ?></div>
+                        <div style="background-color: #9eea6a;width: auto;display: inline-block!important;color: #232323;margin-right: 30px;padding: 10px 15px 0 15px;margin-bottom: 3px"><span><?php echo ($co["content"]); ?></span></div>
                     </div>
                 <?php else: ?>
                     <div style="text-align: left;">
-                        <div style="background-color: #999999;width: auto;display: inline-block!important;color: #232323;margin-left: 30px;padding: 10px 15px 0 15px;margin-bottom: 3px"><?php echo ($co["content"]); ?></div>
+                        <div style="background-color: #999999;width: auto;display: inline-block!important;color: #232323;margin-left: 30px;padding: 10px 15px 0 15px;margin-bottom: 3px"><span><?php echo ($co["content"]); ?></span></div>
                     </div><?php endif; ?>
             <?php else: ?>
                 <div style="text-align: left;">
-                    <div style="background-color: #f8f8f8;width: auto;display: inline-block!important;color: #232323;margin-left: 30px;padding: 10px 15px 0 15px;margin-bottom: 3px"><?php echo ($co["content"]); ?></div>
+                    <div style="background-color: #f8f8f8;width: auto;display: inline-block!important;color: #232323;margin-left: 30px;padding: 10px 15px 0 15px;margin-bottom: 3px"><span><?php echo ($co["content"]); ?></span></div>
                 </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
     </div>
 </body>

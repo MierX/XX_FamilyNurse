@@ -83,6 +83,20 @@
                                 </div>
                             </td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+<!--                    <tr class="text-c" style="background-color: #ffffff;color: black">-->
+<!--                        <td style="color: black">-->
+<!--                            上一页-->
+<!--                        </td>-->
+<!--                        <td style="color: black">-->
+<!--                            下一页-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                            首页-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                            末页-->
+<!--                        </td>-->
+<!--                    </tr>-->
                 </tbody>
             </table>
         </div>

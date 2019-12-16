@@ -68,7 +68,7 @@
                                 <?php elseif($vo["status"] == 3): ?>
                                     已完成
                                 <?php else: ?>
-                                    <u style="cursor:pointer" class="text-primary" href="javascript:;" onclick="edit('?table=<?php echo ($table); ?>&where[id]=<?php echo ($vo["id"]); ?>&data[status]=1')">取消</u><?php endif; ?>
+                                    <u style="cursor:pointer" class="text-primary" href="javascript:;" onclick="edit('?table=<?php echo ($table); ?>&where[id]=<?php echo ($vo["id"]); ?>&data[status]=1&data[addtime]=<?php echo time();?>&data[endtime]=<?php echo strtotime('+1 week');?>')">取消</u><?php endif; ?>
                             </td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 				</tbody>

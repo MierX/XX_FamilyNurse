@@ -87,7 +87,7 @@
 				</li>
 				<li>
 					<input type="text" class="btn radius" style="width: 200px!important;cursor: default;text-align: right!important;" value="请填写具体需求内容：" readonly="readonly" />
-					<script id="editor" name="needs" type="text/plain" style="width:600px;height:300px;background-color: #E6E6E6;border: none;margin-left: 200px;margin-top: -20px;"></script>
+					<script id="editor" name="needs" type="text/plain" style="width:600px;height:300px;background-color: #E6E6E6;border: none;margin-left: 200px;margin-top: -20px;"><?php echo htmlspecialchars_decode($dfContent);?></script>
 				</li>
 				<li style="margin-top: 35px;margin-left: 25%">
 					<button type="submit" class="radius btn" style="border: 1px black solid">&nbsp;&nbsp;&nbsp;&nbsp;发&nbsp;&nbsp;布&nbsp;&nbsp;&nbsp;&nbsp;</button>

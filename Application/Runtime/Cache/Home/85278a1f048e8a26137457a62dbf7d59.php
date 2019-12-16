@@ -66,7 +66,7 @@
                 <tbody>
                     <?php if(is_array($Notice)): $i = 0; $__LIST__ = $Notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c" style="background-color: #ffffff">
                             <td style="height: 185px;margin-top: 50px;border: none;">
-                                <div id="content" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','<?php echo U('Notice/index');?>?id=<?php echo ($vo["id"]); ?>','1000','0')">
+                                <div id="content" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','<?php echo U('Notice/index');?>?id=<?php echo ($vo["id"]); ?>','1200','0')">
                                     <div id="up1" style="text-align: left">
                                         <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #1A1A1A" onmousemove="this.style.color='blue'" onmouseout="this.style.color = '#1A1A1A'"><?php echo ($vo["title"]); ?></u>
                                     </div>

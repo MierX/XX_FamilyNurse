@@ -48,6 +48,13 @@ class NeedsController extends BaseController {
                 echo "<script>parent.location.reload();</script>";
             }
         }
+        $default = "<p>与患者关系：</p>
+						<p>患者姓名：</p>
+						<p>健康状态：</p>
+						<p>性别：</p>
+						<p>年龄：</p>
+						<p>现在居住地：</p>";
+        $this -> dfContent = $default;
         $this -> display();
     }
 
