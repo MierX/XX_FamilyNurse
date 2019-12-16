@@ -53,7 +53,7 @@ class IndexController extends Controller {
             if($page == -1) {
                 $info = D($table) -> where($keyword) -> order($order) -> select();
                 if(count($info) % 10 == 0) {
-                    $page = count($info) % 10;
+                    $page = count($info) / 10;
                 } else {
                     $page = intval(count($info) / 10 + 1);
                 }

@@ -63,6 +63,8 @@
 								</if>
 							</td>
 							<td>
+								<u style="cursor: pointer;text-decoration: none" onclick="show('需求详情','{:U(\'Needs/index\')}?id={$no.id}','1000','0')">查看</u>
+								|
 								<u style="cursor: pointer;text-decoration: none" onclick="show('需求编辑','{:U(\'Needs/editNeeds\')}?id={$no.id}','1600','1200')">编辑</u>
 								|
 								<u style="cursor: pointer;text-decoration: none" onclick="offNeeds('{$no.id}','{$no.status}')">关闭</u>
