@@ -52,6 +52,16 @@
             font-size: 14px;
             font-weight: 600;
         }
+        #page ul {
+            background-color: #FFFFFF!important;
+            margin-left: 30%;
+        }
+        #page ul > li {
+            float: left;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -100,6 +110,14 @@
                     </volist>
                 </tbody>
             </table>
+            <div id="page">
+                <ul>
+                    <li onclick="page(1)">首页</li>
+                    <li onclick="page(parseInt('{$page}')-1)">上一页</li>
+                    <li onclick="page(parseInt('{$page}')+1)">下一页</li>
+                    <li onclick="page(-1)">末页</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
@@ -120,6 +138,26 @@
             "bInfo":false,
         })
     });
+
+    function page(page) {
+        $.ajax({
+            url:"{:U('checkPage')}",
+            type:"get",
+            data:{
+                "page":page,
+                "table":"Nurse",
+            },
+            success:function (data) {
+                if(data == 'Up') {
+                    alert("已经是第一页了");
+                } else if(data == 'End'){
+                    alert('已经是最后一页了');
+                } else if(data){
+                    location.href = "{:U('nurseList')}?page="+data;
+                }
+            }
+        });
+    }
 
     function show(title,url,w,h) {
     	var account = "{$Think.SESSION.account}";

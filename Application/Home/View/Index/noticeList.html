@@ -34,6 +34,7 @@
             left: 0;
             overflow-x: hidden;
             overflow-y: scroll;
+            width: 800px;
         }
         body::-webkit-scrollbar {
             display: none;
@@ -45,50 +46,54 @@
             font-size: 14px;
             font-weight: 600;
         }
+        #page ul {
+            background-color: #FFFFFF!important;
+            margin-left: 30%;
+        }
+        #page ul > li {
+            float: left;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div id="notice">
-        <div id="bow" style="width: 100%;">
-            <table class="table table-border table-bordered table-hover table-bg table-sort" style="border: none!important;">
-                <thead>
-                    <tr class="text-c">
-                        <th style="background-color: #ffffff;border: none!important;padding: 0">
-                            <notempty name="Notice">
-                                <div class="text-c" style="float: left">
-                                    <button type="button" class="radius btn size-MINI" style="border: none;font-size: 14px;" onclick="hotSort()">
-                                        根据热度排序
-                                        <i class="Hui-iconfont">&#xe675;</i>
-                                    </button>
-                                </div>
-                            </notempty>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <volist name="Notice" id="vo">
-                        <tr class="text-c" style="background-color: #ffffff">
-                            <td style="height: 185px;margin-top: 50px;border: none;">
-                                <div id="content" style="height: 90%;width: 100%;cursor: pointer" onclick="show('公告详情','{:U(\'Notice/index\')}?id={$vo.id}','1200','0')">
-                                    <div id="up1" style="text-align: left">
-                                        <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #1A1A1A" onmousemove="this.style.color='blue'" onmouseout="this.style.color = '#1A1A1A'">{$vo.title}</u>
-                                    </div>
-                                    <div id="mid" style="margin-top: 10px;padding-left: 5px;height: 110px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
-                                        <u style="font-size: 16px;line-height: 1.67;">{$vo.content}</u>
-                                    </div>
-                                    <div id="down">
-                                        <ul>
-                                            <li>热度：{$vo.hot}</li>
-                                            <li>发布者：{$vo.author}</li>
-                                            <li>发布时间：{$vo.addtime|date='Y-m-d H:i:s',###}</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </volist>
-                </tbody>
-            </table>
+        <div id="bow" style="width: 800px;background-color: #ffffff!important;">
+            <notempty name="Notice">
+                <div class="text-c" style="width: 100%;display: inline-block;">
+                    <button type="button" class="radius btn size-MINI" style="border: none;font-size: 14px;float: right" onclick="hotSort()">
+                        根据热度排序
+                        <i class="Hui-iconfont">&#xe675;</i>
+                    </button>
+                </div>
+            </notempty>
+            <volist name="Notice" id="vo">
+                <div  id="content" style="margin-top: 15px;cursor: pointer;" onclick="show('公告详情','{:U(\'Notice/index\')}?id={$vo.id}','1200','0')">
+                    <div style="display: inline-block;height: 36px;margin-left: 12px">
+                        <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #1A1A1A" onmousemove="this.style.color='blue'" onmouseout="this.style.color = '#1A1A1A'">{$vo.title}</u>
+                    </div>
+                    <div id="mid" style="display: block;height: 100px;width: 96%;margin-left: 2%;overflow: hidden;">
+                        <u style="font-size: 16px;line-height: 1.67;">{$vo.content}</u>
+                    </div>
+                    <div id="down" style="display: inline-block;margin-top: 20px">
+                        <ul>
+                            <li>热度：{$vo.hot}</li>
+                            <li>发布者：{$vo.author}</li>
+                            <li>发布时间：{$vo.addtime|date='Y-m-d H:i:s',###}</li>
+                        </ul>
+                    </div>
+                </div>
+            </volist>
+            <div id="page">
+                <ul>
+                    <li onclick="page(1)">首页</li>
+                    <li onclick="page(parseInt('{$page}')-1)">上一页</li>
+                    <li onclick="page(parseInt('{$page}')+1)">下一页</li>
+                    <li onclick="page(-1)">末页</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
@@ -109,6 +114,26 @@
             "bInfo":false,
         })
     });
+
+    function page(page) {
+        $.ajax({
+            url:"{:U('checkPage')}",
+            type:"get",
+            data:{
+                "page":page,
+                "table":"Notice",
+            },
+            success:function (data) {
+                if(data == 'Up') {
+                    alert("已经是第一页了");
+                } else if(data == 'End'){
+                    alert('已经是最后一页了');
+                } else if(data){
+                    location.href = "{:U('noticeList')}?page="+data;
+                }
+            }
+        });
+    }
 
     function show(title,url,w,h) {
     	var account = "{$Think.SESSION.account}";

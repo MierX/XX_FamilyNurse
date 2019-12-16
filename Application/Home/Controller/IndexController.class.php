@@ -38,6 +38,42 @@ class IndexController extends Controller {
         $this -> display('index');
     }
 
+    public function checkPage() {
+        if($_GET) {
+            $table = $_GET['table'];
+            if($table == 'Notice') {
+                $order = 'addtime desc,hot desc';
+            } else if($table == 'Nurse') {
+                $order = 'addtime desc,merits desc';
+            } else {
+                $order = 'addtime desc';
+            }
+            $keyword = ['status' => 1];
+            $page = $_GET['page'];
+            if($page == -1) {
+                $info = D($table) -> where($keyword) -> order($order) -> select();
+                if(count($info) % 10 == 0) {
+                    $page = count($info) % 10;
+                } else {
+                    $page = intval(count($info) / 10 + 1);
+                }
+            }
+            $min = ($page-1)*10;
+            if($min < 0) {
+                echo 'Up';
+                exit;
+            }
+            $info = D($table) -> where($keyword) -> order($order) -> limit($min,10) -> select();
+            if(empty($info)) {
+                echo 'End';
+                exit;
+            }
+            echo $page;
+        } else {
+            echo false;
+        }
+    }
+
     public function noticeList() {
         if($_GET['order']) {
             $order = $_GET['order'];
@@ -49,15 +85,10 @@ class IndexController extends Controller {
         } else {
             $keyword = ['status' => 1];
         }
-        $notice_info = D('Notice') -> where($keyword) -> order($order) -> select();
-//        if(count($notice_info) > 0) {
-//            $length = 10 - count($notice_info);
-//            if($length > 0) {
-//                for ($i = 0; $i < $length; $i++) {
-//                    $notice_info[] = $notice_info[0];
-//                }
-//            }
-//        }
+        $page = $_GET['page'] ? $_GET['page'] : 1;
+        $min = ($page-1)*10;
+        $notice_info = D('Notice') -> where($keyword) -> order($order) -> limit($min,10) -> select();
+        $this -> page = $page;
         $this -> Notice = $notice_info;
         $this -> display();
     }
@@ -68,7 +99,9 @@ class IndexController extends Controller {
         } else {
             $keyword = ['status' => 1];
         }
-        $info_list = D('Needs') -> where($keyword) -> order('addtime desc') -> select();
+        $page = $_GET['page'] ? $_GET['page'] : 1;
+        $min = ($page-1)*10;
+        $info_list = D('Needs') -> where($keyword) -> order('addtime desc') -> limit($min,10) -> select();
         foreach ($info_list as $k => &$v) {
             if($v['endtime'] <= time()) {
                 $v['status'] = 4;
@@ -89,6 +122,7 @@ class IndexController extends Controller {
             }
         }
         $info_list = array_values($info_list);
+        $this -> page = $page;
         $this -> Needs = $info_list;
         $this -> display();
     }
@@ -99,7 +133,10 @@ class IndexController extends Controller {
         } else {
             $keyword = ['status' => 1];
         }
-        $nurse_info = D('Nurse') -> where($keyword) -> order('addtime desc,merits desc') -> select();
+        $page = $_GET['page'] ? $_GET['page'] : 1;
+        $min = ($page-1)*10;
+        $nurse_info = D('Nurse') -> where($keyword) -> order('addtime desc,merits desc') -> limit($min,10) -> select();
+        $this -> page = $page;
         $this -> Nurse = $nurse_info;
         $this -> display();
     }
