@@ -5,7 +5,7 @@ class BaseController extends Controller {
     public function _initialize() {
         if(($_SESSION['role'] == 'User' || $_SESSION['role'] == 'Nurse') && $_SESSION['account'] && $_SESSION['name']) {
             $status = D($_SESSION['role']) -> where(['id' => $_SESSION['id']]) -> field('status') -> find()['status'];
-            if(!$status) {
+            if($status != 1) {
                 session(null);
                 echo "<script>alert('当前账号已被停用！');parent.location.reload();</script>";
             }
