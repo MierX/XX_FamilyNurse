@@ -48,7 +48,11 @@
 							<td>{$io.content}</td>
 							<td>{$io.addtime|date='Y-m-d H:i:s',###}</td>
 							<td>
-								<u style="cursor: pointer;text-decoration: none" onclick="show('与{$io.he}的私聊','{:U(\'index\')}?uid={$io.me_id}&nid={$io.he_id}','0','0')" title="私聊">私聊</u>
+								<if condition="$Think.SESSION.role eq 'User'">
+									<u style="cursor: pointer;text-decoration: none" onclick="show('与{$io.he}的私聊','{:U(\'index\')}?uid={$io.me_id}&nid={$io.he_id}','0','0')" title="私聊">私聊</u>
+								<elseif condition="$Think.SESSION.role eq 'Nurse'" />
+									<u style="cursor: pointer;text-decoration: none" onclick="show('与{$io.he}的私聊','{:U(\'index\')}?nid={$io.me_id}&uid={$io.he_id}','0','0')" title="私聊">私聊</u>
+								</if>
 							</td>
 						</tr>
 					</volist>
