@@ -18,7 +18,7 @@ class NeedsController extends BaseController {
         $this -> collection = $collection;
         $this -> needs = $_GET['id'];
         $this -> data = $info;
-        $this -> display();
+        $this -> display();//调用与这个方法同名，且属于当前控制器的对应模板
     }
 
     public function edit() {

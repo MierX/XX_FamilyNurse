@@ -97,7 +97,7 @@
         }
 		#ul_2 > li {
 			float: left;
-			font-size: 20px;
+			font-size: 15px;
 			margin-left: 13%;
 		}
 		#right2 {
@@ -210,9 +210,9 @@
                         </li>
                     </ul>
                     <ul id="ul_2">
-						<li>看需求</li>
-                        <li style="margin-left: 6.5%">看信箱</li>
-                        <li style="margin-left: 7%">查记录</li>
+						<li>查看需求</li>
+                        <li style="margin-left: 6.5%">我的信箱</li>
+                        <li style="margin-left: 7%">我的记录</li>
                     </ul>
                     <ul style="margin-top: 38.5%">
                         <li style="margin-left: 5%;font-size: 14px">
@@ -335,13 +335,13 @@
 		var role = "{$user.role}";
 		console.log(role);
 		layer.open({
-			title: false,
+			title: "功能选择",
 			content:false,
 			btn: ['个人信息','发布需求','查看需求','查看信箱','收藏列表','查看记录'],
 			btnAlign:'c',
 			closeBtn:false,
 			shadow:0.3,
-			area: ['100px','150px'],
+			area: ['100px','200px'],
 			shadeClose: true,
 			skin:'my-skin',
 			btn1: function(index, layero){
