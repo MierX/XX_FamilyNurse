@@ -60,6 +60,7 @@
             float: left;
             padding: 10px;
             font-size: 16px;
+            font-weight: normal;
             cursor: pointer;
         }
     </style>
@@ -84,7 +85,7 @@
                                                 <li>工号：{$vo.id}</li>
                                                 <li>姓名：{$vo.name}</li>
                                                 <li>性别：
-                                                    <if condition="vo.sex eq 1">
+                                                    <if condition="$vo.sex eq 1">
                                                         男
                                                     <else />
                                                         女
