@@ -5,10 +5,10 @@ class ChatController extends BaseController {
     public function index(){
         if($_GET) {
             $user = D('User') -> field('*') -> where(['id' => $_GET['uid']]) -> find();
-            $nurse = D('Nurse') -> field('*') -> where(['id' => $_GET['nid']]) -> find();
+            $nurse = D('Nurse') -> field('*') -> where(['id' => $_GET['nid']]) -> find();//D:跳到父页面
             $this -> user = $user;
             $this -> nurse = $nurse;
-            $this -> display();
+            $this -> display();//显示Home/Index/Index
         }
     }
 
