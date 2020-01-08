@@ -6,10 +6,12 @@ class IndexController extends BaseController {
         $this -> display();
     }
 
+    // 注销
     public function logout() {
         unset($_SESSION['admin_role']);
         unset($_SESSION['admin_account']);
         unset($_SESSION['admin_name']);
-        echo "<script type='text/javascript'>parent.location.reload();</script>";
+        //刷新父窗口，关闭子窗口
+        echo "<script type='text/javascript'>parent.location.reload();</script>";        
     }
 }

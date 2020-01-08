@@ -53,7 +53,7 @@ class ChatController extends BaseController {
                 $he = 'uid';
                 $he_table = 'User';
             }
-            $list = D('Chat') -> field('*') -> where([$me => $_GET['id']]) -> order('nid asc,addtime desc') -> select();
+            $list = D('Chat') -> field('*') -> where([$me => $_GET['id']]) -> order('nid asc,addtime desc') -> select();//D('chat')是什么意思
             $k = 0;
             foreach ($list as $key => $value) {
                 if($value[$group] != $k) {

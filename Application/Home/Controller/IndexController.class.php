@@ -74,6 +74,7 @@ class IndexController extends Controller {
         }
     }
 
+    // 查询公告
     public function noticeList() {
         if($_GET['order']) {
             $order = $_GET['order'];
@@ -93,6 +94,7 @@ class IndexController extends Controller {
         $this -> display();
     }
 
+    // 查询需求列表
     public function needsList() {
         if($_GET['keyword']) {
             $keyword = ['status' => 1, 'title' => ['like','%'.$_GET['keyword'].'%']];

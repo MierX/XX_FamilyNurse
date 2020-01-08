@@ -34,7 +34,6 @@
             left: 0;
             overflow-x: hidden;
             overflow-y: scroll;
-            width: 800px;
         }
         body::-webkit-scrollbar {
             display: none;
@@ -60,10 +59,10 @@
 </head>
 <body>
     <div id="notice">
-        <div id="bow" style="width: 800px;background-color: #ffffff!important;">
+        <div id="bow" style="width: 100%;background-color: #ffffff!important;">
             <notempty name="Notice">
                 <div class="text-c" style="width: 100%;display: inline-block;">
-                    <button type="button" class="radius btn size-MINI" style="border: none;font-size: 14px;float: right" onclick="hotSort()">
+                    <button type="button" class="radius btn size-MINI" style="border: none;font-size: 14px;float: right;margin-right: 15px" onclick="hotSort()">
                         根据热度排序
                         <i class="Hui-iconfont">&#xe675;</i>
                     </button>
