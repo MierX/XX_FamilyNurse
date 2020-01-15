@@ -30,7 +30,7 @@
             text-decoration: none;
         }
         body {
-            background-color: #E6E6E6;
+            background-color: #FFF5EE;
             left: 0;
             overflow-x: hidden;
             overflow-y: scroll;
@@ -42,9 +42,9 @@
             float: left;
             padding-left: 10px;
             padding-right: 10px;
-            font-size: 14px;
+            font-size: 10px;
             font-weight: 600;
-            margin-top: 20px;
+            margin-top: 15px;
         }
         #page ul {
             background-color: #FFFFFF!important;
@@ -73,12 +73,12 @@
                             <td style="height: 185px;margin-top: 60px;border: none;">
                                 <div id="content1" style="height: 90%;width:70%;cursor: pointer" onclick="show('需求详情','{:U(\'Needs/index\')}?id={$vo.id}','1000','0')">
                                     <div id="up1" style="text-align: left">
-                                        <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #1A1A1A" onmousemove="this.style.color='blue'" onmouseout="this.style.color = '#1A1A1A'">{$vo.title}</u>
+                                        <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #F08080" onmousemove="this.style.color='#B9D3EE'" onmouseout="this.style.color = '#F08080'">{$vo.title}</u>
                                     </div>
-                                    <div id="mid1" style="margin-top: 10px;padding-left: 5px;height: 150px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
-                                        <u style="font-size: 16px;line-height: 1.67;">{$vo.needs}</u>
+                                    <div id="mid1" style="margin-top: 10px;padding-left: 20px;height: 150px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
+                                        <u style="font-size: 16px;line-height: 1;">{$vo.needs}</u>
                                     </div>
-                                    <div id="down">
+                                    <div id="down" style="margin-top: 10px;padding-left: 10px;padding-bottom:10px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
                                         <ul>
                                             <li>发布者：{$vo.name}</li>
                                             <li>性别：{$vo.sex}</li>

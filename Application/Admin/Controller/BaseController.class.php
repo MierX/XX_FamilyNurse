@@ -17,7 +17,7 @@ class BaseController extends Controller {
         return [$table,$count,$info_list];
     }
 
-    // 数据库关键字搜索语句
+    // 数据库关键字搜索方法
     public function search() {
         foreach ($_GET['where'] as $key => &$value) {
             if(stristr($value,'null')) unset($_GET['where'][$key]);
@@ -31,7 +31,7 @@ class BaseController extends Controller {
         return [$table,$count,$info];
     }
 
-    // 数据库查询语句
+    // 数据库查询方法
     public function info() {
         if($_GET) {
             $info = D($_GET['table']) -> where($_GET['where']) -> find();
@@ -40,7 +40,7 @@ class BaseController extends Controller {
         return $info;
     }
 
-    // 数据库更新、删除语句
+    // 数据库更新、删除方法
     public function edit() {
         if($_GET) {
             if($_GET['where']['id']) {
