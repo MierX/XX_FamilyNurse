@@ -57,7 +57,7 @@
         .ul_3 > li {
             margin-left: 5%;
             margin-top: 1%;
-            font-size: 16px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -65,9 +65,9 @@
     <div id="body">
         <div id="left">
             <div id="top">
-                <iframe scrolling="auto" frameborder="0" name="targetText" src="{:U('content')}?id={$info.id}" style="margin-top: 3%;height: 450px"></iframe>
+                <iframe scrolling="auto" frameborder="0" name="targetText" src="{:U('content')}?id={$info.id}" style="margin-top: 3%;height: 300px"></iframe>
             </div>
-            <p style="margin-top: 1%">医嘱记录：</p>
+            <p>医嘱记录：</p>
             <div id="bottom">
                 <iframe frameborder="0" name="targetText" src="{:U('record')}?id={$info.id}" ></iframe>
             </div>
@@ -117,7 +117,7 @@
                     </li>
                 </ul>
                 <ul class="ul_3">
-                    <li style="margin-top: 8%;">
+                    <li style="margin-top: 1%; width: 350px">
                         <if condition="$info.status eq 2">
                             <if condition="$Think.SESSION.role eq User">
                                 <p>结束本次医疗：<span id="score"></span></p>
