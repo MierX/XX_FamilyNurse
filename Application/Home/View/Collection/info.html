@@ -18,22 +18,15 @@
 	<script type="text/javascript" src="../../../../Public/h-ui/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 	<script>DD_belatedPNG.fix('*');</script>
 	<![endif]-->
-	<title></title>
+	<title>收藏详情</title>
 	<style type="text/css">
 		body {
 			border: 0;
 			padding: 0;
 			margin: 0;
-			background-color: #e6e6e6;
+			background-color: #fff;
 		}
-		input{
-			width: 450px!important;
-			display: block;
-			border: none!important;
-			border-bottom: 1px #ffffff dashed!important;
-			outline: none;
-			background-color: #E6E6E6;
-		}
+		
 		ul > li {
 			font-size: 16px;
 			font-weight: bold;
@@ -43,16 +36,16 @@
 </head>
 <body>
 	<if condition="$Think.SESSION.role eq 'Nurse'">
-		<p onclick="collection1()" style="margin-left: 15px;font-size: 20px;cursor: default;">
-			<i class="Hui-iconfont" style="cursor: pointer" title="收藏">&#xe630;</i>
+		<p onclick="collection1()" style="margin-left: 15px;font-size: 20px;margin-top: 1%;cursor: default;">
+			<i class="Hui-iconfont" style="cursor: pointer;color: red;" title="收藏">&#xe630;</i>
 		</p>
 	</if>
 	<if condition="$Think.SESSION.role eq 'User'">
-		<p onclick="collection2()" style="margin-left: 15px;font-size: 20px;cursor: default;">
-			<i class="Hui-iconfont" style="cursor: pointer" title="收藏">&#xe630;</i>
+		<p onclick="collection2()" style="margin-left: 15px;margin-top: 1%;font-size: 20px;cursor: default;">
+			<i class="Hui-iconfont" style="cursor: pointer;color: red;" title="收藏">&#xe630;</i>
 		</p>
 	</if>
-	<div style="margin-left: 35%;margin-top: 3%;float: left;">{$info}</div>
+	<div style="margin-left: 10%;margin-top: 2%;margin-right:10%;float: left;">{$info}</div>
 </body>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/layer/2.4/layer.js"></script>

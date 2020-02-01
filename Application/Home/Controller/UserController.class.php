@@ -7,6 +7,7 @@ class UserController extends BaseController {
             $user_info = D($_GET['role']) -> field('*') -> where(['id' => $_GET['id']]) -> find();
         }
         if($_POST) {
+            //字符串查找与匹配，判断性别
             if(stristr($_POST['sex'],'女')) {
                 $_POST['sex'] = 2;
             } else if(stristr($_POST['sex'],'男')) {
@@ -14,10 +15,12 @@ class UserController extends BaseController {
             } else {
                 unset($_POST['sex']);
             }
+            //将年龄和工龄转换为整型
             $_POST['age'] = intval($_POST['age']);
             $_POST['work-year'] = intval($_POST['work-year']);
             $id = $_POST['id'];
             unset($_POST['id']);
+            //实例化数据表，将数据保存到数据库
             D($_POST['role']) -> where(['id' => $id]) -> save($_POST);
             $user_info = D($_POST['role']) -> field('*') -> where(['id' => $id]) -> find();
         }

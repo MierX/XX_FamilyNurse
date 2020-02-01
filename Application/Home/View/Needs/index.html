@@ -19,8 +19,11 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
-    <title>护士详情</title>
+    <title>需求详情</title>
     <style type="text/css">
+        body{
+            background-color: #fff;
+        }
         #content {
             margin: 15px 100px 0 200px;
         }
@@ -30,12 +33,12 @@
     <if condition="$Think.SESSION.role eq 'Nurse'">
         <div style="margin-left: 15px;font-size: 20px;cursor: default;">
             <if condition="$collection eq true">
-                <i class="Hui-iconfont" onclick="collection()"  style="cursor: pointer" title="收藏">&#xe630;</i>
+                <i class="Hui-iconfont" onclick="collection()"  style="cursor: pointer;color: red;" title="收藏">&#xe630;</i>
             <elseif condition="$collection eq false" />
                 <i class="Hui-iconfont" onclick="collection()"  style="cursor: pointer" title="收藏">&#xe61b;</i>
             </if>
         </div>
-        <div style="float: left;font-size: 20px;cursor: default;">
+        <div style="float: left;margin-left: 15px;font-size: 20px;cursor: default;">
             <i class="Hui-iconfont" onclick="show('title','{:U(\'Chat/index\')}?nid={$Think.SESSION.id}&uid={$data.uid}','0','0')"  style="cursor: pointer" title="私聊">&#xe6c5;</i>
         </div>
         <div style="float: left;margin-left: 15px;font-size: 20px;cursor: default;">
@@ -96,7 +99,7 @@
         var account = "{$Think.SESSION.account}";
         if(account) {
             title = "与{$data.name}的私聊";
-            w = parent.document.body.clientWidth*0.25;
+            w = parent.document.body.clientWidth*0.28;
             h = parent.document.body.clientHeight*0.75;
             parent.layer_show(title,url,w,h);
         } else {

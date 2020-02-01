@@ -40,21 +40,25 @@ class BaseController extends Controller {
         return $info;
     }
 
-    // 数据库更新、删除方法
+    // 数据库更新、软删除方法
     public function edit() {
         if($_GET) {
             if($_GET['where']['id']) {
+                //实例化数据表，将数据存储到数据库
                 D($_GET['table']) -> where($_GET['where']) -> save($_GET['data']);
             } else {
+                //获取当前时间，将数据写入数据库
                 $_GET['data']['addtime'] = time();
                 D($_GET['table']) -> add($_GET['data']);
             }
             $table = $_GET['table'];
             unset($_GET);
         } else if($_POST) {
-            if($_POST['where']['id']) {
+            if($_POST['where']['id']) {                
+                //实例化数据表，将数据存储到数据库
                 D($_POST['table']) -> where($_POST['where']) -> save($_POST['data']);
             } else {
+                //获取当前时间，将数据写入数据库
                 $_POST['data']['addtime'] = time();
                 D($_POST['table']) -> add($_POST['data']);
             }

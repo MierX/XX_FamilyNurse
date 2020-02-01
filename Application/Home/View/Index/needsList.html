@@ -41,10 +41,10 @@
         #down ul > li {
             float: left;
             padding-left: 10px;
-            padding-right: 10px;
+            padding-right: 5px;
             font-size: 10px;
             font-weight: 600;
-            margin-top: 15px;
+            margin-top: 5px;
         }
         #page ul {
             background-color: #FFFFFF!important;
@@ -71,12 +71,12 @@
                     <volist name="Needs" id="vo">
                         <tr class="text-c" style="background-color: #ffffff">
                             <td style="height: 185px;margin-top: 60px;border: none;">
-                                <div id="content1" style="height: 90%;width:70%;cursor: pointer" onclick="show('需求详情','{:U(\'Needs/index\')}?id={$vo.id}','1000','0')">
+                                <div id="content1" style="height: 90%;cursor: pointer" onclick="show('需求详情','{:U(\'Needs/index\')}?id={$vo.id}','900','0')">
                                     <div id="up1" style="text-align: left">
-                                        <u style="font-size: 18px;font-weight: 600;line-height: 1.6;color: #F08080" onmousemove="this.style.color='#B9D3EE'" onmouseout="this.style.color = '#F08080'">{$vo.title}</u>
+                                        <u style="font-size: 16px;font-weight: 600;line-height: 1.6;color: #F08080" onmousemove="this.style.color='#B9D3EE'" onmouseout="this.style.color = '#F08080'">{$vo.title}</u>
                                     </div>
                                     <div id="mid1" style="margin-top: 10px;padding-left: 20px;height: 150px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
-                                        <u style="font-size: 16px;line-height: 1;">{$vo.needs}</u>
+                                        <u style="font-size: 14px;line-height: 1;">{$vo.needs}</u>
                                     </div>
                                     <div id="down" style="margin-top: 10px;padding-left: 10px;padding-bottom:10px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align: left;display: -webkit-box;-webkit-box-orient: vertical;word-wrap: break-word;">
                                         <ul>

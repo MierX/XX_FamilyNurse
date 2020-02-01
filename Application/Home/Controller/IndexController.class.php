@@ -38,6 +38,7 @@ class IndexController extends Controller {
         $this -> display('index');
     }
 
+    //分页
     public function checkPage() {
         if($_GET) {
             $table = $_GET['table'];
@@ -129,6 +130,7 @@ class IndexController extends Controller {
         $this -> display();
     }
 
+    //查询护士列表
     public function nurseList() {
         if($_GET['keyword']) {
             $keyword = ['status' => 1, 'name' => ['like','%'.$_GET['keyword'].'%']];
@@ -143,22 +145,25 @@ class IndexController extends Controller {
         $this -> display();
     }
 
+    //注册
     public function register() {
         if($_POST) {
             if($_POST['role'] == 'User') {
+                //如果注册角色为用户，则销毁以下变量，若角色为护士则不用销毁
                 unset($_POST['work-year']);
                 unset($_POST['work-add']);
                 unset($_POST['remark']);
             }
-            $_POST['addtime'] = time();
-            $_POST['status'] = 1;
-            $result = D($_POST['role']) -> add($_POST);
+            $_POST['addtime'] = time();//将当前时间赋给$_POST['addtime']
+            $_POST['status'] = 1;//将账号初始状态设置为正常
+            $result = D($_POST['role']) -> add($_POST);//实例化数据表的映射对象，并将数据写入数据库
             if($result) {
+                //若数据写入成功，将变量存储到session中并登录
                 $_SESSION['id'] = D($_POST['role']) -> field('id') -> where(['account' => $_POST['account'], 'name' => $_POST['name']]) -> find()['id'];
                 $_SESSION['account'] = $_POST['account'];
                 $_SESSION['role'] = $_POST['role'];
                 $_SESSION['name'] = $_POST['name'];
-                $this -> redirect('Index');
+                $this -> redirect('Index');//跳转到主页
             }
         }
         $this -> display();
@@ -177,27 +182,36 @@ class IndexController extends Controller {
         }
     }
 
+    //登录
     public function login() {
         if($_POST) {
+            //判断登录者的角色为用户或护士
             if($_POST['role'] == 'User') {
+                //若为用户则实例化用户表，查询用户信息
                 $info = D($_POST['role']) -> field('*') -> where(['status' => 1, 'account' => $_POST['account'], 'password' => $_POST['password']]) -> find();
             } else if($_POST['role'] == 'Nurse') {
+                //若为用户则实例化护士表，查询护士信息
                 $info = D($_POST['role']) -> field('*') -> where(['status' => 1, 'account' => $_POST['account'], 'password' => $_POST['password'], 'id' => $_POST['job-num']]) -> find();
             }
+            //信息正确且账号状态正常则将登陆者的id、account、role、name存到session中
             if($info) {
                 $_SESSION['id'] = $info['id'];
                 $_SESSION['account'] = $info['account'];
                 $_SESSION['role'] = $info['role'];
                 $_SESSION['name'] = $info['name'];
+                //跳转到主页
                 $this -> redirect('Index');
             } else {
+                //登录信息有误，错误提示
                 $this -> error('信息输入错误！请重试！');
             }
         }
-        $this -> display();
+        $this -> display();//显示index/index
     }
 
+    //注销
     public function logout() {
+        //销毁变量
         unset($_SESSION['account']);
         unset($_SESSION['role']);
         unset($_SESSION['name']);

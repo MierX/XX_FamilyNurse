@@ -18,31 +18,32 @@
 	<script type="text/javascript" src="../../../../Public/h-ui/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 	<script>DD_belatedPNG.fix('*');</script>
 	<![endif]-->
-	<title></title>
+	<title>用户信息</title>
 	<style type="text/css">
 		body {
 			border: 0;
 			padding: 0;
 			margin: 0;
-			background-color: #e6e6e6;
+			background-color: #fff;
 		}
 		input{
 			width: 450px!important;
 			display: block;
+			margin-bottom: 1.5%;
 			border: none!important;
-			border-bottom: 1px #ffffff dashed!important;
+			border-bottom: 1px pink dashed!important;
 			outline: none;
-			background-color: #E6E6E6;
+			background-color: #fff;
 		}
-		ul > li {
-			font-size: 16px;
+		ul > li {						
+			font-size: 14px;
 			font-weight: bold;
 			text-align: right;
 		}
 	</style>
 </head>
 <body>
-<div style="margin-left: 35%;margin-top: 3%;float: left;">
+<div style="margin-left: 15%;margin-top: 2%;float: left;">
 	<ul>
 		<li style="margin-top: 9px">账号：</li>
 		<li style="margin-top: 15px">状态：</li>
@@ -61,35 +62,35 @@
 		</if>
 	</ul>
 </div>
-<div style="width: 460px;float: left;margin-top: 3%;text-align: left;">
-	<form style="border: none;outline: none;background-color: #E6E6E6" name="form1">
-		<input class="input-text size-L radius" type="hidden" name="id" value="{$data.id}" readonly="readonly" />
-		<input class="input-text size-L radius" type="hidden" name="role" value="{$data.role}" readonly="readonly" />
-		<input class="input-text radius size-L" type="text" value="{$data.account}" readonly="readonly" />
+<div style="width: 460px;float: left;margin-top: 2%;text-align: left;">
+	<form style="border: none;outline: none;background-color: #fff;" name="form1">
+		<input class="input-text size-M radius" type="hidden" name="id" value="{$data.id}" readonly="readonly" />
+		<input class="input-text size-M radius" type="hidden" name="role" value="{$data.role}" readonly="readonly" />
+		<input class="input-text radius size-M" type="text" value="{$data.account}" readonly="readonly" />
 		<if condition="$data.status eq 1">
-			<input class="input-text size-L radius" type="text" value="正常" readonly="readonly" />
+			<input class="input-text size-M radius" type="text" value="正常" readonly="readonly" />
 			<else />
-			<input class="input-text size-L radius" type="text" value="封号" readonly="readonly" />
+			<input class="input-text size-M radius" type="text" value="封号" readonly="readonly" />
 		</if>
-		<input class="input-text radius size-L" type="text" value="{$data.name}" readonly="readonly" />
+		<input class="input-text radius size-M" type="text" value="{$data.name}" readonly="readonly" />
 		<if condition="$data.role eq 'User'">
-			<input class="input-text size-L radius" type="text" value="用户" readonly="readonly" />
+			<input class="input-text size-M radius" type="text" value="用户" readonly="readonly" />
 			<elseif condition="$data.role eq 'Nurse'" />
-			<input class="input-text size-L radius" type="text" value="护士" readonly="readonly" />
+			<input class="input-text size-M radius" type="text" value="护士" readonly="readonly" />
 		</if>
 		<if condition="$data.sex eq 1">
-			<input class="input-text size-L radius" type="text" name="sex" value="男性" readonly="readonly" />
+			<input class="input-text size-M radius" type="text" name="sex" value="男性" readonly="readonly" />
 			<elseif condition="$data.sex eq 2" />
-			<input class="input-text size-L radius" type="text" name="sex" value="女性" readonly="readonly" />
+			<input class="input-text size-M radius" type="text" name="sex" value="女性" readonly="readonly" />
 		</if>
-		<input class="input-text size-L radius" type="text" name="age" value="{$data.age}周岁" readonly="readonly" />
-		<input class="input-text size-L radius" type="text" name="phone" value="{$data.phone}" readonly="readonly" />
-		<input class="input-text size-L radius" type="text" value="{$data.card}" readonly="readonly" />
+		<input class="input-text size-M radius" type="text" name="age" value="{$data.age}周岁" readonly="readonly" />
+		<input class="input-text size-M radius" type="text" name="phone" value="{$data.phone}" readonly="readonly" />
+		<input class="input-text size-M radius" type="text" value="{$data.card}" readonly="readonly" />
 		<if condition="$data.role eq 'Nurse'">
-			<input class="input-text size-L radius" type="text" value="{$data.id}" readonly="readonly" />
-			<input class="input-text size-L radius" type="text" value="{$data.merits}" readonly="readonly" />
-			<input class="input-text size-L radius" type="text" name="work-year" value="{$data.work-year}年" readonly="readonly" />
-			<input class="input-text size-L radius" type="text" name="work-add" value="{$data.work-add}" readonly="readonly" />
+			<input class="input-text size-M radius" type="text" value="{$data.id}" readonly="readonly" />
+			<input class="input-text size-M radius" type="text" value="{$data.merits}" readonly="readonly" />
+			<input class="input-text size-M radius" type="text" name="work-year" value="{$data.work-year}年" readonly="readonly" />
+			<input class="input-text size-M radius" type="text" name="work-add" value="{$data.work-add}" readonly="readonly" />
 			<div>{:htmlspecialchars_decode($data[remark])}</div>
 		</if>
 	</form>

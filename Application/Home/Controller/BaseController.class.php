@@ -3,10 +3,12 @@ namespace Home\Controller;
 use Think\Controller;
 class BaseController extends Controller {
     public function _initialize() {
+        //查询账户状态
         if(($_SESSION['role'] == 'User' || $_SESSION['role'] == 'Nurse') && $_SESSION['account'] && $_SESSION['name']) {
             $status = D($_SESSION['role']) -> where(['id' => $_SESSION['id']]) -> field('status') -> find()['status'];
             if($status != 1) {
                 session(null);
+                //封号状态，提示
                 echo "<script>alert('当前账号已被停用！');parent.location.reload();</script>";
             }
         } else {
@@ -17,6 +19,7 @@ class BaseController extends Controller {
     public function index(){
     }
 
+    //时间转换
     public function setTime($time) {
         $nowTime = time();
         $differenceTime = $nowTime - $time;

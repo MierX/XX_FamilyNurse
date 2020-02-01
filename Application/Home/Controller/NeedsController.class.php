@@ -21,30 +21,37 @@ class NeedsController extends BaseController {
         $this -> display();//调用与这个方法同名，且属于当前控制器的对应模板
     }
 
+    //发布需求
     public function edit() {
         if($_GET['id']) {
-            $user = D('User') -> field('*') -> where(['id' => $_GET['id']]) -> find();
+            $user = D('User') -> field('*') -> where(['id' => $_GET['id']]) -> find();//实例化用户表，并查询所有表字段
             if($user['sex'] == 1) {
                 $user['sex'] = '男';
             } else {
                 $user['sex'] = '女';
             }
+            //销毁$_POST、$_GET值
             unset($_POST);
             unset($_GET);
         }
+        //将查询的数据集合渲染到前端的user变量
         $this -> user = $user;
-        $addtime = time();
-        $endtime = strtotime('+1 week');
+        $addtime = time();//获取当前时间，并赋值给发布时间
+        $endtime = strtotime('+1 week');//失效时间为发布时间+1周
+        //将发布时间和失效时间渲染到前端
         $this -> addtime = $addtime;
         $this -> endtime = $endtime;
         if($_POST) {
+            //若表单数据提交成功，将发布时间和失效时间变量赋值给表单的发布时间和失效时间            
             $_POST['addtime'] = $addtime;
             $_POST['endtime'] = $endtime;
-            if(!$_POST['needs']) $_POST['needs'] = '无';
-            $rs = D('Needs') -> add($_POST);
+            if(!$_POST['needs']) $_POST['needs'] = '无';//若表单提交的需求数据为空，则默认“无”
+            $rs = D('Needs') -> add($_POST);//实例化数据库患者需求表，将数据写入数据库
             if($rs) {
+                //发布成功后刷新父窗体并关闭子窗体
                 echo "<script>alert('发布成功！');parent.location.reload();</script>";
             } else {
+                //发布失败刷新父窗体并关闭子窗体
                 echo "<script>parent.location.reload();</script>";
             }
         }
@@ -54,41 +61,47 @@ class NeedsController extends BaseController {
 						<p>性别：</p>
 						<p>年龄：</p>
 						<p>现在居住地：</p>";
-        $this -> dfContent = $default;
-        $this -> display();
+        $this -> dfContent = $default;//将默认的需求内容渲染到前端dfContent变量
+        $this -> display();//显示Needs/index.html
     }
 
+    //修改需求
     public function editNeeds() {
         if($_GET['id']) {
-            $info = D("Needs") -> field('*') -> where(['id' => $_GET['id']]) -> find();
-            $user = D('User') -> field('*') -> where(['id' => $info['uid']]) -> find();
+            $info = D("Needs") -> field('*') -> where(['id' => $_GET['id']]) -> find();//实例化患者需求表，并查询所有表字段
+            $user = D('User') -> field('*') -> where(['id' => $info['uid']]) -> find();//实例化用户表，并查询所有表字段
             if($user['sex'] == 1) {
                 $user['sex'] = '男';
             } else {
                 $user['sex'] = '女';
             }
         }
+        //将查询的数据集合渲染到前端的info和user变量
         $this -> info = $info;
         $this -> user = $user;
-        $addtime = time();
-        $endtime = strtotime('+1 week');
+        $addtime = time();//获取当前时间，并赋值给修改时间
+        $endtime = strtotime('+1 week');//失效时间为修改时间+1周
+        //将发布时间和失效时间渲染到前端
         $this -> addtime = $addtime;
         $this -> endtime = $endtime;
         if($_POST) {
+            //若表单数据提交成功，将修改时间和失效时间变量赋值给表单的发布时间和失效时间
             $_POST['addtime'] = $addtime;
             $_POST['endtime'] = $endtime;
-            $_POST['status'] = 1;
-            if(!$_POST['needs']) $_POST['needs'] = '无';
-            $rs = D('Needs') -> save($_POST, ['id' => $_POST['id']]);
+            $_POST['status'] = 1;//默认需求状态为开启
+            if(!$_POST['needs']) $_POST['needs'] = '无';//如果表单的需求数据为空，则默认“无”
+            $rs = D('Needs') -> save($_POST, ['id' => $_POST['id']]);//实例化数据库表，将数据保存到患者需求表中
             if($rs) {
-                echo "<script>alert('修改成功，已重新发布！');window.onload = layer_close();</script>";
+                //修改成功后刷新父窗体并关闭子窗体
+                echo "<script>alert('修改成功，已重新发布！');parent.location.reload();</script>";
             } else {
-                echo "<script>parent.location.reload();</script>";
+                echo "<script>parent.location.reload();</script>";//修改失败，刷新父窗体并关闭子窗体
             }
         }
         $this -> display();
     }
 
+    //关闭需求
     public function offNeeds() {
         if($_GET) {
             $rs = D('Needs') -> where(['id' => $_GET['id']]) -> save(['status' => 4]);
@@ -102,27 +115,35 @@ class NeedsController extends BaseController {
         }
     }
 
+    //检查账号状态，提出申请
     public function checkStatus() {
         if($_GET) {
+            //实例化数据表，查询此申请的id
             $rs = D('Apply') -> field('id') -> where(['needs' => $_GET['id'], 'nurse' => $_GET['nid']]) -> find();
             if($rs) {
+                //数据表中已存在此申请，返回false
                 echo false;
             } else {
+                //数据表中不存在此申请，写入数据库
                 D('Apply') -> add(['needs' => $_GET['id'], 'nurse' => $_GET['nid'], 'addtime' => time()]);
                 echo true;
             }
         }
     }
 
+    //接受需求申请
     public function accept() {
         if($_GET) {
+            //实例化数据表，查询此接受记录
             $rs = D('Accept') -> field('id') -> where(['needs' => $_GET['needs'], 'uid' => $_GET['user'], 'nid' => $_GET['nurse']]) -> find();
             if($rs) {
+                //若已有接受记录，则返回false
                 echo false;
             } else {
+                //若没有接受记录，将数据写入数据库中
                 D('Accept') -> add(['needs' => $_GET['needs'], 'uid' => $_GET['user'], 'nid' => $_GET['nurse'], 'addtime' => time()]);
-                D('Needs') -> where(['id' => $_GET['needs']]) -> save(['status' => 2]);
-                D('Apply') -> where(['needs' => $_GET['needs']]) -> delete();
+                D('Needs') -> where(['id' => $_GET['needs']]) -> save(['status' => 2]);//修改需求状态
+                D('Apply') -> where(['needs' => $_GET['needs']]) -> delete();//删除申请
                 echo true;
             }
         }

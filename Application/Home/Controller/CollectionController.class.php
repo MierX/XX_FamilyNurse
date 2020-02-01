@@ -34,30 +34,39 @@ class CollectionController extends BaseController {
                         }
                     }
                     $needs = array_values($needs);
-                    $this -> data = $needs;
+                    $this -> data = $needs;//将数据集合渲染到前端
                     $this -> display();
                 }
             }
         }
     }
 
+    //用户收藏护士
     public function userCollection() {
         if($_GET) {
+            //实例化数据表，查询账户状态为正常的护士信息
             $nurse = D('Nurse') -> field('status') -> where(['id' => $_GET['nurse'], 'status' => 1]) -> find()['status'];
             if($nurse) {
+                //护士账号状态正常，则实例化数据表，查询此用户的收藏信息
                 $info = D('UserCollection') -> field('id,ids') -> where(['uid' => $_GET['user']]) -> find();
                 if(!$info['id']) {
+                    //如果此用户未收藏护士，则将数据将数据赋值给以下变量
                     $data['uid'] = $_GET['user'];
-                    $data['ids'] = json_encode([intval($_GET['nurse'])]);
-                    D('UserCollection') -> add($data);
+                    $data['ids'] = json_encode([intval($_GET['nurse'])]);//获取此护士的工号
+                    D('UserCollection') -> add($data);//实例化数据表，将数据写入数据库中
                 } else {
+                    //若此用户已收藏护士，赋值数据到以下变量
                     $info_id = $info['id'];
                     $info = json_decode($info['ids'],true);
                     if($_GET['status'] == true) {
+                        //若护士账号状态正常，销毁数组中搜索的工号
                         unset($info[array_search(intval($_GET['nurse']),$info)]);
+                        //实例化数据表，将数据集合保存到数据库
                         D('UserCollection') -> where(['id' => $info_id]) -> save(['ids' => json_encode($info)]);
                     } else if($_GET['status'] == false) {
+                        //若护士账号状态非正常，将护士工号赋给数组
                         $info[] = intval($_GET['nurse']);
+                        //实例化数据表，将数据集合保存到数据库
                         D('UserCollection') -> where(['id' => $info_id]) -> save(['ids' => json_encode($info)]);
                     }
                 }

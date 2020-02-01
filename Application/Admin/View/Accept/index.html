@@ -18,13 +18,13 @@
     <script type="text/javascript" src="../../../../Public/h-ui/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <title>需求管理</title>
+    <title>记录列表</title>
 </head>
 <body>
 	<nav class="breadcrumb">
 		<i class="Hui-iconfont">&#xe67f;</i> 首页
-		<span class="c-gray en">&gt;</span> 需求管理
-        <span class="c-gray en">&gt;</span> 需求列表
+		<span class="c-gray en">&gt;</span> 记录管理
+        <span class="c-gray en">&gt;</span> 记录列表
 	</nav>
 	<div class="page-container">
 		<div class="text-c">
@@ -47,7 +47,7 @@
                         <th>评价</th>
                         <th>开始时间</th>
                         <th>完成时间</th>
-                        <th>遗嘱</th>
+                        <th>医嘱</th>
                     </tr>
 				</thead>
 				<tbody>
@@ -87,7 +87,7 @@
                                 </if>
                             </td>
                             <td>
-                                <u style="cursor:pointer" class="text-primary" onclick="show('医嘱','{:U(\'record\')}?table=Record&where[needs]={$vo.needs}','1600','1200')">查看</u>
+                                <u style="cursor:pointer" class="text-primary" onclick="show('医嘱','{:U(\'record\')}?table=Record&where[needs]={$vo.needs}','900','1000')">查看</u>
                                 <if condition="$vo.endtime neq 0">
                                      |
                                     <u style="cursor:pointer" class="text-primary" onclick="cancelRecord('{$vo.id}')">取消</u>
@@ -150,6 +150,8 @@
     }
 
 	function show(title,url,id,w,h){
+        w = parent.document.body.clientWidth*0.75;
+        h = parent.document.body.clientHeight*0.85;
 		layer_show(title,url,w,h);
 	}
 	function edit(get) {

@@ -18,7 +18,7 @@
     <script type="text/javascript" src="../../../../Public/h-ui/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <title>公告管理</title>
+    <title>公告列表</title>
 </head>
 <body>
 	<nav class="breadcrumb">
@@ -28,10 +28,10 @@
 	</nav>
 	<div class="page-container">
 		<div class="text-c">
-            <input type="date" value="" id="min" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />
+            <input type="date" value="" id="min" class="input-text" style="width:122px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />
             -
-            <input type="date" value="" id="max" class="input-text" style="width:160px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />
-			<input id="title" type="text" class="input-text" onmouseover="this.style.border = '1px #DDDDDD solid'" style="width:250px;" placeholder="输入公告标题" />
+            <input type="date" value="" id="max" class="input-text" style="width:122px;" onmouseover="this.style.border = '1px #DDDDDD solid'" onchange="checkTime(this.id,this.value)" />
+			<input id="title" type="text" class="input-text" onmouseover="this.style.border = '1px #DDDDDD solid'" style="width:225px;" placeholder="输入公告标题" />
 			<button type="button" class="btn radius" onclick="search()">
                 <i class="Hui-iconfont">&#xe665;</i> 搜公告
             </button>
@@ -40,7 +40,7 @@
                     <i class="Hui-iconfont">&#xe600;</i> 发布公告
                 </a>
             </span>
-            <span class="r">
+            <span class="r" style="margin-top: 0.5%">
                 统计：<strong>{$count}</strong> 条数据
             </span>
 		</div>
@@ -101,6 +101,8 @@
 	});
 
 	function show(title,url,id,w,h){
+        w = parent.document.body.clientWidth*0.77;
+        h = parent.document.body.clientHeight*0.85;
 		layer_show(title,url,w,h);
 	}
 	function edit(get) {

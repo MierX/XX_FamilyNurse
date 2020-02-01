@@ -19,7 +19,7 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
-    <title>查看记录</title>
+    <title>记录详情</title>
     <style type="text/css">
         * {
             margin: 0;
@@ -31,7 +31,8 @@
             text-decoration: none;
         }
         body {
-            background-color: #E6E6E6;            
+            background-color: #fff;   
+            overflow-y: scroll;        
         }
         #body {
             width: 53%;
@@ -43,21 +44,22 @@
             float: left;
             width: 50%;
             height: 100%;
-            border: 1px #E6E6E6 solid;
+            border: 1px #fff solid;
         }
         #right {
             float: right;
-            width: 40%;
+            width: 49.5%;
         }
         .right_1 {
             width: 100%;
+            margin-left: 20%;
             height: 195px;
-            border: 1px #E6E6E6 solid;
+            border: 1px #fff solid;
         }
         .ul_3 > li {
             margin-left: 5%;
-            margin-top: 1%;
-            font-size: 16px;
+            margin-top: 0.1%;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -65,17 +67,18 @@
     <div id="body">
         <div id="left">
             <div id="top">
-                <iframe scrolling="auto" frameborder="0" name="targetText" src="{:U('content')}?id={$info.id}" style="margin-top: 3%;height: 450px"></iframe>
+                <iframe scrolling="auto" frameborder="0" name="targetText" src="{:U('content')}?id={$info.id}" style="margin-top: 3%;height: 300px;background-color: #FFF;"></iframe>
             </div>
-            <p style="margin-top: 1%">医嘱记录：</p>
+            <p>医嘱记录：</p>
             <div id="bottom">
-                <iframe frameborder="0" name="targetText" src="{:U('record')}?id={$info.id}" ></iframe>
+                <iframe frameborder="0" name="targetText" src="{:U('record')}?id={$info.id}" style="
+            border:1px #E6E6E6 solid;"></iframe>
             </div>
         </div>
         <div id="right">
             <div class="right_1">
                 <ul class="ul_3">
-                    <li style="margin-top: 8%;">用户信息</li>
+                    <li style="margin-top: 3%;">用户信息</li>
                     <li style="margin-top: 1%;">姓名：{$info.u_name}</li>
                     <if condition="$info.u_sex eq 1">
                         <li>性别：男</li>
@@ -117,7 +120,7 @@
                     </li>
                 </ul>
                 <ul class="ul_3">
-                    <li style="margin-top: 8%;">
+                    <li style="margin-top: 1%; width: 350px">
                         <if condition="$info.status eq 2">
                             <if condition="$Think.SESSION.role eq User">
                                 <p>结束本次医疗：<span id="score"></span></p>

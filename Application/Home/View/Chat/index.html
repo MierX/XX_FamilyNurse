@@ -18,7 +18,7 @@
 	<script type="text/javascript" src="../../../../Public/h-ui/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 	<script>DD_belatedPNG.fix('*');</script>
 	<![endif]-->
-	<title></title>
+	<title>留言</title>
 	<style type="text/css">
 		* {
 			margin: 0;
@@ -38,9 +38,9 @@
 	<div id="chatList" style="position: fixed;height: 80%;margin-left: 1%;width: 100%;margin-top: 1%;overflow-y:auto;overflow-x: hidden;" class="show_iframe">
 		<iframe id="list" style="border: none;" scrolling="auto" name="targetText" src="{:U('chatList')}?uid={$user.id}&nid={$nurse.id}"></iframe>
 	</div>
-	<div style="position: fixed;margin-left: 1%;width: 100%;bottom: 0;text-align: left;">
-		<script id="editor" name="remark" type="text/plain" style="height: 60px;background-color: #E6E6E6;border: none;margin-right: 10px;"></script>
-		<a href="{:U('chatList')}?uid={$user.id}&nid={$nurse.id}" target="targetText" style="margin-left: 80%;float: right;" class="btn radius size-L" onclick="return sendChat()">&nbsp;发&nbsp;&nbsp;&nbsp;&nbsp;送&nbsp;</a>
+	<div style="position: fixed;margin-left: 1%;width: 100%;bottom: 1%;text-align: left;">
+		<div id="editor" name="remark" type="text/plain" style="height: 50px;background-color: #E6E6E6;border: none;"></div>
+		<a href="{:U('chatList')}?uid={$user.id}&nid={$nurse.id}" target="targetText" style="margin-right: 3%;float: right;" class="btn radius size-M" onclick="return sendChat()">&nbsp;发&nbsp;&nbsp;&nbsp;&nbsp;送&nbsp;</a>
 	</div>
 </body>
 <script type="text/javascript" src="../../../../Public/h-ui/lib/jquery/1.9.1/jquery.min.js"></script>

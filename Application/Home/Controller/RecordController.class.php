@@ -35,6 +35,7 @@ class RecordController extends BaseController {
     }
 
     public function record() {
+        //实例化医嘱表，查询医嘱记录，按记录时间降序排序
         $info = D('Record') -> field('*') -> where(['needs' => $_GET['id']]) -> order('addtime desc') -> select();
         $this -> info = $info;
         $this -> display();
@@ -42,16 +43,21 @@ class RecordController extends BaseController {
 
     public function save() {
         if($_GET) {
+            //实例化医嘱表，将护士所填的医嘱写入数据库
             $rs = D('Record') -> add(['needs' => $_GET['id'], 'content' => $_GET['value'], 'addtime' => time()]);
             echo $rs;
         }
     }
 
+    //绩效核算
     public function saveScore() {
         if($_GET) {
+            //实例化记录表，将评价分数村吃到数据库中
             $rs = D('Accept') -> where(['needs' => $_GET['id']]) -> save(['score' => $_GET['score'], 'endtime' => time()]);
             if($rs) {
+                //实例化需求表，将需求状态改为已完成
                 D('Needs') -> where(['id' => $_GET['id']]) -> save(['status' => 3]);
+                //实例化护士表，将绩效（评分-2）存储到数据库中
                 D('Nurse') -> where(['id' => $_GET['nid']]) -> setInc('merits',$_GET['score']-2);
             }
             echo $rs;

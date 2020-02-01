@@ -5,20 +5,24 @@ class ChatController extends BaseController {
     public function index(){
         if($_GET) {
             $user = D('User') -> field('*') -> where(['id' => $_GET['uid']]) -> find();
-            $nurse = D('Nurse') -> field('*') -> where(['id' => $_GET['nid']]) -> find();//D:跳到父页面
+            $nurse = D('Nurse') -> field('*') -> where(['id' => $_GET['nid']]) -> find();
             $this -> user = $user;
             $this -> nurse = $nurse;
             $this -> display();//显示Home/Index/Index
         }
     }
 
+    //查看留言信息
     public function chatList() {
         if($_GET) {
+            //实例化留言表，查询数据
             $chats = D('Chat') -> field('*') -> where(['uid' => $_GET['uid'], 'nid' => $_GET['nid']]) -> order('addtime asc') -> select();
             $v_t = 0;
             foreach ($chats as $key => &$value) {
                 if($value['addtime'] - $v_t >= 300) {
+                    //若当前留言时间与上一条留言时间相隔300秒，将当前时间赋给变量
                     $v_t = $value['addtime'];
+                    //进行时间转换
                     $value['time'] = $this -> setTime($value['addtime']);
                 } else {
                     $value['time'] = 1;
@@ -29,6 +33,7 @@ class ChatController extends BaseController {
         }
     }
 
+    //保存留言
     public function save() {
         if($_GET) {
             $rs = D('Chat') -> add(['uid' => $_GET['uid'], 'nid' => $_GET['nid'], 'author' => $_GET['author'], 'role' => $_GET['role'], 'content' => $_GET['content'], 'addtime' => time()]);
@@ -40,6 +45,7 @@ class ChatController extends BaseController {
         }
     }
 
+    //留言列表
     public function list() {
         if($_GET) {
             if($_GET['role'] == 'User') {
@@ -53,7 +59,7 @@ class ChatController extends BaseController {
                 $he = 'uid';
                 $he_table = 'User';
             }
-            $list = D('Chat') -> field('*') -> where([$me => $_GET['id']]) -> order('nid asc,addtime desc') -> select();//D('chat')是什么意思
+            $list = D('Chat') -> field('*') -> where([$me => $_GET['id']]) -> order('nid asc,addtime desc') -> select();
             $k = 0;
             foreach ($list as $key => $value) {
                 if($value[$group] != $k) {
