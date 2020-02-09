@@ -6,18 +6,24 @@ class IndexController extends Controller {
         if ($_SESSION['role']) {
             $user_info = D($_SESSION['role']) -> field('*') -> where(['account' => $_SESSION['account'], 'name' => $_SESSION['name']]) -> find();
             if ($_SESSION['role'] == 'User') {
+                //若登录者角色为用户，查询用户的收藏表
                 $collection = json_decode(D($_SESSION['role'] . 'Collection') -> field('ids') -> where(['uid' => $_SESSION['id']]) -> find()['ids'], true);
                 if ($collection) {
+                    //若存在数据，显示前十五条收藏的护士信息
                     $collection_info = D('Nurse') -> where(['id' => ['in', $collection], 'status' => 1]) -> limit('15') -> select();
+                    //计算收藏数
                     $collection_count = count($collection_info);
                     $this -> collection_count = $collection_count;
                     $this -> collection = $collection_info;
                 }
             } elseif ($_SESSION['role'] == 'Nurse') {
+                //若登录者角色为护士，查询护士的收藏表
                 $collection = json_decode(D($_SESSION['role'] . 'Collection') -> field('ids') -> where(['nid' => $_SESSION['id']]) -> find()['ids'], true);
                 if ($collection) {
+                   //若存在数据，显示前十五条收藏的需求信息
                     $collection_info = D('Needs') -> where(['id' => ['in', $collection], 'status' => 1]) -> limit('15') -> select();
                     foreach ($collection_info as $k => &$v) {
+                        //若失效时间小于当前时间，修改需求状态为失效
                         if($v['endtime'] <= time()) {
                             $v['status'] = 4;
                             D('Needs') -> where(['id' => $v['id']]) -> save($v);
@@ -25,9 +31,11 @@ class IndexController extends Controller {
                             continue;
                         }
                         $user = D('User') -> field('status') -> where(['id' => $v['uid']]) -> find()['status'];
+                        //若发布者的状态为封号，则不显示该条收藏
                         if($user == 2) unset($collection_info[$k]);
                     }
                     $collection_info = array_values($collection_info);
+                    //计算收藏数
                     $collection_count = count($collection_info);
                     $this -> collection_count = $collection_count;
                     $this -> collection = $collection_info;
@@ -38,10 +46,11 @@ class IndexController extends Controller {
         $this -> display('index');
     }
 
-    //分页
+    //分页功能
     public function checkPage() {
         if($_GET) {
             $table = $_GET['table'];
+            //各表排序规则
             if($table == 'Notice') {
                 $order = 'addtime desc,hot desc';
             } else if($table == 'Nurse') {
@@ -50,9 +59,12 @@ class IndexController extends Controller {
                 $order = 'addtime desc';
             }
             $keyword = ['status' => 1];
+            //获取页数
             $page = $_GET['page'];
             if($page == -1) {
+                //实例化数据表，查询数据
                 $info = D($table) -> where($keyword) -> order($order) -> select();
+                //显示总页数
                 if(count($info) % 10 == 0) {
                     $page = count($info) / 10;
                 } else {
@@ -61,61 +73,79 @@ class IndexController extends Controller {
             }
             $min = ($page-1)*10;
             if($min < 0) {
+                //输出第一页
                 echo 'Up';
                 exit;
             }
+            //每页显示十条数据
             $info = D($table) -> where($keyword) -> order($order) -> limit($min,10) -> select();
             if(empty($info)) {
+                //输出最后一页
                 echo 'End';
                 exit;
             }
+            //输出总页数
             echo $page;
         } else {
             echo false;
         }
     }
 
-    // 查询公告
+    // 公告列表
     public function noticeList() {
         if($_GET['order']) {
+            //按热度降序排序
             $order = $_GET['order'];
         } else {
+            //默认排序方式
             $order = 'addtime desc,hot desc';
         }
         if($_GET['keyword']) {
+            //若有关键词，生成模糊查询语句
             $keyword = ['status' => 1, 'title' => ['like','%'.$_GET['keyword'].'%']];
         } else {
             $keyword = ['status' => 1];
         }
+        //获取页数
         $page = $_GET['page'] ? $_GET['page'] : 1;
+        //每条显示十条数据
         $min = ($page-1)*10;
         $notice_info = D('Notice') -> where($keyword) -> order($order) -> limit($min,10) -> select();
+        //将控制器变量值传递到模板
         $this -> page = $page;
         $this -> Notice = $notice_info;
         $this -> display();
     }
 
-    // 查询需求列表
+    // 需求列表
     public function needsList() {
         if($_GET['keyword']) {
+            //若有关键词，生成需求状态为未开始的模糊查询语句
             $keyword = ['status' => 1, 'title' => ['like','%'.$_GET['keyword'].'%']];
         } else {
             $keyword = ['status' => 1];
         }
+        //获取页数
         $page = $_GET['page'] ? $_GET['page'] : 1;
+        //每页显示十条数据
         $min = ($page-1)*10;
         $info_list = D('Needs') -> where($keyword) -> order('addtime desc') -> limit($min,10) -> select();
         foreach ($info_list as $k => &$v) {
+            //若需求失效时间小于当前时间，修改需求状态为取消
             if($v['endtime'] <= time()) {
                 $v['status'] = 4;
                 D('Needs') -> where(['id' => $v['id']]) -> save($v);
+                //销毁此条需求数据
                 unset($info_list[$k]);
                 continue;
             }
+            //实例化用户表，查询数据
             $user = D('User') -> field('sex,name,status') -> where(['id' => $v['uid']]) -> find();
             if($user['status'] == 2) {
+                //若用户被封号，不显示此用户发布的需求
                 unset($info_list[$k]);
             } else {
+                //判断性别
                 if($user['sex'] == 1) {
                     $v['sex'] = '男';
                 } else {
@@ -124,6 +154,7 @@ class IndexController extends Controller {
                 $v['name'] = $user['name'];
             }
         }
+        //将控制器变量值传递到模板
         $info_list = array_values($info_list);
         $this -> page = $page;
         $this -> Needs = $info_list;
@@ -133,13 +164,18 @@ class IndexController extends Controller {
     //查询护士列表
     public function nurseList() {
         if($_GET['keyword']) {
+            //如果有关键词，按关键词进行模糊查询
             $keyword = ['status' => 1, 'name' => ['like','%'.$_GET['keyword'].'%']];
         } else {
             $keyword = ['status' => 1];
         }
+        //如果页数存在，显示页数，不存在，显示第一页
         $page = $_GET['page'] ? $_GET['page'] : 1;
+        //每页显示十条数据
         $min = ($page-1)*10;
+        //实例化数据表，查询数据
         $nurse_info = D('Nurse') -> where($keyword) -> order('addtime desc,merits desc') -> limit($min,10) -> select();
+        //将控制器变量传递到模板，并渲染
         $this -> page = $page;
         $this -> Nurse = $nurse_info;
         $this -> display();
@@ -169,7 +205,9 @@ class IndexController extends Controller {
         $this -> display();
     }
 
+    //注册时的数据验证
     public function checkValue() {
+        //判断数据表中数据是否已存在
         if($_GET['role'] && $_GET['name'] && $_GET['value']) {
             $info = D($_GET['role']) -> field('name') -> where([$_GET['name'] => $_GET['value']]) -> find();
             if(!$info) {
@@ -211,7 +249,7 @@ class IndexController extends Controller {
 
     //注销
     public function logout() {
-        //销毁变量
+        //销毁变量，跳转到主界面
         unset($_SESSION['account']);
         unset($_SESSION['role']);
         unset($_SESSION['name']);

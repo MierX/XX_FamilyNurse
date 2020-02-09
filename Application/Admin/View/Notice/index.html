@@ -106,7 +106,7 @@
 		layer_show(title,url,w,h);
 	}
 	function edit(get) {
-        var choose = confirm("该操作将改变此用户的状态");
+        var choose = confirm("该操作将改变此条公告的状态");
         if(choose) {
             window.location.href = "{:U(edit)}"+get;
         }
@@ -114,6 +114,7 @@
     function checkTime(id,value) {
 	    var time = new Date(value.replace(/-/g,'/')).getTime();
 	    var nowTime = new Date().getTime();
+        //时间小于当前时间
 	    if(time <= nowTime) {
             if(id === 'max') {
                 var min = document.getElementById("min").value;
@@ -136,6 +137,7 @@
     function search() {
 	    var value = {
 	        'title' : document.getElementById("title").value,
+            //获取时间，将“-”替换成“/”
 	        'min' : new Date((document.getElementById("min").value).replace(/-/g,'/')).getTime(),
 	        'max' : new Date((document.getElementById("max").value).replace(/-/g,'/')).getTime(),
         };
@@ -143,6 +145,7 @@
             alert('请选择最大时间！');
             window.location.href = "{:U('Notice/index')}?table={$table}";
         }
+        //循环删除不存在的键
 	    for(var key in value) {
 	        if(!value[key]) delete value[key];
         }
@@ -150,9 +153,11 @@
             var title = null;
             var addtime = null;
             if(value['title']) {
+                //分割字符串并解析
                 title = JSON.stringify(['like', ['%',value['title'],'%'].join('|')]);
             }
             if(value['min'] && value['max']) {
+                //选取时间段，并解析字符串
                 addtime = JSON.stringify(['between',[Number(value['min'].toString().slice(0,-3)),Number(value['max'].toString().slice(0,-3))+86400]]);
             }
             window.location.href = "{:U('search')}?table={$table}&where[title]="+title+"&where[addtime]="+addtime;

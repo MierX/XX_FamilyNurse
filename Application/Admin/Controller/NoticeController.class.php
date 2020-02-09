@@ -17,6 +17,7 @@ class NoticeController extends BaseController {
 
     public function edit() {
         parent::edit();
+        //公告修改成功后刷新父窗口，关闭子窗口
         echo "<script>parent.location.reload();</script>";
     }
 
@@ -28,6 +29,7 @@ class NoticeController extends BaseController {
 
     public function search() {
         $value = parent::search();
+        //将控制器变量传递到模板
         $this -> table = $value[0];
         $this -> count = $value[1];
         $this -> data = $value[2];

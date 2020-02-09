@@ -3,22 +3,30 @@ namespace Home\Controller;
 use Think\Controller;
 class NeedsController extends BaseController {
     public function index() {
+        //实例化数据表，查找数据
         $info = D('Needs')  -> field('uid,needs') -> where(['id' => $_GET['id']]) -> find();
         $info['name'] = D('User') -> field('name') -> where(['id' => $info['uid']]) -> find()['name'];
+        // 生成条件语句
         $where = ['uid' => $_SESSION['id']];
+        //若登录者为护士，则以护士工号生成条件语句
         if($_SESSION['role'] == 'Nurse') $where = ['nid' => $_SESSION['id']];
+        //查找登录者的收藏列表
         $collections = json_decode(D($_SESSION['role'].'Collection') -> field('ids') -> where($where) -> find()['ids'],true);
+        //判断$collections数组中存在$_GET['id']
         in_array($_GET['id'],$collections) ? $collection = true : $collection = false;
         $apply_list = D('Apply') -> field('nurse') -> where(['needs' => $_GET['id']]) -> order('addtime asc') -> select();
+        // 遍历数据集合，遍历申请此需求的所有护士
         foreach ($apply_list as $key => $value) {
             $nurse = D('Nurse') -> field('id as nid,name') -> where(['id' => $value['nurse'], 'status' => 1]) -> find();
             if($nurse) $applyer[] = $nurse;
         }
+        //将控制器变量值传递到模板
         $this -> applyer = $applyer;
         $this -> collection = $collection;
         $this -> needs = $_GET['id'];
         $this -> data = $info;
-        $this -> display();//调用与这个方法同名，且属于当前控制器的对应模板
+        //调用与这个方法同名，且属于当前控制器的对应模板
+        $this -> display();
     }
 
     //发布需求
@@ -104,6 +112,7 @@ class NeedsController extends BaseController {
     //关闭需求
     public function offNeeds() {
         if($_GET) {
+            //将患者需求状态改为取消
             $rs = D('Needs') -> where(['id' => $_GET['id']]) -> save(['status' => 4]);
             if($rs) {
                 echo true;
@@ -115,7 +124,7 @@ class NeedsController extends BaseController {
         }
     }
 
-    //检查账号状态，提出申请
+    //检查需求申请状态，提出申请
     public function checkStatus() {
         if($_GET) {
             //实例化数据表，查询此申请的id

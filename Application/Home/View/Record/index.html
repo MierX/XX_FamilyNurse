@@ -185,6 +185,8 @@
             }
         })
     }
+
+    //用户的评分
     function changerStar(id) {
         for(var i = 1; i <= id; i++) {
             document.getElementById('star'+i).innerHTML = "★";
@@ -203,6 +205,7 @@
         }
         document.getElementById('score').innerText = "";
     }
+    //保存用户打的评分
     function saveScore(value) {
         if(value) {
             $.ajax({
@@ -221,6 +224,7 @@
             });
         }
     }
+    //护士的评分
     function changerStarNurse(id) {
         for(var i = 1; i <= id; i++) {
             document.getElementById('star_nurse'+i).innerHTML = "★";
@@ -239,6 +243,7 @@
         }
         document.getElementById('score_nurse').innerText = "";
     }
+    //保存护士打的评分
     function saveScoreNurse(value) {
         if(value) {
             $.ajax({
@@ -251,72 +256,13 @@
                 },
                 success:function (data) {
                     if(data) {
-                        location.reload();
+                        location.reload();//刷新页面
                     }
                 }
             });
         }
     }
-    function show(title,url,w,h) {
-        var account = "{$Think.SESSION.account}";
-        if(account) {
-            title = "与{$data.name}的私聊";
-            w = parent.document.body.clientWidth*0.25;
-            h = parent.document.body.clientHeight*0.75;
-            parent.layer_show(title,url,w,h);
-        } else {
-            alert('请先登录');
-            parent.location.href = "{:U('login')}";
-        }
-    }
-    function apply() {
-        var apply = confirm('您确定要申请此需求吗？');
-        if(apply) {
-            $.ajax({
-                url:"{:U('checkStatus')}",
-                type:"get",
-                data:{
-                    'id':"{$needs}",
-                    "nid":"{$Think.SESSION.id}",
-                },
-                success:function (data) {
-                    if(data) {
-                        alert("申请成功，请耐心等待用户的选择！");
-                    } else {
-                        alert("您已经申请过该需求，不能重复申请！");
-                    }
-                },
-                error:function () {
-                    alert('未知错误，请重试~');
-                },
-            });
-        }
-    }
-    function accept(nid) {
-        var accept = confirm("您确定接受这位护士的医护申请吗？");
-        if(accept) {
-            $.ajax({
-                url:"{:U('accept')}",
-                type:"get",
-                data:{
-                    "needs":"{$needs}",
-                    "nurse":nid,
-                    "user":"{$Think.SESSION.id}",
-                },
-                success:function (data) {
-                    if(data) {
-                        alert("接收成功！");
-                        parent.location.reload();
-                    } else {
-                        alert("接受失败！");
-                    }
-                },
-                error:function () {
-                    alert('未知错误，请重试~');
-                },
-            });
-        }
-    }
+    //存储医嘱
     function setRecord() {
         var value = document.getElementById('record').value;
         $.ajax({

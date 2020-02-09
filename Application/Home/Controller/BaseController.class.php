@@ -2,8 +2,9 @@
 namespace Home\Controller;
 use Think\Controller;
 class BaseController extends Controller {
+    //初始化方法
     public function _initialize() {
-        //查询账户状态
+        //查询账户状态与登录状态
         if(($_SESSION['role'] == 'User' || $_SESSION['role'] == 'Nurse') && $_SESSION['account'] && $_SESSION['name']) {
             $status = D($_SESSION['role']) -> where(['id' => $_SESSION['id']]) -> field('status') -> find()['status'];
             if($status != 1) {
@@ -23,7 +24,7 @@ class BaseController extends Controller {
     public function setTime($time) {
         $nowTime = time();
         $differenceTime = $nowTime - $time;
-        $yesterdayTime = strtotime('yesterday');
+        $yesterdayTime = strtotime('yesterday');        
         $weekTime = strtotime(date('Y-m-d 0:0:0', (time() - ((date('w') == 0 ? 7 : date('w')) - 1) * 24 * 36000)));
         if(date('Y-m-d', time()) == date('Y-m-d', $time)) {
             $rs = '今天'.date('H:i', $time);

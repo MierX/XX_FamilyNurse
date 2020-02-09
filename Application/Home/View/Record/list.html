@@ -128,30 +128,6 @@
 			alert('请先登录');
 			parent.location.href = "{:U('login')}";
 		}
-	}
-	function offNeeds(id,status) {
-		if(status === '1') {
-			$.ajax({
-				url:"{:U('Needs/offNeeds')}",
-				type:"get",
-				data:{
-					"id":id,
-				},
-				success:function (data) {
-					if(data) {
-						alert('关闭需求成功！');
-						location.reload();
-					} else {
-						alert('出错了~刷新一下！');
-					}
-				},
-				error:function () {
-					alert("未知错误，请重试~");
-				},
-			});
-		} else {
-			alert('该需求无法关闭！');
-		}
-	}
+	}	
 </script>
 </html>

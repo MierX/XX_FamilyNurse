@@ -107,6 +107,8 @@
             parent.location.href = "{:U('login')}";
         }
     }
+
+    //申请需求
     function apply() {
         var apply = confirm('您确定要申请此需求吗？');
         if(apply) {
@@ -143,7 +145,7 @@
                 },
                 success:function (data) {
                     if(data) {
-                        alert("接收成功！");
+                        alert("接受成功，请到我的记录查看！");
                         parent.location.reload();
                     } else {
                         alert("接受失败！");

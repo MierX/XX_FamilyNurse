@@ -90,9 +90,10 @@
     roleStatus();
   }
 
+    //表单根据角色适应大小
   function roleStatus(value) {
     if(value === 'User' || !value) {
-      document.getElementById("job-num").style.display = 'none';
+      document.getElementById("job-num").style.display = 'none';//不显示工号
       document.getElementById("job-num").value = '';
       document.getElementById("loginform").style.height = '300px';
       document.getElementById("loginform").style.borderBottom = '1px #78b5b8 solid';
@@ -104,7 +105,7 @@
       role = 'Nurse';
     }
   }
-
+  //数据验证
   function checkValue(name, value) {
     if(value) {
       valueSuccess(name);
@@ -112,7 +113,7 @@
       valueError(name);
     }
   }
-
+  //数据格式正确打勾
   function valueSuccess(name) {
     document.getElementById('i_'+name).innerHTML = '&#xe6a7;';
     document.getElementById('i_'+name).style.color = 'green';
@@ -120,6 +121,7 @@
     value[name] = 1;
   }
 
+  //数据格式错误打叉
   function valueError(name) {
     document.getElementById('i_'+name).innerHTML = '&#xe6a6;';
     document.getElementById('i_'+name).style.color = 'red';
@@ -128,13 +130,16 @@
     return false;
   }
 
+//登录验证
   function loginNow() {
     if(role === 'User') {
       delete value['job-num'];
+      //有空数据
       if(Object.keys(value).length !== 2) {
-        alert('请确认所有信息填写正确！');
+        alert('请确认所有信息已填写！');
         return false;
       } else {
+        //信息填写错误
         for(var i in value) {
           if(!i) {
             alert('请确认所有信息填写正确！');
@@ -143,10 +148,12 @@
         }
       }
     } else if(role === 'Nurse') {
+      //有空数据
       if(Object.keys(value).length !== 3) {
-        alert('请确认所有信息填写正确！');
+        alert('请确认所有信息已填写！');
         return false;
       } else {
+        //信息填写错误
         for(var j in value) {
           if(!j) {
             alert('请确认所有信息填写正确！');

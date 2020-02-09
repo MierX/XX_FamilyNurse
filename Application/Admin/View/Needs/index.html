@@ -106,36 +106,17 @@
 		layer_show(title,url,w,h);
 	}
 	function edit(get) {
-        var choose = confirm("该操作将改变此用户的状态");
+        var choose = confirm("该操作将改变此条需求的状态");
         if(choose) {
             window.location.href = "{:U(edit)}"+get;
         }
     }
-    function checkTime(id,value) {
-	    var time = new Date(value.replace(/-/g,'/')).getTime();
-	    var nowTime = new Date().getTime();
-	    if(time <= nowTime) {
-            if(id === 'max') {
-                var min = document.getElementById("min").value;
-                min = new Date(min.replace(/-/g,'/')).getTime();
-                if(min) {
-                    if(time <= min) {
-                        alert('请大于最小时间！');
-                        document.getElementById(id).value = '';
-                    }
-                } else {
-                    alert('请先选择最小时间！');
-                    document.getElementById(id).value = '';
-                }
-            }
-        } else {
-	        alert('请选择正确时间！');
-	        document.getElementById(id).value = '';
-        }
-    }
+    
+    //关键词搜索
     function search() {
 	    var value = document.getElementById("keyword").value;
         if(value) {
+            //将字符串分割，并解析字符串
             title = JSON.stringify(['like', ['%',value,'%'].join('|')]);
             window.location.href = "{:U('search')}?table={$table}&where[title]="+title;
         } else {

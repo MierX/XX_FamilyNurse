@@ -28,10 +28,14 @@ class UserController extends BaseController {
         $this -> display();
     }
 
+    //我的需求
     public function myNeeds() {
+        //实例化患者需求表，查询数据
         $needs = D('Needs') -> where(['uid' => $_GET['id']]) -> select();
+        //将$needs数组的值赋给$needs
         $needs = array_values($needs);
         if($_GET['check']) {
+            //若点击“我的需求”，查询不到当前用户发布的需求，返回true
             if(!$needs) {
                 echo true;
             } else {

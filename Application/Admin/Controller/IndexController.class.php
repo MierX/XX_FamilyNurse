@@ -8,6 +8,7 @@ class IndexController extends BaseController {
 
     // 注销
     public function logout() {
+        //销毁$_SESSION
         unset($_SESSION['admin_role']);
         unset($_SESSION['admin_account']);
         unset($_SESSION['admin_name']);

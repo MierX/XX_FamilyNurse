@@ -20,6 +20,7 @@ class NurseController extends BaseController {
         $this -> display();
     }
 
+    //查看我的需求
     public function myNeeds() {
         if($_GET['id']) {
             $needs = D('NurseNeeds') -> field('nid') -> where(['nurse' => $_GET['id']]) -> order('id asc') -> select();

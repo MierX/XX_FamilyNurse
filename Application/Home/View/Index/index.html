@@ -210,14 +210,14 @@
                         </li>
                     </ul>
                     <ul id="ul_2">
-						<li>查看需求</li>
+						<li>我的需求</li>
                         <li style="margin-left: 6.5%">我的信箱</li>
                         <li style="margin-left: 7%">我的记录</li>
                     </ul>
                     <ul style="margin-top: 38.5%">
                         <li style="margin-left: 5%;font-size: 14px">
                             <i class="Hui-iconfont" style="color: red">&#xe600;</i>
-                            <a href="#">查看医生</a>
+                            <a href="#">我的医生</a>
                         </li>
                         <li>
                             <Hr style="width: 90%; margin-left: 5%; background-color: #E6E6E6;margin-top: 10px;margin-bottom: 10px;" size="4">
@@ -332,6 +332,7 @@
 		}
 	}
 	
+	// 功能选择
 	function self() {
 		var role = "{$user.role}";
 		console.log(role);
@@ -409,6 +410,8 @@
 			parent.location.href = "{:U('login')}";
 		}
 	}
+
+	// 选择我的需求
 	function chooseNeeds() {
 		var account = "{$Think.SESSION.account}";
 		if(!account) {
@@ -435,6 +438,8 @@
 			}
 		});
 	}
+
+	// 需求功能选择
 	function checkNeeds() {
 		layer.confirm('请选择：', {
 			btn: ['查看需求','发布需求']
@@ -444,24 +449,24 @@
 			show('发布需求','{:U(\'Needs/edit\')}?id={$user.id}','0','0');
 		});
 	}
-	function checkNurse() {
-		$.ajax({
-			url:"{:U('Nurse/myNeeds')}",
-			type:"get",
-			data:{
-				"id":"{$user.id}",
-			},
-			success:function (data) {
-				if(data) {
-					show('查看需求','{:U(\'Nurse/myNeeds\')}?id={$user.id}&list=1','0','0')
-				} else {
-					alert('您还没有医护记录');
-				}
-			},
-			error:function () {
-				alert('未知错误！请调试！');
-			},
-		});
-	}
+	// function checkNurse() {
+	// 	$.ajax({
+	// 		url:"{:U('Nurse/myNeeds')}",
+	// 		type:"get",
+	// 		data:{
+	// 			"id":"{$user.id}",
+	// 		},
+	// 		success:function (data) {
+	// 			if(data) {
+	// 				show('查看需求','{:U(\'Nurse/myNeeds\')}?id={$user.id}&list=1','0','0')
+	// 			} else {
+	// 				alert('您还没有医护记录');
+	// 			}
+	// 		},
+	// 		error:function () {
+	// 			alert('未知错误！请调试！');
+	// 		},
+	// 	});
+	// }
 </script>
 </html>

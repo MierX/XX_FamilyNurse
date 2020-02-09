@@ -163,6 +163,7 @@
 
   var value = {};
 
+  //初始化
   function init() {
     roleStatus();
   }
@@ -196,13 +197,16 @@
     }
   }
   
+  //数据验证
   function checkValue(name, value) {
     if(value) {
       if(name === 'account' || name === 'name' || name === 'phone' || name === 'card') {
         var rs = true;
+        //设置长度
         if(name === 'account' && value.length < 6) rs =  valueError(name);
         if(name === 'phone' && value.length !== 11) rs =  valueError(name);
         if(name === 'card' && value.length !== 18) rs =  valueError(name);
+        //传值
         if(rs) {
           $.ajax({
             url:"{:U('checkValue')}",
@@ -272,7 +276,7 @@
       delete value['work-add'];
       delete value['remark'];
       if(Object.keys(value).length !== 6) {
-        alert('请确认所有信息填写正确！');
+        alert('请确认所有信息已填写！');
         return false;
       } else {
         for(var i in value) {
@@ -284,7 +288,7 @@
       }
     } else if(role === 'Nurse') {
       if(Object.keys(value).length != 9) {
-        alert('请确认所有信息填写正确！');
+        alert('请确认所有信息已填写！');
         return false;
       } else {
         for(var j in value) {
@@ -295,6 +299,7 @@
         }
       }
     }
+    //判断是否选择了性别
     var sexObj = document.getElementsByName("sex");
     var checked = 0;
     for(var k = 0; k < sexObj.length; k++) {
@@ -303,11 +308,12 @@
     if(checked) {
       return true;
     } else {
-      alert('请确认所有信息填写正确！');
+      alert('请确认所有信息已填写！');
       return false;
     }
   }
 
+  //登录按钮
   function goLogin() {
     window.location.href = "{:U('login')}";
   }

@@ -113,8 +113,10 @@
     }
     function search() {
 	    var value = document.getElementById("keyword").value;
-        if(value || value === '0') {
+        if(value && value !== '0') {
+            //用"|"进行分割
             value = ['%',value,'%'].join('|');
+            //解析字符串
             var phone = JSON.stringify(['like', value]);
             window.location.href = "{:U('search')}?table={$table}&where[phone]="+phone;
         } else {

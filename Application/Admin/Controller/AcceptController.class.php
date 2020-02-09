@@ -9,14 +9,18 @@ class AcceptController extends BaseController {
         $table = $value[0];
         $info_list = $value[2];
         foreach ($info_list as $k => &$v) {
+            //实例化数据表，查询数据
             $user = D('User') -> field('*') -> where(['id' => $v['uid']]) ->find();
             $nurse = D('Nurse') -> field('*') -> where(['id' => $v['nid']]) -> find();
             $needs = D('needs') -> field('*') -> where(['id' => $v['needs']]) -> find();
+            //获取所需字段
             $v['user_name'] = $user['name'];
             $v['nurse_name'] = $nurse['name'];
             $v['needs_name'] = $needs['title'];
+            //如果记录被取消，不显示数据
             if($v['cancel'] == 1) unset($info_list[$k]);
         }
+        //获取数组的所有值
         $info_list = array_values($info_list);
         $count = count($info_list);
         $this -> table = $table;
@@ -41,15 +45,19 @@ class AcceptController extends BaseController {
         $table = $value[0];
         $info_list = $value[2];
         foreach ($info_list as $k => &$v) {
+            //实例化数据表，查询数据
             $user = D('User') -> field('*') -> where(['id' => $v['uid']]) ->find();
             $nurse = D('Nurse') -> field('*') -> where(['id' => $v['nid']]) -> find();
             $needs = D('needs') -> field('*') -> where(['id' => $v['needs']]) -> find();
+            //选取所需字段
             $v['user_name'] = $user['name'];
             $v['nurse_name'] = $nurse['name'];
             $v['needs_name'] = $needs['title'];
         }
+        //获取数组的所有值
         $info_list = array_values($info_list);
         $count = count($info_list);
+        //将控制器变量传递到模板
         $this -> table = $table;
         $this -> count = $count;
         $this -> data = $info_list;
@@ -58,6 +66,7 @@ class AcceptController extends BaseController {
 
     public function record() {
         $info = D($_GET['table']) -> where($_GET['where']) -> select();
+        //将控制器变量传递到模板
         $this -> data = $info;
         $this -> count = count($info);
         $this -> display();
